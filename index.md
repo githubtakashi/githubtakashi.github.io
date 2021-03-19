@@ -1,5 +1,5 @@
-# はじめてのgithub pages
-  github pagesを使ってみた。
-  noteで日々のアウトプットをしています。
-  noteはこちら↓
-  <p><a href="https://note.com/noabou">僕のnote</a></p>
+# かつお
+
+- noteで日々のアウトプットをしています。
+- noteはこちら。[僕のnote](https://note.com/noabou)
+- [twitter](https://twitter.com/noaboucoffee)で日々の勉強などつぶやいています。
