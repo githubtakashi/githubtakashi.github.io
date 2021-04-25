@@ -1,13 +1,15 @@
 # かつお
 
-Linux, Windowsが好きで、プライベートは1日中、11台のPCでわちゃわちゃしています。
+2018年からHTML/CSSから学び出し、2020年くらいからプログラマー・ソフトウェアエンジニアを目指そう！
+と思うようになり基礎から勉強をしています。
+Thinkpad, Linux, Windowsが好きで、プライベートは1日中、13台のPCでわちゃわちゃしています。
 
-今日の[todoやメモ](todo.md)はこちら
+今日の[todoやメモ](todo.md)
 
 ## 学んでいることをアウトプットしています
 
 *c++*
-- AtCoderを利用してc++を使ったプログラミング
+- AtCoderの問題をc++を使ってプログラミング
 - vimを使ってc++のコードを書いて実行
 - visual studioを使ったアプリ開発の勉強
 - qt5/6を使ったアプリ開発の勉強
@@ -17,19 +19,20 @@ Linux, Windowsが好きで、プライベートは1日中、11台のPCでわち�
 - プラグイン作成
 
 *go*
-- チュートリアルでgo言語を動かしつつ勉強
+- 公式サイトのチュートリアルでgo言語を動かしつつ勉強
+- udemyの講座でgolandを使いつつgoの基礎を勉強
 
 *Linux*
-- Void Linux, Arch Linux, lubuntu, Debianを使ってわちゃわちゃいろんなことしています。
-- コンパイラ作成中ocaml
+- Arch Linux,lubuntu,ubuntu,Debianを使ってわちゃわちゃいろんなことしています。
+- コンパイラ作成中ocaml<-エラーで進まず挫折中。
 
 *Windows*
-- Windows NT, Windows XP, Windows 10
+- Windows NT, Windows XP, Windows10
 - クラシックなWindowsでOSについて勉強
 
 *応用情報技術*
 - Itパスポートの本で一通り勉強したので応用情報技術の基礎を勉強しています。
 
 ## Links | 下記リンクで学んでいることをアウトプットしています
-- note: [note](https://note.com/noabou)
-- twitter: [twitter](https://twitter.com/noaboucoffee)
+- note｜140記事以上作成・SEO上位記事もあり: [note](https://note.com/noabou)
+- twitter｜毎日更新しています: [twitter](https://twitter.com/noaboucoffee)
