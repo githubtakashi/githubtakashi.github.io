@@ -2,13 +2,13 @@
 
 ここにtodoやメモなどいろいろ書いていきます。
 
-**2021-05-05**
+**2021-05-07**
 - 応用情報技術の勉強
 - atcoderでc++で問題を解く
-- //visual studio 2019でwindowsデスクトップアプリを作成する勉強、デスクトップキャラクター作りを試してみる
-- //golangのudemy
+- visual studio 2019でwindowsデスクトップアプリを作成する勉強、デスクトップキャラクター作りを試してみる
+- golangのudemy
 - vimプラグイン作成と勉強
-- //読書３冊
+- 読書３冊
 ***
 
 ## メモ
@@ -28,9 +28,10 @@
 - dockerでlaravel環境構築、dockerですきな環境を構築できるようにする。
 - 技術書展の本を実践
 - aws課金してるので活用する。azuruも勉強して使えるようにするとか
-- pcの用途を考える。X41 linux Mint　他のPCも結局同じようなことしてるので専用マシンにするのがよいかも？
 - 文書作成専用マシン、vimプラグイン作成専用マシン、linuxの勉強専用マシン、シェルスクリプト専用マシンなど
 - thinkpad x40でシェルスクリプトを勉強する。
+- thinkpad x41 linux mint はvim専用マシンにする。
+- thinkpad t430sでudemyでフロントエンドを勉強する。html, css, javascript, wordpress,vuejs,reactjs...
 
  
 
