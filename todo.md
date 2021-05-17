@@ -3,16 +3,14 @@
 ここにtodoやメモなどいろいろ書いていきます。
 
 **2021-05-017**
-- 応用情報技術の勉強
 - atcoderでc++で問題を解く
 - visual studio 2019でwindowsデスクトップアプリを作成する勉強、デスクトップキャラクター作りを試してみる
 - golangのudemy
 - vimプラグイン作成と勉強
-- xcodeとswift準備
 - 数学の勉強
 - c++の本で勉強
-- osの本で勉強
 - udemyでHTMLとCSSとJavaScript勉強
+- ビッグオー記法の勉強
 
 ***
 
