@@ -39,3 +39,4 @@ Thinkpad, Linux, Windowsが好きで、プライベートは1日中、14台のPC
 ## Links | 下記リンクで学んでいることをアウトプットしています
 - note｜140記事以上作成・SEO上位記事もあり: [note](https://note.com/noabou)
 - twitter｜毎日更新しています: [twitter](https://twitter.com/noaboucoffee)
+- zenn.dev | zennもはじめました: [zenn](https://zenn.dev/katsuo)
