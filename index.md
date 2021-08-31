@@ -1,10 +1,10 @@
 # Katsuo
 
-プログラマー・ソフトウェアエンジニア、ITエンジニアになるためにいろいろ進めている。
+プログラマー・ソフトウェアエンジニア、ITエンジニアになるためにいろいろ進めています。
 
-同時に名大の情報学部への入学を目指して受験勉強もお試しで進めてる。
+情報学部への入学を目指して受験勉強もお試しで進めてる。
 
-Thinkpad, Linux, Windowsが好き
+retroなThinkpad, Arch Linux, retroなWindowsが好き
 
 - 今日の[todoやメモ](todo.md)
 - contents(まだお試し中)[contents](contents.md)　
@@ -47,15 +47,13 @@ Thinkpad, Linux, Windowsが好き
 - udemy
 
 **応用情報技術**
-- Itパスポートの本で一通り勉強し応用情報技術の基礎をあそんでいます。
-- 試験合格を目指してあそびを進めています。
+- 22年春の試験合格を目指して進めています。
 - 応用情報の参考書
 - 応用情報ドットコムでひまな時間を活用
 
 ---
 
-
 ## Links | アウトプット
-- note｜150記事以上作成・SEO1位～10位以内の上位記事もわりとあり: [note](https://note.com/noabou)
+- note｜150記事以上作成 SEO10位以内の上位記事もあり: [note](https://note.com/noabou)
 - twitter｜毎日更新: [twitter](https://twitter.com/noaboucoffee)
-- zenn.dev | zennもとりあえずはじめてみた: [zenn](https://zenn.dev/katsuo)
+- zenn.dev | [zenn](https://zenn.dev/katsuo)
