@@ -52,7 +52,22 @@ Linuxでvimをビルドしようとしてエラーになったときにエラー
 github pagesにはjekyllというテンプレートのテーマが準備されているので便利。
 これを利用します。
 
-- settingsに移動し
+- "settings"をクリックし"github pages"をクリック
+- "choose a theme"をクリックし好きなテーマを選ぶ
+
+" _config.yml " と " index.md " が生成される
+
+jekyllによって生成されたindex.mdをもとにして実際にはindex.htmlが作られてサイトが描画される。
+
+リポジトリ上にindex.htmlとindex.mdの2つが存在する状態だと、index.htmlの方が優先されてテーマが
+あたらないので、index.htmlの方は削除しておく。
+
+config.ymlファイルに直接jekyllのテーマ名を書くこと（テーマ名変更すること）でテーマを変更することが
+できる。
+
+また、サイト名やサイトがどんなサイトなのかを表示するサイトのヘッダー部分を変更することができる。
+
+![サイトのヘッダーの文字をconfigymlで変える](C:\Users\user\Pictures\configyml.png)
 
 
 
