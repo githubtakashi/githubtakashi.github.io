@@ -6,7 +6,7 @@
 
 - [Linuxやプログラミングのエラー｜普通に分からないことにメモを活用する](howtomemo.md)
 
-
+- [visualStudio2005を使っていくためのメモ](visualstudio2005.md)
 
 ---
 
