@@ -77,13 +77,34 @@ optional型にしてnilで変数に何も値がない状態だと、予期しな
 
 値が入っていない状態での予期せぬ挙動をしないようにできる。
 
+optional bindingはif文で条件分岐する。
 
+```
+let hako : String?
+if let hako2 = hako {
+  print(hako2)
+}
+else {
+  print("hako: nil")
+}
+//hakoの中身はnilなのでelseの中身が実行される
+```
 
+<br />
 
+optional chaining
 
+optional型の変数のうしろに?を付与してプロパティやメソッドにアクセスする。
 
+optional型の変数の値が存在するかどうかを検証してくれる。
 
+もし値が入っていれば変数をアンラップし中身が取り出されるという処理が自動的にされる。
 
+変数がnilだったらアンラップせず,値が入っていたらアンラップするみたいに処理してくれる。
+
+optional型の変数?.method()
+
+optional型の変数?.property
   
   
   
