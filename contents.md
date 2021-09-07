@@ -8,6 +8,8 @@
 
 - [visualStudio2005を使っていくためのメモ](visualstudio2005.md)
 
+- [xcodeの勉強メモ](xcodememo.md)
+
 ---
 
 
