@@ -10,6 +10,8 @@
 
 - [xcodeの勉強メモ](xcodememo.md)
 
+- [vimのメモ](vimmemo.md)
+
 ---
 
 
