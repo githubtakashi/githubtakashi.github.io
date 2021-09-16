@@ -12,6 +12,8 @@
 
 - [vimのメモ](vimmemo.md)
 
+- [vimrcの設定メモ](vimrc.md)
+
 ---
 
 
