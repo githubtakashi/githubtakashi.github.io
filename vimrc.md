@@ -2,7 +2,7 @@
 
 主にvimrcの設定内容についてメモ。
 どこかからコピペして作ることが多く、内容がわからないまま設定している項目も多いので、
-設定した内容についてメモや説明など。
+設定した内容についてメモや説明など。基本的に便利だと思って実際に設定する設定だけメモする。
 
 <br />
 
@@ -31,7 +31,7 @@ vimの左側に行番号を表示する。
 backspaceキーが効かない場合は設定する。
 
 indent: indentによる空白を削除
-
+vim
 eol: 行末を削除
 
 start: カーソルよりも前(左側)の文字を削除
@@ -74,16 +74,26 @@ set backspace=2 //set backspace=indent,eol,startと同じ
 
 <br />
 
-## autocmdを作成して好きなときに使う
+## set wildmenu
 
-ファイルタイプがtextのとき1行あたりの文字数をコマンドで設定する
+コマンドを入力してtabを押したときにコマンドの候補がステータスラインに表示される。
 
-```
-augroup vimrcEx
-  au!
-  autocmd Filetype text setlocal textwidth=50
-augroup END
-```
+<br />
+
+## inoremap <C-U> <C-G>u<C-U>
+
+insertモードで行の最後尾にカーソルがある状態で、Ctrl + u で行の文字を一括で削除できる。
+便利なキーマッピング。
+  
+一時的にもとに戻したいときは:iunmap <C-U>とする。
+  
+<br />
+
+## filetype plugin indent on
+ 
+filetypeの検出、ファイルタイププラグインの適用、ファイルタイプに合わせたインデントの自動調整
+
+  
 
 
 
