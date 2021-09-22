@@ -14,6 +14,8 @@
 
 - [vimrcの設定メモ](vimrc.md)
 
+- [vim pluginの勉強メモ](vimpluginmemo.md)
+
 ---
 
 
