@@ -57,14 +57,13 @@ set backspace=2 //set backspace=indent,eol,startと同じ
 <br />
 
 ## set ruler
-
 現在のカーソル位置(行,列)を画面の右下にずっと表示する。
 
 <br />
 
 ## set laststatus=2
 
-画面最下部のステータスラインの行を2行に設定。
+画面最下部のステータスラインを2に設定すると常にステータスラインが表示される。
 
 <br />
 
@@ -93,7 +92,36 @@ insertモードで行の最後尾にカーソルがある状態で、Ctrl + u �
  
 filetypeの検出、ファイルタイププラグインの適用、ファイルタイプに合わせたインデントの自動調整
 
+<br />
+
+## DiffOrigコマンド
   
+下記を記述することでDiffOrigコマンドがつかえるようになる。
+  
+```
+command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
+                  \ | wincmd p | diffthis
+```
+  
+下記コマンドを実行することで、差分モードで表示される。
+変更前とこれから変更するファイルが同時に左右に表示され、新しく変更するとそこがハイライトされる。 
+  
+```
+:DiffOrig
+```
+
+<br />
+  
+## packadd! matchit
+  
+デフォルトで入っているけど無効になっているmatchitプラグインを有効にする。
+有効にすると、'%'キーを押したときに()だけでなくif/endifなどの組み合わせにも
+ハイライトが対応できるようになる。
+  
+<br />
+
+
+
 
 
 
