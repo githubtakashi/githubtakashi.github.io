@@ -2,9 +2,9 @@
 
 ここにtodoやメモなどいろいろ
 
-### 2021-09-27のメモ
+### 2021-09-28のメモ
 
-9/27 勉強をticktickのポモドーロを使ってスモールステップで進める。
+9/28 勉強をticktickのポモドーロを使ってスモールステップで進める。
 
 <br />
 
@@ -27,13 +27,14 @@ atcoderが少ししなくなってきたので、時間をとって進めてい�
 
 <br />
 
-**2021-09-27のtodos**
+**2021-09-28のtodos**
 
 - 応用情報の参考書
 - 青チャート
 - c++ポケットリファレンス
 - vim plugin
 - atcoder
+- visual studio2005
 - golang
 - xcode
 - html
@@ -47,8 +48,8 @@ atcoderが少ししなくなってきたので、時間をとって進めてい�
 - c++環境としてCMake。doxygenｗ導入する。thinkpad x260
 - visual studio2019でc++アプリ(microsoftのドキュメントやコンテンツを活用)。
 - visual studio2005でアプリつくり(thinkpad t42, t40p)
-- vimのプラグインつくり
-- golang
+- vimのプラグインつくりを通じてvim力をうｐ
+- golangの基礎をコツコツと積み上げておく
 - 応用情報技術の基礎。2022年春に受験する。
 - xcodeとswiftでのiOSアプリ作成進めてアプリ個人開発者で喰っていける状態にもっていく。
 
@@ -56,10 +57,8 @@ atcoderが少ししなくなってきたので、時間をとって進めてい�
 - dockerなどコンテナを道具にする。thinkpad x1に入れてみたので使ってみる。
 - 買った技術書展の本をもったいないので活用していく。
 - thinkpad x40でシェルスクリプトであそぶ
-- thinkpad x41 linux mint はvim専用あそびマシンにする。
-- thinkpad t430sでudemyでフロントエンドもとりあえず当たり前としてあそぶ。html, css, javascript, wordpress,vuejs,reactjs...
+- thinkpad t430sでudemyでフロントエンドもとりあえず当たり前として。html, css, javascript, wordpress,vuejs,reactjs...
 - thinkpad windows98,NT,ラズパイのpc98エミュレータでエクセルVBAやコマンドプロンプトでのコマンドをあそぶ
 - electronでメモアプリ作リ。古いpcだと何かとパッケージが満たしていないみたいな足らないメッセージ出るのでmbpで進める。
-- 他にも書ききれないくらいいろいろあって書ききれない。
  
  
