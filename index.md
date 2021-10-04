@@ -1,16 +1,18 @@
-# Katsuo
+# Katsuoとは？
 
-プログラマー・ソフトウェアエンジニア、ITエンジニアになるために勉強を進めています。
+ITエンジニアになるために勉強しています。
 
-情報学部への入学を目指して受験勉強もお試しで進めています。
+情報学部への入学を目指して受験勉強も進めています。
 
-retroなThinkpad, Arch Linux, retroなWindowsが好き
+Thinkpad, Arch Linux, Windowsが好きで、
+23台のPC、hhkb, realforce, logitech. ibm, cherry, keychronのキーボードを持ってます。
+特に2021年10月現在、realforceがとても好きになりました。
 
 //今日の予定やメモはこちら
 
 - 今日の[todoやメモ](todo.md)
 
-//メモや記事はこちら
+//メモや記事はこちら｜vimのコンテンツを中心に作成しています。
 
 - [contents](contents.md)　
 
