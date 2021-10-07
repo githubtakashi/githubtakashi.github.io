@@ -16,6 +16,8 @@
 
 - [vim pluginの勉強メモ](vimpluginmemo.md)
 
+- [エラーや問題点などいろいろメモ](iroiromemo.md)
+
 ---
 
 
