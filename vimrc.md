@@ -98,6 +98,12 @@ set backspace=2 //set backspace=indent,eol,startと同じ
 
 <br />
 
+## set virtualedit=onemore
+
+行末で通常はカーソルは最後の文字の上にあり、それ以上右に移動できないけど、
+設定することで行末の最後の文字の1文字先にカーソルが移動できる。
+
+
 ## inoremap <C-U> <C-G>u<C-U>
 
 insertモードで行の最後尾にカーソルがある状態で、Ctrl + u で行の文字を一括で削除できる。
