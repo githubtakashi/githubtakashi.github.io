@@ -2,7 +2,7 @@
 
 いろいろ書いていきます。
 
-## vimのLSPがインストールできない
+## vimのLSPがインストールできない|golang
 
 環境；thinkpad x220 windows10
 
@@ -41,5 +41,24 @@ ok。
 go install golang.org/x/tools/gopls@latest
 ```
 
+<br />
+
+## a.exeでエントリポイントが見つかりませんが出て実行できない｜c++
 
 
+![スクリーンショット 2021-10-12 185931](https://user-images.githubusercontent.com/43819429/136935271-c9b30551-af33-4f93-b52a-61ec926b90d0.png)
+
+
+エントリポイントとは、...
+
+
+cmdプロンプトを管理者で下記のコマンドを実行
+
+```
+> sfc / sannow
+```
+
+実行することで修復が必要なものは修復してくれる。
+
+
+![スクリーンショット 2021-10-12 190928](https://user-images.githubusercontent.com/43819429/136936763-bcdea9b1-8f01-42b6-8fd4-19fa81b0160f.png)
