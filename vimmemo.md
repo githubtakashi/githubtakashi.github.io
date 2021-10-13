@@ -109,6 +109,29 @@ yankやddした文字はレジスタに保存されている。
 
 <br />
 
+## プラグインを使うとき必要なpipとは
+
+Pip Installs Packpagesの略で、
+pythonのパーケージを管理するパッケージマネージャのこと。
+
+Arch linuxでpip3をインストールする方法
+
+```
+> sudo pacman -S python-pip
+```
+
+<br />
+
+python3で動作させるプラグインをつかうときは、vimとpythonを
+つなぐインターフェースとしてpynvimというパッケージを利用する。
+ので、pip3パッケージマネージャでpynvimをインストールする。
+
+```
+pip3 install --user pynvim
+```
+
+--userオプションをつけることで、ユーザーレベルのディレクトリにインストールされる。
+
 
 
 
