@@ -152,7 +152,22 @@ command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
   
 <br />
   
+## set cursorline
+  
+カーソルがある行全体をハイライトしてくれる。
 
+<br />
+
+## set clipboard+=unnamed
+
+通常はVimの*レジスタとOSのクリップボードが連動してるので、
+  vim以外のとこからコピーした文字列をVimにペーストでき、vimでヤンクした文字列をvim以外のところにペーストできる。
+  
+put, yankの都度*レジスタを指定しないと動作しないので、慣れないと大変。
+この問題を解決できるのがこの設定。yank, putするときにクリップボードを使用できるので便利。
+
+<br />
+  
 
 
 
