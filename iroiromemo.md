@@ -1,5 +1,13 @@
-<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[['\$','\$'],['\\(','\\)']],processEscapes:true},CommonHTML: {matchFontHeight:false}});</script>
-<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+ tex2jax: {
+ inlineMath: [['$', '$'] ],
+ displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+ }
+ });
+</script>
 
 # いろんなメモ書いていく
 
@@ -34,9 +42,6 @@ vim-lsp-settingsの:LspInstallServerコマンドで自動的にインストー�
 自分でやる方法もあるのかもしれないので調べてみる。qiitaに記事があった。
 vim-lsp-settingsにもissueとして同じ現象のことが書かれていた。
 
-<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[['\$','\$'],['\\(','\\)']],processEscapes:true},CommonHTML: {matchFontHeight:false}});</script>
-<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
 goのコマンドなど全然わからないのでこの際基本から調べてみる。
 
 goplsを自分でインストールすればとりあえずよさそうなのでよくわからないままに
@@ -69,5 +74,5 @@ cmdプロンプトを管理者で下記のコマンドを実行
 
 ![スクリーンショット 2021-10-12 190928](https://user-images.githubusercontent.com/43819429/136936763-bcdea9b1-8f01-42b6-8fd4-19fa81b0160f.png)
 
-\sqrt{2}$
+$$ e^{i x} = \cos{x} + i \sin{x} $$
 
