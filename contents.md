@@ -20,6 +20,8 @@
 
 - [cmakeを使っていくためのメモ](cmake.md)
 
+- [github pagesとnote.muに数式を表記する方法](texdesuushiki.md)
+
 ---
 
 
