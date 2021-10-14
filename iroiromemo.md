@@ -1,14 +1,3 @@
-<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-<script type="text/x-mathjax-config">
- MathJax.Hub.Config({
- tex2jax: {
- inlineMath: [['$', '$'] ],
- displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
- }
- });
-</script>
-
 # いろんなメモ書いていく
 
 いろいろ書いていきます。
@@ -74,5 +63,5 @@ cmdプロンプトを管理者で下記のコマンドを実行
 
 ![スクリーンショット 2021-10-12 190928](https://user-images.githubusercontent.com/43819429/136936763-bcdea9b1-8f01-42b6-8fd4-19fa81b0160f.png)
 
-$$ e^{i x} = \cos{x} + i \sin{x} $$
+
 
