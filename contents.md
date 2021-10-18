@@ -22,6 +22,8 @@
 
 - [github pagesとnote.muに数式を表記する方法](texdesuushiki.md)
 
+- [シェルスクリプトの勉強メモ](shellscript.md)
+
 ---
 
 
