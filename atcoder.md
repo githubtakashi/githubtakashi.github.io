@@ -204,7 +204,7 @@ sum_range(2, 4) = 9;なので、
 
 <br />
 
-<完成コードは下記>
+完成コードは下記
 
 ```
 int sum_range(int a, int b){
