@@ -292,6 +292,54 @@ int array_sum_from_i(vector<int> &data, int i) {
 }
 ```
 
+<br />
+
+```
+// (補助関数)
+// dataのi番目以降の要素の合計を計算
+int array_sum_from_i(vector<int> &data, int i) {
+  // ベースケース
+  if (i == data.size()) {
+    return 0;  // 対象の要素がないので合計は0
+  }
+  // 再帰ステップ
+  int s = array_sum_from_i(data, i + 1);  // i+1番目以降の要素の合計
+  return data.at(i) + s;  // (i番目以降の要素の合計)=(i番目の要素)+ s
+}
+```
+<br />
+
+main関数の中のarray_sum関数を起点にして再帰処理を進めると下記のようなコードになる。
+
+```
+#include <bits/stdc++.h>
+using namespace std;
+
+// (補助関数)
+// dataのi番目以降の要素の合計を計算する
+int array_sum_from_i(vector<int> &data, int i) {
+  // ベースケース
+  if (i == data.size()) {
+    return 0;  // 対象の要素がないの合計は0
+  }
+  // 再帰ステップ
+  int s = array_sum_from_i(data, i + 1);  // i+1番目以降の要素の合計
+  return data.at(i) + s;  // (i番目以降の要素の合計)=(i番目の要素)+ s
+}
+
+// dataの全ての要素の合計を計算する
+int array_sum(vector<int> &data) {
+  return array_sum_from_i(data, 0);
+}
+
+int main() {
+  vector<int> a = {0, 3, 9, 1, 5};
+  cout << array_sum(a) << endl;   // 0 + 3 + 9 + 1 + 5 = 18
+}
+```
+
+<br />
+
 配列とiをarray_sum_from_iに渡す。
 
 int s = array_sum_from_i(data, i + 1)に渡されたiをi+1する。
@@ -324,11 +372,11 @@ i == data.size()となったときは、対象の要素がないので、合計0
 
 array_sum_from_i(data, 5);の値は0
 
-return data.at(0) + array_sum_from_i(data, 1); ->(e)
-return data.at(1) + array_sum_from_i(data, 2); ->(d)
-return data.at(2) + array_sum_from_i(data, 3); ->(c)
-return data.at(3) + array_sum_from_i(data, 4); ->(b)
-return data.at(4) + array_sum_from_i(data, 5); ->(a)
+- return data.at(0) + array_sum_from_i(data, 1); ->(e)
+- return data.at(1) + array_sum_from_i(data, 2); ->(d)
+- return data.at(2) + array_sum_from_i(data, 3); ->(c)
+- return data.at(3) + array_sum_from_i(data, 4); ->(b)
+- return data.at(4) + array_sum_from_i(data, 5); ->(a)
 
 最後のarray_sum_from_i(data, 5);の値は0なので、
 
