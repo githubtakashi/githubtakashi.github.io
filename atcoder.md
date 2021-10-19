@@ -255,11 +255,111 @@ int arrary_sum(vector<int> &data) {
 
 (n個の配列の要素の合計) = (配列のi番目の要素) + (配列のi+1番目以降の要素の合計)
 
-i=0とすると、全部の要素の合計を求めることになる。
+i=0とすると、1番目の要素から全部の要素の合計を求めることになる。
 
 i+1番目の部分は再帰呼び出しできる。
 
 変数iを使って再帰呼び出しをするということは、iも関数の引数に追加してあげる必要があるので、引数iを追加する。
 
+引数iを追加するので、再帰呼び出しする関数と再帰ステップの関数名をarray_sum_from_iに変更する。
+
+iを再帰的に実行することで変化させるので、そのために補助関数を追加する。
+
+
+```
+// (補助関数)
+// dataのi番目以降の要素の合計を計算する
+int array_sum_from_i(vector<int> &data, int i) {
+}
+
+// dataの全ての要素の合計を計算する
+int array_sum(vector<int> &data) {
+  return array_sum_from_i(data, 0);
+}
+```
+
+<br />
+
+i + 1番め以降の要素の合計は再帰呼び出しすることで求める。
+
+```
+// (補助関数)
+// dataのi番目以降の要素の合計を計算する
+int array_sum_from_i(vector<int> &data, int i) {
+  // 再帰ステップ
+  int s = array_sum_from_i(data, i + 1);  // i+1番目以降の要素の合計
+  return data.at(i) + s;  // (i番目以降の要素の合計) = (i番目の要素) + s
+}
+```
+
+配列とiをarray_sum_from_iに渡す。
+
+int s = array_sum_from_i(data, i + 1)に渡されたiをi+1する。
+
+data.at(i) + s;でi番目の要素であるdata.at(i)とi+1番目の要素であるsを足し算する。
+
+例えばi=0が渡されると、int s = array_sum_from_i(data, i + 1)は(data, 1)となる。
+
+return data.at(i) + s;ではdata.at(0) + array_sum_from_i(data, 1);となる。
+
+int s の右辺array_sum_from_i(data, 1)から再帰呼び出しを行い、
+
+array_sum_from_i(vector<int> &data, int i)のiに1が渡される。
+  
+そしてint s = array_sum_from_i(data, i + 1)にiが渡され、iは1+1=2になる。
+  
+この再帰を配列の一番最後まで続ける。
+  
+iが配列の一番最後まで増加したときにiの増加を止める必要がある。
+  
+例えばdata = {10, 20, 30, 40, 50}
+
+5個の配列とすると、iは0,1,2,3,4となる。
+
+配列の要素数は5個なので、data.size() = 5となる。
+  
+i == data.size()となったときは、対象の要素がないので、合計0を返すようにする。
+
+すると、i = 5のときはreturn 0;を返すので、
+
+array_sum_from_i(data, 5);の値は0
+
+return data.at(0) + array_sum_from_i(data, 1); ->(e)
+return data.at(1) + array_sum_from_i(data, 2); ->(d)
+return data.at(2) + array_sum_from_i(data, 3); ->(c)
+return data.at(3) + array_sum_from_i(data, 4); ->(b)
+return data.at(4) + array_sum_from_i(data, 5); ->(a)
+
+最後のarray_sum_from_i(data, 5);の値は0なので、
+
+(a)の値はdata.at(4) + 0 = 50;
+
+つまりint array_sum_from_i(vector<int> &data, int 4)の実行結果が50。
+  
+(b)のarray_sum_from_i(data, 4);は上記と同じなので、値は(a)の値である50となる。
+  
+よって(b)は return data.at(3) + data.at(4) + 0;
+
+同様にして、(c)のarray_sum_from_i(data, 3);は(b)のint array_sum_from_i(vector<int> &data, int 3)の実行結果
+  
+data.at(3) + data.at(4) + 0である。
+
+よって、(c)は return data.at(2) + data.at(3) + data.at(4) + 0;
+  
+同様にして、(d)のarray_sum_from_i(data, 2);は(c)のint array_sum_from_i(vector<int> &data, int 2)の実行結果
+  
+data.at(2) + data.at(3) + data.at(4) + 0である。
+
+よって、(d)は return data.at(1) + data.at(2) + data.at(3) + data.at(4) + 0;
+
+同様にして、(e)のarray_sum_from_i(data, 1);は(d)のint array_sum_from_i(vector<int> &data, int 1)の実行結果
+  
+data.at(1) + data.at(2) + data.at(3) + data.at(4) + 0である。
+
+よって、(e)は return data.at(0) + data.at(1) + data.at(2) + data.at(3) + data.at(4) + 0;
+
+以上の流れで合計値が求まる。
+
+<br />
 
 
