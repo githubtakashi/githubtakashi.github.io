@@ -36,7 +36,7 @@ github pagesのmarkdownのmdファイルやnote.muでのブログに数式を表
 </script>
 ```
 
-inlineMathとdisplayMathとは
+- inlineMathとdisplayMath
 
 文中に数式を表示する場合はinlineMathの表記方法を使う。
 
@@ -46,11 +46,25 @@ inlineMathとdisplayMathとは
 
 ⇒数式を$$ $$で囲む。
 
-$2^3$
+2^3を表記すると下記のようになる。
+
+A$2^3$
+
+\begin{eqnarray*}
+
+y &=& (x+1)^2 \\
+
+&=& (x+1)(x+1) \\
+
+&=& x^2 + x + x + 1 \\
+
+&=& x^2 + 2x + 1
+
+\end{eqnarray*}
 
 <br />
 
-あとはtexの記法で数式を書くと、github pagesのmdファイルのプレビュー時には適用され無いけど、
+あとはtexの記法で数式を書くと、github pagesのmdファイルのプレビュー時には適用されないけど、
 htmlの公開ページにはちゃんと数式が表示されるようになる。
 
 <br />
