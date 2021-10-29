@@ -50,9 +50,9 @@ github pagesのmarkdownのmdファイルやnote.muでのブログに数式を表
 
 2の3乗 $2^3$
 
-\\[
+$$
 D = P^{-1} A P
-\\]
+$$
 
 <br />
 
