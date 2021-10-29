@@ -48,19 +48,11 @@ github pagesのmarkdownのmdファイルやnote.muでのブログに数式を表
 
 2^3を表記すると下記のようになる。
 
-A$2^3$
+2の3乗 $2^3$
 
-\begin{eqnarray*}
-
-y &=& (x+1)^2 \\
-
-&=& (x+1)(x+1) \\
-
-&=& x^2 + x + x + 1 \\
-
-&=& x^2 + 2x + 1
-
-\end{eqnarray*}
+\\[
+D = P^{-1} A P
+\\]
 
 <br />
 
