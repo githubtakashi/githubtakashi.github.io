@@ -24,6 +24,18 @@ github pagesのmarkdownのmdファイルやnote.muでのブログに数式を表
 </script>
 ```
 
+inlineMathとdisplayMathとは
+
+文中に数式を表示する場合はinlineMathの表記方法を使う。
+
+⇒数式を$ $で囲む。
+
+文中に数式を表示せず、新しい段落に数式を表示するときはdisplayMathを使う。
+
+⇒数式を$$ $$で囲む。
+
+$2^3$
+
 <br />
 
 あとはtexの記法で数式を書くと、github pagesのmdファイルのプレビュー時には適用され無いけど、
