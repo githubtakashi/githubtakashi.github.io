@@ -10,7 +10,7 @@
 </script>
 
 
-# ウェブブラウザで数式を書く方法
+# github pagesとnote.muで数式を書く方法
 
 github pagesのmarkdownのmdファイルやnote.muでのブログに数式を表記できるように
 したい。方法を調べたのでメモ(2021年10月15日現在での方法)。
@@ -36,6 +36,11 @@ github pagesのmarkdownのmdファイルやnote.muでのブログに数式を表
 </script>
 ```
 
+texの記法で数式を書くと、github pagesのmdファイルのプレビュー時には適用されないけど、
+htmlの公開ページにはちゃんと数式が表示されるようになる。
+
+<br />
+
 - inlineMathとdisplayMath
 
 文中に数式を表示する場合はinlineMathの表記方法を使う。
@@ -53,11 +58,6 @@ github pagesのmarkdownのmdファイルやnote.muでのブログに数式を表
 $$
 D = P^{-1} A P
 $$
-
-<br />
-
-あとはtexの記法で数式を書くと、github pagesのmdファイルのプレビュー時には適用されないけど、
-htmlの公開ページにはちゃんと数式が表示されるようになる。
 
 <br />
 
