@@ -26,6 +26,8 @@
 
 - [atcoderのメモ](atcoder.md)
 
+- [haskellの勉強メモ；環境構築など](haskell.md)
+
 ---
 
 
