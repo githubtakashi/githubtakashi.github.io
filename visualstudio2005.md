@@ -264,6 +264,30 @@ comではクラスのことをcoclassと呼ぶ。
 
 <br />
 
+### threading
+
+threadクラスはスレッドを作成して制御する。優先順位の設定やステータスの取得を行う。
+
+COMではthreadがdeadlockやrace conditionsにならないように制御してくれる機能を提供している。
+
+race conditionsとは、並列動作するプロセスやスレッドが同じリソースにほぼ同時にアクセスしたときに
+
+予定外の処理結果が起こってしまうこと。
+
+プロセスにおけるCOMオブジェクトはApartmentと呼び分けて考える。
+
+SingleThreaded ApartmentとMultiThreaded Apartmentに分類される。
+
+SingleThreaded ApartmentはSingleThreaded Apartmentのスレッドとの同期を
+
+wondowsのメッセージキューを利用して同期する。
+
+MultiThreaded Apartmentはwindowsのメッセージキューを使わずオブジェクト同士が
+
+直接通信して同期を行う。
+
+<br />
+
 ## __declspec(dllexport)
 
 dll作成の時にメソッド宣言に付ける。
