@@ -54,6 +54,8 @@ cmakeで一連のファイルが生成されると元のソースファイルと
 
 Cmakeにはスクリプトモードという機能がある。
 
+bashのようなスクリプト言語。
+
 .cmakeという拡張子。
 
 scriptモードの使い方は、cmake -pの引数にスクリプトファイルを渡すことで
@@ -67,15 +69,37 @@ $ cmake -P <スクリプトファイル名>
 自由に設定できるメッセージの前に<mode>か<check_state>を渡すことで任意のエラーなどを
 検出しその後の処理も行ってくれる。
   
-messageコマンドについてのドキュメントが(こちら)[https://cmake.org/cmake/help/latest/command/message.html ]
-  
- 
-
+messageコマンドについてのドキュメントが[こちら](https://cmake.org/cmake/help/latest/command/message.html)
 
 ```
 message("hello")
 message(WARNING "警告")
 ```
+
+### 変数の設定方法
+  
+変数の設定は.cmakeのスクリプトファイルではsetコマンドで変数を定義し設定できる。
+
+cmakeコマンドでは-Dオプションで変数を定義し設定できる。
+  
+```
+//hello.cmake
+set(NEKO "katsuo")
+message(${NEKO} " " ${WORLD})
+message("${NEKO} ${WORLD}")
+```
+
+実行結果(-Dオプションで変数名WORLD=worldに設定)
+
+```
+$ cmake -D WORLD=world -P hello.cmake
+hello katsuo
+katsuo world
+katsuo world
+```
+
+以上のように、ブレースでくくった変数を展開してくれる。
+  
 
 
 
