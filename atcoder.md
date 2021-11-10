@@ -558,3 +558,62 @@ int main() {
 <br />
   
 ***
+
+## 配列を逆に並べ替える再帰関数を作成
+
+vector配列から参照渡しで渡した要素を逆順に並び替える関数を再帰処理で作成。
+
+要素を逆順に並び替える関数名をreverse_arrayとする。
+
+まずmainの処理は下記のようになる。
+  
+並び替える元データとなるvector配列を作成。
+  
+その元データの配列をreverse_arrayに渡す。
+
+逆順の結果を出力する。
+
+```
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+  vector<int> a = {1, 2, 3, 4, 5};
+  vector<int> b = reverse_array(a);
+  for (int i = 0; i < b.size(); i++) {
+    cout << b.at(i) << endl;
+  }
+}
+```
+                           
+<br />
+
+メインの処理ができたら、次はreverse_array関数の処理を実装する。
+
+reverse_arrayの引数は配列aを参照で受け取るのでvector<int> &dataとする。
+
+参照で受け取った配列をもとに逆順に並び替える操作を実装する。
+
+要素を並び替える方法を考える。
+
+a = {1, 2, 3, 4, 5}
+
+を並び替えるには、逆順の要素を格納する配列を準備して、そこに格納していく。
+
+たまっていくスタック
+
+vector<int> tmp = reverse_array_from_i(data, 1);
+
+vector<int> tmp = reverse_array_from_i(data, 2)
+  
+vector<int> tmp = reverse_array_from_i(data, 3)
+  
+vector<int> tmp = reverse_array_from_i(data, 4)
+
+
+```
+// 配列を逆順にしたものを返す
+vector<int> reverse_array(vector<int> &data) {
+  return reverse_array_from_i(data, 0);
+}
+```
