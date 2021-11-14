@@ -32,6 +32,8 @@
 
 - [覚えておきたいvimのコマンド](vimcmd.md)
 
+- [Defxについてのメモ](defxmemo.md)
+
 ---
 
 
