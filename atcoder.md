@@ -577,8 +577,6 @@ vector配列から参照渡しで渡した要素を逆順に並び替える関�
  
 <br />
 
-まずはメインの処理の流れを作成する。  
-
 ```
 #include <bits/stdc++.h>
 using namespace std;
@@ -594,29 +592,27 @@ int main() {
                            
 <br />
 
-次は逆順に並び替える関数を作成する。
-  
-reverse_array関数の処理を実装する。
+次は逆順に並び替える関数reverse_arrayを作成する。
 
-reverse_arrayの引数は配列aを参照で受け取るのでvector<int> &dataとする。
+reverse_arrayは配列aを参照で受け取るので引数はvector<int> &dataとする。
 
-参照で受け取った配列をもとに逆順に並び替える操作を実装する。
-
-要素を並び替える方法を考える。
+参照で受け取った配列を逆順に並び替える処理を実装する。
 
 a = {1, 2, 3, 4, 5}
 
 を並び替えた要素を格納するvector配列を準備する。
 
-  
-
 vector<int> b = reverse_array(a);
 
 a = {1, 2, 3, 4, 5}のデータが下記に参照される。
   
-vector<int>型の配列reverse_arrayは上記のa = {1, 2, 3, 4, 5}
+vector<int>配列reverse_arrayは上記のa = {1, 2, 3, 4, 5}
 
 を参照する。
+  
+reverse_array関数の補助関数をreverse_array_from_iとし、この間数で
+  
+再帰処理を行い要素を逆順に並び替える。
 
 vector<int> reverse_array(vector<int> &data) {
   return reverse_array_from_i(data, 0);
@@ -634,25 +630,31 @@ reverse_array_from_iもvector<int>型の配列。
   
 i = 0; data.size == 5なので下記のif文は実行されない。
 
+```
 if (i == data.size()) {
     vector<int> empty_array(0);  // 要素数0の配列
     return empty_array;
   }
+```
 
 a = {1, 2, 3, 4, 5}, i + 1 = 0 + 1 = 1が下記のvector<int>配列tmpに渡される。
 
 vector<int> tmp = reverse_array_from_i(data, i + 1); 
   
-vector<int> tmp はint型の配列なので、最初はtmp = {}のような空の配列となる。
+逆順に並び替えた要素を格納するvector<int> tmp はint型の配列で、
+  
+最初はtmp = {}のような空の配列となる。
 
 tmp = {}の中に右辺のreverse_array_from_i(data, i + 1);の結果を格納していくことになる。
+
+ここで、右辺reverse_array_from_i(data, i + 1);は再帰処理となる。
   
 tmp.push_back(data.at(i));でtmp = {} の中にdata.at(i)の要素を格納する。
   
-i = 0なので、data.at(0) = 1がtmpに格納される。
+例えばi = 0の場合、data.at(0) = 1がtmpに格納される。
   
 
-たまっていくスタック
+再帰処理でたまっていくスタック
   
 vector<int> tmp = reverse_array_from_i(data, 1);
 tmp.push_back(data.at(0));
@@ -666,7 +668,7 @@ tmp.push_back(data.at(2));
 vector<int> tmp = reverse_array_from_i(data, 4)
 tmp.push_back(data.at(3));
 
-i = 4のとき、
+i = 4のとき、下記の流れで処理される。
 vector<int> tmp = reverse_array_from_i(data, 5)
   
 if (i == data.size()) {
@@ -674,32 +676,68 @@ if (i == data.size()) {
     return empty_array;
 }
 
-i = 5, data.size() = 5となるので、これ以上の処理は必要ないので、
+i = 5, data.size() = 5となり、i == data.size()なのでif文の中身が実行される。
 
-要素数0の配列すなわち0をリターンすることでreverse_array_from_iの処理が終了し
-以降の処理を抜ける。
+要素数0の配列すなわち0をリターンすることでreverse_array_from_iの再帰の繰り返しが終了する。
   
-ここで、スタックなので一番最後のスタックから順に実行されていく。
+reverse_array_from_iの実行結果が結局empty_array(0)で、空の配列となる。
+  
+すなわち、vector<int> tmp = reverse_array_from_i(data, i + 1);
+  
+の実行結果はvector<int> tmp =　empty_array；となり、空の配列となる。
 
+ここで、未処理のスタックに格納された処理が実行されていく。
+
+スタックなので、一番最後のスタックから順に実行されていく。
+
+```
 tmp.push_back(data.at(4)); // tmp = {5}
 tmp.push_back(data.at(3)); // tmp = {5,4}
 tmp.push_back(data.at(2)); // tmp = {5,4,3}
 tmp.push_back(data.at(1)); // tmp = {5,4,3,2}
 tmp.push_back(data.at(0)); // tmp = {5,4,3,2,1}
-return tmp;で
+return tmp;
+```
+
 tmp = {5,4,3,2,1}が最終的にリターンされる。これがreverse_array_from_i
+  
 の実行結果、すなわちreverse_arrayの実行結果になる。
   
 よって、vector<int> b = reverse_array(a);の実行結果は
-b = {5,4,3,2,1}となり、あとはfor文で要素を出力して完了。
-
-
-
-
   
+b = {5,4,3,2,1}となり、あとはfor文で要素を出力して完了。
+  
+完成のソースコードは下記となる。
+
 ```
+#include <bits/stdc++.h>
+using namespace std;
+
+// dataのi番目以降の要素を逆順にした配列を返す
+vector<int> reverse_array_from_i(vector<int> &data, int i) {
+  // ベースケース
+  if (i == data.size()) {
+    vector<int> empty_array(0);  // 要素数0の配列
+    return empty_array;
+  }
+
+  // 再帰ステップ
+  vector<int> tmp = reverse_array_from_i(data, i + 1);  // dataのi+1番目以降の要素を逆順にした配列を得る
+  tmp.push_back(data.at(i));  // 末尾にdataのi番目の要素を追加
+  return tmp;
+}
+
 // 配列を逆順にしたものを返す
 vector<int> reverse_array(vector<int> &data) {
   return reverse_array_from_i(data, 0);
 }
+
+int main() {
+  vector<int> a = {1, 2, 3, 4, 5};
+  vector<int> b = reverse_array(a);
+  for (int i = 0; i < b.size(); i++) {
+    cout << b.at(i) << endl;
+  }
+}
 ```
+  
