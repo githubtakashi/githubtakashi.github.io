@@ -106,5 +106,21 @@ optional型の変数?.method()
 
 optional型の変数?.property
   
-  
-  
+<br />
+
+## Jump to Difinitionできる理由
+
+ライブラリをインポートしているので定義ジャンプができる。
+
+```
+import UIKit
+import WebKit 
+```
+
+## 目的から機能を覚えていくとよい
+
+実装したい機能という目的が初めにあって、目的でググってそこから書き方を調べる。
+
+
+
+
