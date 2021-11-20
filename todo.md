@@ -1,22 +1,28 @@
 ## Katsuos Todo & Memo Page
 
-todoやメモをこのページに書く。
+ぼくのtodoやメモをこのページに書いています。
 
-### 2021-11-17 Todos
+todo管理をgithub pagesのwebページですることで、いろんなPCから
+
+気軽に編集・内容の確認ができます。
+
+github pagesはマークダウンで編集できるのもよいところです。
+
+<br />
+
+### 2021-11-20 Todos
 
 - 応用情報の参考書
 - 青チャート
 - visual studio2005
 - atcoder(再帰関数)
 - C++クイックリファレンスを読む
-- vim
 - xcode
 
 ***
 
-### 2021-11-17実際やったこと
+### 2021-11-20実際やったこと
 
-- xcode
 
 <br />
 
@@ -97,20 +103,19 @@ cmakeのシングルコンフィギュレーションとマルチコンフィギ
 - 青チャートで数学(わんこら式を参考にして進める)
 - c++でatcoder
 - c++環境としてCMake、doxygen導入する。thinkpad x260、x220
-- visual studio2019でc++アプリ(microsoftのドキュメントやコンテンツを活用)。
 - visual studio2005でアプリつくり(thinkpad t42, t40p)
-- vimのプラグインつくり
+- vim力アップ
 - golangの基礎をコツコツと積み上げておく
 - 応用情報技術の基礎。2022年春に受験する。
-- xcodeとswiftでのiOSアプリ作成進めてアプリ個人開発者で喰っていける状態にもっていく。
+- xcodeとswiftでのiOSアプリ作成進めてアプリ個人開発者の状態にもっていく。
 
 **サブ**
 - NEC Express5800についてブログを作成
 - pyxelでゲームを作る(@thinkpad x1)
 - haskellをx220で勉強(install済)
-- マストドンで応用情報のコミュニティを運営開始してみる。
+- マストドンで応用情報などのコミュニティを運営開始してみる。
 - dockerをthinkpad x1に入れてみたので使ってみる。
-- 買った技術書展の本をもったいないので活用していく。
+- 買った技術書展の本を活用していく。
 - thinkpad x40でシェルスクリプト勉強
 - thinkpad t430sでudemyでフロントエンドもとりあえず当たり前として。html, css, javascript, wordpress,vuejs,reactjs...
 - thinkpad windows98,NT,ラズパイのpc98エミュレータでエクセルVBAやコマンドプロンプトでのコマンド
