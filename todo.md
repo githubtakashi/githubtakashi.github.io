@@ -1,6 +1,6 @@
 ## Katsuos Todo & Memo Page
 
-ぼくのtodoやメモをこのページに書いています。
+todoやメモをこのページに書いています。
 
 todo管理をgithub pagesのwebページですることで、いろんなPCから
 
@@ -10,7 +10,7 @@ github pagesはマークダウンで編集できるのもよいところです�
 
 <br />
 
-### 2021-11-20 Todos
+### 2021-11-25 Todos
 
 - 応用情報の参考書
 - 青チャート
@@ -18,10 +18,13 @@ github pagesはマークダウンで編集できるのもよいところです�
 - atcoder(再帰関数)
 - C++クイックリファレンスを読む
 - xcode
+- visual studio2022
 
 ***
 
-### 2021-11-20実際やったこと
+### 2021-11-25のtodo用memo
+
+visual studio2022をインストールしたので使っていく。
 
 
 <br />
