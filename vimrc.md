@@ -114,6 +114,10 @@ set backspace=2 //set backspace=indent,eol,startと同じ
 
 ## inoremap <C-U> <C-G>u<C-U>
 
+```
+inoremap <C-U> <C-G>u<C-U>
+```
+  
 insertモードで行の最後尾にカーソルがある状態で、Ctrl + u で行の文字を一括で削除できる。
 
 設定していないといちいちノーマルモードにしてddなど実行しないといけないので設定して使うことを
@@ -192,6 +196,10 @@ vim以外のとこからコピーした文字列をVimにペーストでき、vi
 
 ## inoremap jj <ESC>
 
+```
+inoremap jj <ESC>
+```
+  
 インサートモードでESCにjjをキーマッピング
 
 insertモードでjjでノーマルモードに抜けれるので便利。
