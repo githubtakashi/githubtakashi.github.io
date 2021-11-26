@@ -1,7 +1,7 @@
 # githubtakashi.github.io
 
-my name is Katsuo.
+my name is Katsuo dayoon.
 
-this is myblog.
+this is myblog desu.
 
-my daily todos, activity, memo, and so on.
+my daily todos, activity, memo, etc.
