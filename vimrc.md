@@ -216,3 +216,32 @@ nowritebackupとセットで設定しておくとよさそう。
 swapfileを作らない。
   
 <br />
+
+## undoの永続化
+
+ファイルを閉じると変更履歴が消えてしまうので、一度ファイルを閉じて開き直したら閉じる前に行ったundo操作は
+  
+できないけど、これをできるように設定する。
+  
+- undoファイルを保存するディレクトリを準備
+
+```
+> mkdir ~/.vim/undo
+```
+
+<br />
+  
+- 下記内容を.vimrcに追加
+  
+```
+if has('persistent_undo')
+	let undo_path = expand('~/.vim/undo')
+	exe 'set undodir=' .. undo_path
+	set undofile
+endif  
+```
+
+<br />
+
+
+  
