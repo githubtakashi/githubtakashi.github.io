@@ -16,12 +16,12 @@ github pagesはマークダウンで編集できるのでメモとしても見�
 
 ### 2021-11-28 Todos
 
-- [] 応用情報の参考書
-- []青チャート
+- [x] 応用情報の参考書
+- [x]青チャート
 - []visual studio2005
 - [x] atcoder(再帰関数)
 - [x] C++クイックリファレンスを読む。
-- [] xcode
+- [x] xcode
 - [] visual studio2022
 - [x] vimの勉強
 
