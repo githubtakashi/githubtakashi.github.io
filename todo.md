@@ -19,7 +19,7 @@ github pagesはマークダウンで編集できるのでメモとしても見�
 - [] 応用情報の参考書
 - []青チャート
 - []visual studio2005
-- [] atcoder(再帰関数)
+- [x] atcoder(再帰関数)
 - [] C++クイックリファレンスを読む。
 - [x] xcode
 - [] visual studio2022
