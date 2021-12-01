@@ -883,7 +883,7 @@ children.at(4).push_back(5)となり、4の行に5が代入される。
   
 i=6となる。6 > N=5なのでループを抜ける。
   
-以上で親組織と子組織の一覧が得られるが、この一覧は各ノードに左右に紐づく子となる。
+以上で親組織と子組織の一覧が得られるが、この一覧は木構造の各ノードに左右に紐づく子となる(下記の表を参照)。
   
 | x | children.at(x) |
 | :--: | :----- |
@@ -905,7 +905,68 @@ vector<vector<int>> children(N);  // ある組織の子組織の番号一覧  //
   }
 ```
 
+次は、子組織一覧のchildren配列を使ってトップ組織の0に報告書が届くまでの時間を算出し出力する。
 
+0に報告書が届くまでの時間を求める関数名をcomplete_timeとする。                        
+                        
+コードは下記のようになる。
+
+```
+// 0番の組織の元に報告書が揃う時刻を求める
+  cout << complete_time(children, 0) << endl;                        
+```
+
+
+以上でmain関数の流れが完成したので、complete_time関数を実装していく。
+
+main関数の外側に下記のコードを作成する。                                            
+
+```
+// x番の組織について、子組織からの報告書が揃った時刻を返す
+// childrenは組織の関係を表す2次元配列(参照渡し)
+int complete_time(vector<vector<int>> &children, int x) {
+  // (ここに追記して再帰関数を実装する)
+}                                            
+```                                          
+
+- complete_time関数の戻り値
+
+- complete_time関数の引数
+
+- 処理内容
+  
+以上を決める。
+
+まず、返り値は時間なのでint型になる。
+
+引数は、children配列、再帰ステップで使う整数の２つ。
+
+children配列の方は参照渡しとする。整数の方はint型のxとする。
+
+処理内容は、children.at(x)によって再帰ステップで子組織一覧の行ごとの報告書を届ける時間を算出する。
+
+ベースケースと補助関数
+  
+complete_time(children, 0)
+
+complete_time(children, 1)
+
+complete_time(children, 2)
+  
+complete_time(children, 3)
+
+complete_time(children, 4)
+  
+complete_time(children, 5)  
+  
+childrenのデータを使って報告書が届く時刻を求める方法を考える。
+  
+children.at(0)は{1, 2}が入っている。
+
+children.at(1)は{3, 4}が入っている。
+  
+children.at(4)は{5}が入っている。
+  
 
 
 
