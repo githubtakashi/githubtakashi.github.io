@@ -64,3 +64,7 @@ Thinkpad, Arch Linux, Windowsが好きで、
 - note｜150記事以上作成 SEO10位以内の上位記事もあり: [note](https://note.com/noabou)
 - twitter｜毎日更新: [twitter](https://twitter.com/noaboucoffee)
 - zenn.dev | [zenn](https://zenn.dev/katsuo)
+
+---
+
+<a class="twitter-timeline" href="https://twitter.com/noaboucoffee?ref_src=twsrc%5Etfw">Tweets by noaboucoffee</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
