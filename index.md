@@ -67,4 +67,8 @@ Thinkpad, Arch Linux, Windowsが好きで、
 
 ---
 
-<a class="twitter-timeline" href="https://twitter.com/noaboucoffee?ref_src=twsrc%5Etfw">Tweets by noaboucoffee</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<a class="twitter-timeline" data-lang="ja" 
+data-limit="5"
+data-width="600"
+data-lang="ja"
+data-dnt="true" href="https://twitter.com/noaboucoffee?ref_src=twsrc%5Etfw">Tweets by noaboucoffee</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
