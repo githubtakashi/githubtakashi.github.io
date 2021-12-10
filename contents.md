@@ -34,6 +34,8 @@
 
 - [Defxについてのメモ](defxmemo.md)
 
+- [windows terminalの設定メモ](winterminal.md)
+
 ---
 
 
