@@ -36,6 +36,8 @@
 
 - [windows terminalの設定メモ](winterminal.md)
 
+- [starshipの導入メモwindows](starship.md)
+
 ---
 
 
