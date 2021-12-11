@@ -38,6 +38,8 @@
 
 - [starshipの導入メモwindows](starship.md)
 
+- [nvimのメモwindows](nvim.md)
+
 ---
 
 
