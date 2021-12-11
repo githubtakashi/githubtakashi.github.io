@@ -116,6 +116,19 @@ yankやddした文字はレジスタに保存されている。
 Pip Installs Packpagesの略で、
 pythonのパーケージを管理するパッケージマネージャのこと。
 
+python3がvimで有効になっているかを確認する。
+
+:echo has('python3')で1ならpythonが有効な状態。0なら無効となっているので  
+有効にする必要がある。
+
+### python3をvimで有効にする方法
+
+vimrc、nvimならinit.vimファイルに下記のようにpython3のパスを指定する。
+
+```
+let g:python3_host_prog = 'C:\Python310\python.exe'
+```
+
 Arch linuxでpip3をインストールする方法
 
 ```
@@ -133,6 +146,11 @@ pip3 install --user pynvim
 ```
 
 --userオプションをつけることで、ユーザーレベルのディレクトリにインストールされる。
+
+※windowsならpynvimがインストールされていなかったらこのコマンドを実行してインストールしてくれ  
+といったメッセージが出るのでそのメッセージをコピペしてインストールする。
+
+
 
 
 
