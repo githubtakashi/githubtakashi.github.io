@@ -79,6 +79,73 @@ int main()
 
 クラス名と同じhヘッダーファイルとcppファイルが作成される。
 
+ヘッダーファイルにクラスの関数や変数の名前と型の定義(プロトタイプ宣言)を書き、  
+ソースファイルのcppファイルに処理の実装を書くのが標準的な作成方法。
+
+<br />
+
+### プロトタイプ宣言の効果
+
+.hヘッダーファイルは、関数のプロトタイプを宣言。プロトタイプ宣言することで、必要なパラメーターとそれから返される  
+戻り値の型をコンパイラに事前に知らせておける。
+
+<br />
+
+### 単純なソースコードの場合はコンストラクタとデストラクタは省略できる
+
+コンストラクタとデストラクタは単純なクラスでは省略してもコンパイラが自動的に作成してくれる仕組みとなっている。
+
+<br />
+
+### ファイルは細かい単位で分けたほうがよい
+
+ファイルはなるべく複数のファイルに分けたほうがメンテナンス性がよい。
+
+<br />
+
+### ヘッダーファイルからソースファイルにクラスを追加
+
+ヘッダーファイルにクラス定義を書いた時点では、ソースファイルにまだクラスを作成していないのでクラス名の下に  
+波線が表示される。クラス名の単語にマウスカーソルのポインターをフォーカスする。  
+すると、ねじみたいな表示が出るので、そこで"Create definition of 'Calculate' in Calculator.cpp  
+calculator.cpp で 'Calculate' の定義を作成"を選択する。
+
+![classadd2](https://user-images.githubusercontent.com/43819429/146159101-d09a7b98-d10f-4534-ba2b-3b4262bbee8e.png)
+
+
+すると、cppのソースファイルにCalculateクラスが自動的に追記される。
+
+![calculateクラスの追加](https://user-images.githubusercontent.com/43819429/146160942-4830ecd6-c9a2-4a01-b9c2-d2a4258e7bb1.png)
+
+<br />
+
+### Calculateクラスにソースコードを記載する
+
+Calculator.cppにCalculateクラスの実装としてswitch文で引数に渡された演算子に応じて  
+計算を行うソースコードを記載する。
+
+```
+#include "Calculator.h"
+
+double Calculator::Calculate(double x, char oper, double y)
+{
+	switch (oper)
+	{
+		case '+':
+			return x + y;
+		case '-':
+			return x - y;
+		case '*':
+			return x * y;
+		case '/':
+			return x / y;
+		default:
+			return 0.0;
+	}
+}
+```
+
+戻り値の型(クラスの型)をdouble型にしておくことで、小数と整数どちらの引数にも対応できる。
 
 
 
