@@ -147,5 +147,96 @@ double Calculator::Calculate(double x, char oper, double y)
 
 戻り値の型(クラスの型)をdouble型にしておくことで、小数と整数どちらの引数にも対応できる。
 
+### メイン関数に処理を追加する
+
+作成したCalculateクラスをメイン関数の中から呼び出し使う。
+
+```
+#include <iostream>
+#include "Calculator.h"
+
+using namespace std;
+
+int main()
+{
+	double x = 0.0;
+	double y = 0.0;
+	double result = 0.0;
+	char oper = '+';
+
+	cout << "Caluculator Console Application" << endl << endl;
+	cout << "Please enter the operation to perform. Format: a+b | a-b | a*b | a/b" << endl;
+	
+	Calculator c;
+	while (true) 
+	{
+		cin >> x >> oper >> y;
+		result = c.Calculate(x, oper, y);
+		cout << "Result is: " << result << endl;
+	}	
+	return 0;
+}
+```
+
+C++のプログラムは常にmain()関数から始まって、そこから他のコードを呼び出す必要がある。   
+#include ステートメントによってほかのコードを呼び出すことができる。
+
+Calculator c; はCalculatorクラスのインスタンスとしてcというオブジェクトを宣言。  
+このクラス自体(Calculatorクラス)は、電卓がどのように機能するかを示すただのブループリントにすぎない。  
+ブループリントから生成したオブジェクトcが実際に計算を実行する特定の電卓となる。
+
+whileの条件は単にtrueと指定しているため、常にtrueになり無限ループとなる。　　
+無限ループのプログラムを閉じるには、ユーザーが手動でコンソールウィンドウを閉じたらよい。
+それ以外の場合はプログラムは常に新しい入力を待機していることになる。
+
+プログラムをビルドしてデバッグなしで実行をすると、コンソールが立ち上がり入力が促されるので  
+入力すると計算がされ結果が表示される。
+
+![calculateresult](https://user-images.githubusercontent.com/43819429/146174554-5af146c1-bf98-49fc-882a-f2d28dfe94d8.png)
+
+<br />
+
+### 作成した電卓アプリをデバッグする
+
+ユーザが自由に入力できてしまう状態なので、ユーザが入力したデータが想定に収まるように改善が必要。  
+visual studioではプログラムを実行するかわりにデバッグして実行内容を詳細に確認することができる。
+
+<br />
+
+#### ブレークポイントの設定方法
+
+ブレークポイントを設定する。ブレークポイントを任意の行に設定すると、そこで処理が止まるように  
+なる。ブレークポイントは画像のようにグレーの縦線の部分をクリックするだけで設定できる。  
+赤い点がブレークポイント。
+
+![breakpoint](https://user-images.githubusercontent.com/43819429/146176810-e685ef0e-91db-4b21-bc98-01facbcddbeb.png)
+
+特定の条件に当てはまるときだけ実行を一時停止させたいときは、条件付きのブレークポイントを設定する。
+
+ブレークポイントの赤丸を右クリックし "条件" を選択。 
+条件の編集ボックスに "(y == 0) && (oper == '/')" と入力し"閉じる"ボタンを選択。
+
+以上によりゼロで除算したときだけブレークポイントで処理がストップするようになる。
+
+デバッグを開始するには、"ローカル Windowsデバッガー"をクリック。  
+するとコンソールアプリが立ち上がるので、任意の計算を入力。
+
+y == 0 && oper == /でゼロ除算を入力したときだけ処理がブレークポイントで止まる。
+
+例えば1/0と入力した場合は、"自動"ウィンドウに処理が止まった時の変数の値が表示される。
+
+![debug](https://user-images.githubusercontent.com/43819429/146244312-40887164-8d6e-4eb3-b8e7-743826a325b6.png)
+
+コード内の変数にマウスカーソルのポインターをフォーカスすると、実行が一時停止されている現在の値を確認することもできる。 
+
+
+
+
+
+
+
+
+
+
 
 
