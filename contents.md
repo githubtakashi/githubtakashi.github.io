@@ -10,6 +10,8 @@
 
 - [visualStudio2022を使っていくためのメモ](visualstudio2022.md)
 
+- [c++の勉強メモ](cpp.md)
+
 - [xcodeの勉強メモ](xcodememo.md)
 
 - [vimのメモ](vimmemo.md)
