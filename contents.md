@@ -44,6 +44,8 @@
 
 - [nvimのメモwindows](nvim.md)
 
+- [retro pieのメモ](retropie.md)
+
 ---
 
 
