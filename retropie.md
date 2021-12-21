@@ -44,6 +44,8 @@ retropieの起動は"emulationstation"というコマンドでretropieが起動�
 sambaというパッケージでディレクトリ共有ができ、外部からromデータを入れることができるので便利。
 
 
+"Configuration/Tools" の"samba - Configure Samba ROM Shares" を選択。"Install RetroPie Samba shares" を選択.
 
+Sambaと共有ディレクトリの設定が行われる。
 
 
