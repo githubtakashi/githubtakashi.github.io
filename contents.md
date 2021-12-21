@@ -46,6 +46,8 @@
 
 - [retro pieのメモ](retropie.md)
 
+- [sshについてのメモ](ssh.md)
+
 ---
 
 
