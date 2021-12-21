@@ -324,3 +324,14 @@ value->m_description = nullptr;
 - [ムーブコンストラクタ｜ムーブセマンティクスやコンテナ高速化との関係](https://marycore.jp/prog/cpp/move-constructor/)
 
 - [関数のdefault／delete宣言](https://cpprefjp.github.io/lang/cpp11/defaulted_and_deleted_functions.html)
+
+---
+
+## スマートポインタとは
+
+まだ勉強するには早いかもしれないけどスマートポインタという機能をメモ。
+
+C++11から追加された機能で、newしたあとにdeleteを忘れてメモリ領域が解放されないままとなってしまう  
+ことを防止できる機能。詳細は下記リンクで勉強する。
+
+[スマートポインタについての参考になるqiitaの記事](https://qiita.com/hmito/items/db3b14917120b285112f)
