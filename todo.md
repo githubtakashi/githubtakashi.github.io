@@ -157,6 +157,7 @@ visual studio2022でgitを使っていく。プライベートリポジトリを
 
 **サブ**
 
+- ssh設定しpc間でssh接続できるようにする。
 - thinkpad t60 ubuntuにretro piをインストールしたので設定する。
 - Blenderをdell precisionとMacBookProにインストールしたのでYoutube参考に作ってみる。
 - NEC Express5800についてブログを作成
