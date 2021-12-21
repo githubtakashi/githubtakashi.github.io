@@ -48,6 +48,8 @@
 
 - [sshについてのメモ](ssh.md)
 
+- [sambaについてのメモ](samba.md)
+
 ---
 
 
