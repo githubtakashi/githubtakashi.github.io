@@ -50,6 +50,8 @@
 
 - [sambaについてのメモ](samba.md)
 
+- [応用情報の勉強メモ](ouyoujouhou.md)
+
 ---
 
 
