@@ -18,7 +18,7 @@ github pagesはマークダウンで編集できるのでメモとしても見�
 - [] 青チャート
 - [] atcoder(再帰関数)
 - [] visual studio2005
-- [] microsoftのコンテンツで勉強
+- [] microsoft learnのコンテンツで勉強
 - [] C++クイックリファレンスを読む。
 - [] xcode
 - [] go言語の勉強
