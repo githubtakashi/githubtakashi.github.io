@@ -1,18 +1,13 @@
 ## Katsuos Todo & Memo Page
 
-todoやメモをこのページに書いています。
-
-todo管理をgithub pagesのwebページ上で行うことで、
-
-PCや場所に依存せず編集・内容の確認ができます。
-
-github pagesはマークダウンで編集できるのでメモとしても見やすい状態で編集できます。
-
+日常のtodoやメモを書いています。  
+github pages(webページ)でtodo管理するとPCや場所に依存せず編集・内容の確認ができます。  
+github pagesはマークダウンで編集できるのでメモとしても見やすい状態で編集できます。  
 リリース時にhtmlに変換されるのでとても便利で使いやすいです。
 
 <br />
 
-### 2021-12-24 Todos
+### 2021-12-27 Todos
 
 - [] 応用情報の参考書
 - [] 青チャート
@@ -30,20 +25,15 @@ github pagesはマークダウンで編集できるのでメモとしても見�
 
 ***
 
-### 2021-12-24のtodo用memo
+### 2021-12-27のtodo用memo
 
 microsoftのコンテンツで勉強を進める。microsoftのアカウントにサインインして初級のコンテンツを進める。
 
 仕事の日は特に時間が少ないので、進捗に関係なく時間で区切って次のタスクに移る。  
-この量のタスクをさすがに1日でこなすとどれも短すぎる時間になってしまうので  
-数日に分けて残ったタスクを処理していく。
-
+この量のタスクを1日でこなすとどれも短すぎる時間になるので数日に分けて残ったタスクを処理していく。  
 応用情報および数学は基本セットとして毎日どちらかは進めるようにする。  
-例)x日：応用情報+xcode y日：数学+atcoder　
-
-todosが全部レ点が付くまで、応用情報と数学以外のtodosのチェックボックスは消さずに残しておく。
-
-このやり方の場合はtodoを全てtodosのところに記載しておかないといけないので記載しておく。
+例)x日：応用情報+xcode y日：数学+atcoder  
+todosが全部レ点が付くまで、応用情報と数学以外のtodosのチェックボックスは消さずに残しておく。  
 
 <br />
 
@@ -153,26 +143,23 @@ visual studio2022でgitを使っていく。プライベートリポジトリを
 - c++環境としてCMake、doxygen導入する。thinkpad x260、x220
 - visual studio2005でアプリつくり(thinkpad t42, t40p)
 - vim力アップ
-- golangの基礎をコツコツと積み上げておく
-- 応用情報技術の基礎。2022年春に受験する。
-- xcodeとswiftでのiOSアプリ作成進めてアプリ個人開発者の状態にもっていく。
-- gitの設定と使い方を覚えていく(github cliのhubインストしたので使い方を覚える)
+- golangの基礎をコツコツと勉強する。
+- 応用情報技術の基礎。2022年秋に受験する。
+- xcodeとswiftでのiOSアプリ作成進めてアプリ個人開発者になる。
+- gitの設定と使い方を覚える。
 
 **サブ**
 
 - ssh設定しpc間でssh接続できるようにする。
 - thinkpad t60 ubuntuにretro piをインストールしたので設定する。
 - Blenderをdell precisionとMacBookProにインストールしたのでYoutube参考に作ってみる。
-- NEC Express5800についてブログを作成
 - pyxelでゲームを作る(@thinkpad x1)
 - haskellをx220で勉強(install済)
 - マストドンで応用情報などのコミュニティを運営開始してみる。
 - dockerをthinkpad x1に入れてみたので使ってみる。
 - 買った技術書展の本を活用していく。
 - thinkpad x40でシェルスクリプト勉強
-- thinkpad t430sでudemyでフロントエンドもとりあえず当たり前として。html, css, javascript, wordpress,vuejs,reactjs...
 - thinkpad windows98,NT,ラズパイのpc98エミュレータでエクセルVBAやコマンドプロンプトでのコマンド
 - electronでメモアプリ作リ。古いpcだとまともに動いてくれないのでmbpで進める。
 - texを使ってnoteとgithub pagesの記事の数式を修正。texの基本を勉強する。
 - thinkpad235の活用としてperlとrubyのプログラムを書きつつ勉強する。
-- キーボードやthinkpadの記事を作成する。OSについての記事も。導入したソフトの記事も。一太郎やvisul studio2005。
