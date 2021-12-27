@@ -1,3 +1,14 @@
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+ tex2jax: {
+ inlineMath: [['$', '$'] ],
+ displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+ }
+ });
+</script>
+
 # 応用情報技術の勉強ノート
 
 応用情報の勉強ノートを書いていく。  
@@ -14,7 +25,7 @@
 
 論理和はOR, 論理積はAND, 排他的論理和はXORまたはEOR, 論理否定はNOT。
 
-論理和はx+y, 論理積はx・y, 排他的論理和はx⊕y,論理否定はxバー(latexなどであとで書く)
+論理和はx+y, 論理積はx・y, 排他的論理和はx$\oplus$y,論理否定はx$\lnot$
 
 <br />
 
