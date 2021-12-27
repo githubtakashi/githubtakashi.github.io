@@ -120,7 +120,19 @@ gistで生成したurlをnoteの記事の中にペーストすると数式が
 
 | 名称 | 演算子 | TEX記法 |
 | ---- | ---- |  ----|
-| 和集合 | $X \cup Y$ | \(X \cup Y\) |
-| 積集合 | $\X \cap Y\$ | \(A \cap B\) |
-| 補集合 | $\(\overline{A}\)$ | \(\overline{A}\) |
+| 和集合 | $X \cup Y$ | X \cup Y |
+| 積集合 | $X \cap Y$ | A \cap B |
+| 補集合 | $\overline{A}$ | \overline{A} |
+| 空集合 | $\emptyset$ | \emptyset |
+
+ド・モルガンの法則の書き方
+
+\overline{A \cup B}=\overline{A}\cap\overline{B}
+
+$\overline{A \cup B}=\overline{A}\cap\overline{B}$
+
+
+
+
+
 
