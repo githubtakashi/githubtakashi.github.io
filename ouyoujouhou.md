@@ -246,6 +246,8 @@ $\overline{(x + y)} = \overline{x} \cdot \overline{y}$
 
 xとyの否定論理積：$\overline{(x AND y)} = \overline{(x \cdot y)}$を"x NAND y"と表記する。
 
+NANDはnot andで、論理積の否定のこと。
+
 このとき、論理式 "(x NAND x) NAND (y NAND y)"を展開しわかりやすく簡略化する。
 
 1) $x NAND x = \overline{(x \cdot x)} = \overline{x} + \overline{x} = \overline{x}$ (ド・モルガンの法則),(同一の法則)  
@@ -254,6 +256,31 @@ xとyの否定論理積：$\overline{(x AND y)} = \overline{(x \cdot y)}$を"x N
 1),2)により、与式(x NAND x) NAND (y NAND y) = $\overline{x} NAND \overline{y}$  
 $=\overline{(\overline{x} \cdot \overline{y})} = \overline{\overline{x}} + \overline{\overline{y}}$ (ド・モルガンの法則)  
 $= x + y$ (論理否定の論理否定なので元にもどる)  
+
+<br />
+
+### カルノー図法
+
+複雑な論理和の論理式を簡略化するために利用される表のこと。
+
+式の各変数の値と出力が分かるようになっている。
+
+| AB\CD | 00 | 01 | 11 | 10 |
+| ---- | ---- | ---- | ---- | ---- |
+| 00 | 1 | 0 | 0 | 1 |
+| 01 | 0 | 1 | 1 | 0 |
+| 11 | 0 | 1 | 1 | 0 |
+| 10 | 0 | 0 | 0 | 0 |
+
+縦はAB, 横はCDのとる値を表している。  
+AB=00は、A=0,B=0の値をとるという意味で、0は偽、1は真を表している。  
+
+例) AB=00, CD=00の交わるセルの出力は1となっている。  
+ここから式を読み取ることが必要となる。  
+A,B,C,D=0のときABCDの論理積が出力1になるので、A,B,C,Dは全て1であることが分かる。
+なので、$\overline{A} \cdot \overline{B} \cdot \overline{C} \cdot \overline{D}$  
+がAB=00,CD=00,出力1という表の情報から読み取れる式となる。
+
 
 
 
