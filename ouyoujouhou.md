@@ -224,6 +224,40 @@ x,yのすべての取りうる値で3)が成立する。
 
 **3)の吸収法則を覚えておき、そこから4)は3)の論理演算子をすべて逆にしたものとして覚えておく。**
 
+<br />
+
+#### ド・モルガンの法則
+
+論理演算にもド・モルガンの法則が使える。
+
+$\overline{(x \cdot y)} = \overline{x} + \overline{y}$
+
+左辺の論理否定、論理積の全部逆にしたものが右辺になる。
+
+<br />
+
+$\overline{(x + y)} = \overline{x} \cdot \overline{y}$
+
+左辺の論理否定、論理積の全部逆にしたものが右辺になる。
+
+<br />
+
+### 複雑な論理演算式の簡略化
+
+xとyの否定論理積：$\overline{(x AND y)} = \overline{(x \cdot y)}$を"x NAND y"と表記する。
+
+このとき、論理式 "(x NAND x) NAND (y NAND y)"を展開しわかりやすく簡略化する。
+
+1) $x NAND x = \overline{(x \cdot x)} = \overline{x} + \overline{x} = \overline{x}$ (ド・モルガンの法則),(同一の法則)  
+2) $y NAND y = \overline{(y \cdot y)} = \overline{y} + \overline{y} = \overline{y}$ (ド・モルガンの法則),(同一の法則)  
+
+1),2)により、与式(x NAND x) NAND (y NAND y) = $\overline{x} NAND \overline{y}$  
+$=\overline{(\overline{x} \cdot \overline{y})} = \overline{\overline{x}} + \overline{\overline{y}}$ (ド・モルガンの法則)  
+$= x + y$ (論理否定の論理否定なので元にもどる)  
+
+
+
+
 
 
 
