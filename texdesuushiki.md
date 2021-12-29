@@ -124,6 +124,12 @@ gistで生成したurlをnoteの記事の中にペーストすると数式が
 | 積集合 | $X \cap Y$ | A \cap B |
 | 補集合 | $\overline{A}$ | \overline{A} |
 | 空集合 | $\emptyset$ | \emptyset |
+| 集合の要素 | $\in$ | \in |
+| 集合の要素 | $\ni$ | \ni |
+| 集合の要素でない | $\notin$ | \notin |
+| 部分集合 | $\subset$ | \subset |
+| 部分集合 | $\supset$ | \supset |
+
 
 ド・モルガンの法則の書き方
 
