@@ -129,6 +129,9 @@ gistで生成したurlをnoteの記事の中にペーストすると数式が
 | 集合の要素でない | $\notin$ | \notin |
 | 部分集合 | $\subset$ | \subset |
 | 部分集合 | $\supset$ | \supset |
+| 補集合 | $A^c$ | A^c |
+| 差集合 | $\setminus$ | \setminus |
+
 
 
 ド・モルガンの法則の書き方
