@@ -400,39 +400,72 @@ $S1 \cup (S2 \cap S3) = (S1 \cup S2) \cap (S1 \cup S3)$
 
 ##### 吸収則
 
+集合演算の吸収則は論理演算の吸収法則と同じ考え方。集合の概念で吸収則を理解しようとすると大変なので、  
+論理演算の吸収則の方をちゃんと理解しといたら大丈夫。
 
+$S1 \cap (S1 \cup S2) = S1$  
+$S1 \cup (S1 \cap S2) = S1$  
+記号が変わるだけなのでどちらか一つを覚えておくだけでいい。
 
+$S1 \cap (\overline{S1} \cup S2) = S1 \cap S2$  
+$S1 \cup (\overline{S1} \cap S2) = S1 \cup S2$  
+記号が変わるだけなのでどちらか一つを覚えておくだけでいい。
 
+<br />
 
+##### 補元則
 
+補元則は論理演算で考えなくても集合の概念で意味をそのままイメージしやすい。
 
+$S \cup \overline{S} = Ω$  
+$S \cap \overline{S} = \emptyset$
 
+<br />
 
+##### ド・モルガンの法則
 
+集合のド・モルガンの法則も論理演算で考えると等式が成り立つ理由がわかりやすい。
 
+$\overline{(S1 \cap S2)} = \overline{S1} \cup \overline{S2}$  
+$\overline{(S1 \cup S2)} = \overline{S1} \cap \overline{S2}$
 
+<br />
 
+#### 複雑な集合演算の式をかんたんにする
 
+複雑な集合演算はベン図で考えると余計にわかりにくくなるので論理演算で考えて簡単に整理する。
 
+例：
 
+$X = (\overline{A} \cap \overline{B}) \cup (\overline{A} \cap B) \cup (A \cap \overline{B})$を整理する。
 
+$X = (\overline{A} \cap \overline{B}) \cup (\overline{A} \cap B) \cup (A \cap \overline{B})$
 
+// 第1項と第2項に分配則を適用(分配則の右辺側のパターンなので分配則の左辺側に変換)。  
+$= \overline{A} \cap (\overline{B} \cup B) \cup (A \cap \overline{B})$ 
 
+// $(\overline{B} \cap B)$は全体集合なので1となる。  
+$= \overline{A} \cup (A \cap \overline{B})$  
 
+$\overline{A} \cap (\overline{B} \cup B)$は$\overline{A}$と1の積集合なので論理積と同じ。  
+ということは、$\overline{A} \cdot 1$なので、この出力値は$\overline{A}$がとる値そのものなので  
+省略できるから$\overline{A} \cup (A \cap \overline{B})$となる。
 
+以上で$X = (\overline{A} \cap \overline{B}) \cup (\overline{A} \cap B) \cup (A \cap \overline{B})$  
+が$X = \overline{A} \cup (A \cap \overline{B})$と簡単に整理できた。
 
+ここで、$\overline{A} \cup (A \cap \overline{B})$に対して吸収則が使えるように工夫をする。  
+吸収則を適用することでもっと簡単に整理する。
 
+$X = \overline{A} \cup (A \cap \overline{B})$の$\overline{A} = S1$, $\overline{B} = S2$とおくと、
 
+$X = S1 \cup (\overline{S1} \cap S2) = S1 \cup S2$ //吸収則
 
+ここで、S1とS2をもとに戻すと、$\overline{A} \cup \overline{B}$
 
+さらにド・モルガンの法則を適用し、$\overline{A} \cup \overline{B} = \overline{A \cap B}$
 
-
-
-
-
-
-
-
+以上のように、複雑な集合演算の式を簡略化できた。
 
 
 
