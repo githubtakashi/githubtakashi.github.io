@@ -7,14 +7,14 @@ github pagesはマークダウンで編集できるのでメモとしても見�
 
 <br />
 
-### 2022-01-01 Todos
+### 2022-01-02 Todos
 
 - [] 応用情報の参考書
 - [] 青チャート
 - [] atcoder(再帰関数)
 - [] visual studio2005
 - [] microsoft learnのコンテンツで勉強
-- [] C++クイックリファレンスを読む。
+- [x] C++クイックリファレンスを読む。
 - [] xcode
 - [] go言語の勉強
 - [] vimの勉強
@@ -25,7 +25,7 @@ github pagesはマークダウンで編集できるのでメモとしても見�
 
 ***
 
-### 2022-01-01のtodo用memo
+### 2022-01-02のtodo用memo
 
 microsoftのコンテンツで勉強を進める。microsoftのアカウントにサインインして初級のコンテンツを進める。
 
@@ -162,7 +162,8 @@ gitでソースコードをgithubにアップロードする。ローカルで�
 #### サブ
 
 - sshについて勉強しssh接続できるようにする。
-- ファイルサーバーを勉強のため構築する。
+- ubuntuでsambaでファイルサーバーを勉強のため構築する。
+- ファイルサーバー構築できたらubuntu serverでサーバー構築する。
 - thinkpad t60 ubuntuにゲームのためのretro piをインストールしたので設定する。
 - Blenderをdell precisionとMacBookProにインストールしたのでYoutube参考に作ってみる。
 - pyxelでゲームを作る(@thinkpad x1)
