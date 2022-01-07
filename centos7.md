@@ -116,3 +116,11 @@ $ sudo systemctl set-default graphical.target
 
 以上で再起動するとグラフィカルなログイン画面が立ち上がり、ログインするとデスクトップ環境となる。
 
+<br />
+
+### Athlon 1core cpuは検証未
+
+centos7はAthlonの1coreのcpuは動作検証していないといったワーニングメッセージが表示されるけど、  
+動作はしているので様子見とする。
+
+
