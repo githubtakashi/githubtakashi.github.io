@@ -540,8 +540,38 @@ AVL木はどの左右のノードについても深さの差が1以下という�
 
 B木は1つのノードに複数の値を格納した木構造。キーとなる値に対しての大小を比較して子のノードに値を振り分ける。
 
+<br />
 
+### 練習問題 | 論理演算
 
+nビットの値L1, L2があり、次の操作によって得られる値L3はL1とL2に対するどの論理演算の結果と同じかを答える。
+
+操作  
+1) L1とL2のビットごとの論理和をとって変数Xに記憶する。
+2) L1とL2のビットごとの論理積をとって更に否定をとって変数Yに記憶する。
+3) XとYのビットごとの論理積をとって結果をL3とする。
+
+解答  
+1)$X = L1 + L2$  
+
+2)$Y = \overline{(L1 \cdot L2)}$
+
+3)$L3 = X \cdot Y$
+
+ここで、Yにドモルガンの法則を使う。  
+$Y = \overline{(L1 \cdot L2)} = \overline{L1} + \overline{L2}$
+
+$L3 = (L1 + L2) \cdot (\overline{L1} + \overline{L2})$  
+右辺を展開する。　
+
+$= ((L1 + L2) \cdot \overline{L1}) + ((L1 + L2) \cdot \overline{L2})$  
+$= (L1 \cdot \overline{L1} + L2 \cdot \overline{L1}) + (L1 \cdot \overline{L2} + L2 \cdot \overline{L2})$  
+ここで、$L1 \cdot \overline{L1} = 0$, $L2 \cdot \overline{L2} = 0$なので  
+$= L2 \cdot \overline{L1} + L1 \cdot \overline{L2}$  
+$= L1 \cdot \overline{L2} + L2 \cdot \overline{L1}$  
+これはベン図で考えると排他的論理和。
+
+以上から、排他的論理和が正解。
 
 
 
