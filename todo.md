@@ -7,13 +7,13 @@ todo管理をgithub pagesでしているのでPCや場所に依存せず編集�
 
 <br />
 
-### 2022-01-06 Todos
+### 2022-01-09 Todos
 
-- [] 応用情報の参考書
+- [x] 応用情報の参考書
 - [] 青チャート
 - [] atcoder(再帰関数)
 - [] visual studio2005
-- [] microsoft learnのコンテンツで勉強
+- [x] microsoft learnのコンテンツで勉強
 - [] C++クイックリファレンスを読む。
 - [] xcode
 - [] go言語の勉強
@@ -25,7 +25,7 @@ todo管理をgithub pagesでしているのでPCや場所に依存せず編集�
 
 ***
 
-### 2022-01-06のtodo用memo
+### 2022-01-09のtodo用memo
 
 応用情報の本の内容に対しノートを作成して進める。練習問題のところを進める。  
 会社ではiphoneで過去問を解く。
