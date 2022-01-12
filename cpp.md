@@ -339,3 +339,32 @@ C++11から追加された機能で、newしたあとにdeleteを忘れてメモ
 ことを防止できる機能。詳細は下記リンクで勉強する。
 
 [スマートポインタについての参考になるqiitaの記事](https://qiita.com/hmito/items/db3b14917120b285112f)
+
+<br />
+
+## 仮想継承
+
+多重継承で異なる2つ以上の親から同じメンバ名を継承しているときに、どの親のメンバなのか判断ができなくなる問題を解決  
+できるのが仮想継承。
+
+
+仮想継承の例：
+
+```
+struct Base {
+  virtual ~Base() {}
+  virtual void method();
+};
+
+struct Derived1 : virtual Base {}; //Derived1はBaseから仮想継承
+struct Derived2 : virtual Base {}; //Derived2はBaseから仮想継承
+struct Derived3 : Derived1, Derived2 {}; //多重継承
+
+Derived3 obj;
+
+obj.method(); //仮想継承によりBase::method();が呼ばれる。
+```
+
+<br />
+
+
