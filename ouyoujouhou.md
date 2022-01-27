@@ -1142,6 +1142,8 @@ ${}nCr \cdot r! = {}nPr$になり、これより
 ${}nCr　= \frac{nPr}{r!} = \frac{n(n-1)...(n-r+1)}{r(r-1)...3 \cdot 2 \cdot 1}$が成り立つ。
 
 また、${}nPr = \frac{n!}{(n-r)!}$より、
+JP
+9+
 
 ${}nCr = \frac{{}nPr}{r!} = \frac{n!}{(n-r)!} \cdot \frac{1}{r!} = \frac{n!}{r!(n-r)!}$
 
@@ -1149,7 +1151,6 @@ ${}nCr = \frac{{}nPr}{r!} = \frac{n!}{(n-r)!} \cdot \frac{1}{r!} = \frac{n!}{r!(
 
 となり、組み合わせの公式が証明される。
 
-こおおおう
 
 
 
