@@ -1105,7 +1105,7 @@ acのときac, ca.
 組み合わせの公式：  
 
 ${}nCr$  
-$= \frac{{}nPr}{r!}$  
+$= \frac{nPr}{r!}$  
 $= \frac{n(n-1)...(n-r+1)}{r(r-1)...3 \cdot 2 \cdot 1}$  
 $= \frac{n!}{r!(n-r)!}$
 
