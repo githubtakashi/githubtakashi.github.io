@@ -1207,7 +1207,7 @@ nekoくんが当たりを引くという事象の影響を受けていること�
 
 なぜ掛け算になるのかについては下記のリンクが分かりやすかったので参照。  
 確率が掛け算となるケースの証明は、直感的に掛け算と分かる感じではなく、結果的に分かる感じ。  
-(確率の掛け算になる理由を証明している記事)[https://hs-math.komaro.net/kakuritsu-jouhouteiri/]  
+[確率の掛け算になる理由を証明している記事](https://hs-math.komaro.net/kakuritsu-jouhouteiri/)  
 
 
 
