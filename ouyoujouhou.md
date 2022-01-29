@@ -1235,10 +1235,30 @@ PERTとは、Program Evaluation and Review Techniqueの略で、プロジェク�
 
 ### PDM
 
-PDMとは、
+PDMとは、Precedence Diagramming Methodの略で、優先順位ダイアグラム法の意味。  
+ダイアグラムとは、幾何学的な図示のこと。  
+プロジェクトなどの作業工程を表すネットワーク図の一つ。  
+依存関係にある2つの工程間の順序をFS,SS,SF,FFという4つの関係で定義している。  
 
+FS: Finish-to-Start 先行作業が終了したら後続作業が開始。
 
+SS: Start-to-Start 先行作業が開始すると後続作業も開始。
 
+SF: Start-to-Finish 先行作業が開始すると後続作業が終了。
+
+FF: Finish-to-Finish 先行作業が終了すると後続作業も終了。
+
+PERTとPDMの違い：  
+PERTでは先行作業の終了したら後続作業が開始するFSしか表現できないが、PDMだと  
+SS,SF,FFも表現できるので、より細かく日程計画を表現できる。
+
+![pdm](https://user-images.githubusercontent.com/43819429/151643649-5a9efb68-da65-47b6-b718-6ac20e8b40a4.png)
+
+ES: 最早開始日、EF: 最早終了日、LS: 最遅開始日、LF: 最遅終了日
+
+上記のように個々の作業を設定し、下記のような感じでダイアグラムを書く。
+
+![pdmimage](https://user-images.githubusercontent.com/43819429/151644932-07e01332-5643-4483-b353-c247a7c6f93a.png)
 
 
 
