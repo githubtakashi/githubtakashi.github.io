@@ -166,7 +166,10 @@ COMサーバーにCOMコンポーネントが格納されていて、外部か�
 
 ### ATL(Active Template Library)とは
 
-COM開発を簡単にするためのラッパーライブラリ。テンプレート。
+COM開発を簡単にするためのラッパーライブラリ。テンプレート。  
+ActiveXコントロールを作成するために使われることが多い。  
+ActiveXコントロールはマイクロソフトが開発した機能で、Webサイトでビデオやゲームなどのコンテンツを提供できる小さなアプリ。  
+Webを閲覧するときにツールバーや株価表示などのコンテンツを操作することもできる。
 
 <br /> 
 
@@ -467,17 +470,21 @@ UUIDとはuniversally unique identifierの略。ソフトフェア上でオブ�
 
 <br />
 
-### define STRICT
-
-STRICT を <Windows.h> をインクルードする前に定義しておくとHANDLEの扱いが厳密になる。新しいvisual studioでは  
-宣言しなくてもデフォルトで有効になっている。昔は宣言する必要があった。
-
-<br />
-
 ### HANDLE
 
 Windowsの持っているリソースを表すための型。ウィンドウならHWND、デバイスコンテキストならHDCというように  
 それぞれ専用の型があり、それの総称をHANDLEと呼ぶ。
+
+<br />
+
+## COMサーバーのヘッダーファイル
+
+comサーバーのヘッダーファイルに書かれている内容を下記に書いていく。
+
+### define STRICT
+
+STRICT を <Windows.h> をインクルードする前に定義しておくとHANDLEの扱いが厳密になる。新しいvisual studioでは  
+宣言しなくてもデフォルトで有効になっている。昔は宣言する必要があった。
 
 <br />
 
@@ -495,23 +502,83 @@ _WIN32_WINNTは、コードがサポートするオペレーティングシス�
 
 ウィンドウズのバージョンは下記のような定数が存在する。
 
-
-// _WIN32_WINNT version constants
-//
-#define _WIN32_WINNT_NT4                    0x0400 // Windows NT 4.0
-#define _WIN32_WINNT_WIN2K                  0x0500 // Windows 2000
-#define _WIN32_WINNT_WINXP                  0x0501 // Windows XP
-#define _WIN32_WINNT_WS03                   0x0502 // Windows Server 2003
-#define _WIN32_WINNT_WIN6                   0x0600 // Windows Vista
-#define _WIN32_WINNT_VISTA                  0x0600 // Windows Vista
-#define _WIN32_WINNT_WS08                   0x0600 // Windows Server 2008
-#define _WIN32_WINNT_LONGHORN               0x0600 // Windows Vista
+```
+// _WIN32_WINNT version constants  
+//  
+#define _WIN32_WINNT_NT4                    0x0400 // Windows NT 4.0  
+#define _WIN32_WINNT_WIN2K                  0x0500 // Windows 2000  
+#define _WIN32_WINNT_WINXP                  0x0501 // Windows XP  
+#define _WIN32_WINNT_WS03                   0x0502 // Windows Server 2003  
+#define _WIN32_WINNT_WIN6                   0x0600 // Windows Vista  
+#define _WIN32_WINNT_VISTA                  0x0600 // Windows Vista  
+#define _WIN32_WINNT_WS08                   0x0600 // Windows Server 2008  
+#define _WIN32_WINNT_LONGHORN               0x0600 // Windows Vista  
 #define _WIN32_WINNT_WIN7                   0x0601 // Windows 7
 #define _WIN32_WINNT_WIN8                   0x0602 // Windows 8
 #define _WIN32_WINNT_WINBLUE                0x0603 // Windows 8.1
 #define _WIN32_WINNT_WINTHRESHOLD           0x0A00 // Windows 10
 #define _WIN32_WINNT_WIN10                  0x0A00 // Windows 10
 // . . .
+```
+
+<br />
+
+### define _ATL_ATTRIBUTES
+
+ATLプログラミングに役立つ属性を使えるようにするための宣言。
+
+<br />
+
+### define _ATL_APARTMENT_THREADED
+
+マクロによるコンパイラオプションの設定で、特定のコンパイラ機能を制御するための  
+マクロの宣言。1つ以上のオブジェクトでアパートメントスレッド処理を使用する場合に宣言。  
+
+<br />
+
+### define _ATL_NO_AUTOMATIC_NAMESPACE
+
+マクロによるコンパイラオプションの設定で、特定のコンパイラ機能を制御するための  
+マクロの宣言。ATLを既定の名前空間として使用しないためのシンボル。  
+このシンボルが定義されていない場合はatlbase.hを含め既定で名前空間ATLを使用して実行され、名前付けの競合が発生する可能性がある。  
+これを防ぐためにこのシンボルを定義する。
+
+<br />
+
+### include <atlbase.h>
+
+ATLをインクルードするためのヘッダーファイル。
+以下、"atl"の付くヘッダーファイル名はアプリケーションにATLのサポートを加えるためのもの。
+
+<br />
+ 
+### include <atlcom.h>
+
+ATLをインクルードするためのヘッダーファイル。
+
+<br />
+
+### include <atlwin.h>
+
+ATLをインクルードするためのヘッダーファイル。
+
+<br />
+
+### include <atltypes.h>
+
+ATLをインクルードするためのヘッダーファイル。
+
+<br />
+
+### include <atlctl.h>
+
+ATLをインクルードするためのヘッダーファイル。
+
+<br />
+
+### include <atlhost.h>
+
+ATLをインクルードするためのヘッダーファイル。
 
 <br />
 
@@ -635,11 +702,6 @@ visual c++のプロジェクトのcppファイルにデフォルトで書かれ�
   
 <br />
 
-## atlbase.hヘッダーファイルとは
-
-ATLをインクルードするためのヘッダーファイル。
-  
-<br />
 
 
   
