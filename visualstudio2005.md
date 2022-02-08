@@ -598,6 +598,53 @@ ATLをインクルードするためのヘッダーファイル。
 IDLはinterface definition languageの略で、インターフェイスとタイプライブラリの定義を含むファイルはIDLファイルとよび、.idlファイル名拡張子が付いている。  
 IDLファイルは、ネットワーク上のアプリケーションのインターフェイス特性(クライアントとサーバー間のデータの送信方法、またはCOM オブジェクト間のデータの送信方法)を指定する。
 
+あるプログラム言語のソースファイルの中にIDL特有の仕様でインターフェースの情報を記述する形式で書く。
+
+```
+//MyServer.cpp fileの中身
+//IObject1
+[
+  object,
+  uuid("103FF...."),
+  dual,
+  helpstring("IObject1 Interface"),
+  pointer_default(unique)
+]
+__interface IObject1 : IDispatch
+{
+  HRESULT GetANum([out, retval]int* pInt);
+};
+//CObject1
+[
+  coclass,
+  threading(apartment),
+  vi_progid("MyServer.Object1.1"),
+  version(1.0),
+  uuid("15615...."),
+  helpstring("Object1 Class")
+]
+class ATL_NO_VTABLE CObject1 :
+  public IObject1
+{
+public:
+  CObject1()
+  {
+  }
+  HRESULT GetANum(int* pInt){
+    *pInt = 101;
+    return S_OK;
+  }
+  DECLARE_PROTECT_FINAL_CONSTRUCT()
+  HRESULT FinalConstruct()
+  {
+    return S_OK;
+  }
+  
+  void FinalRelease()
+  {
+  }
+};
+```
 <br />
 
 ### module属性(COM)
