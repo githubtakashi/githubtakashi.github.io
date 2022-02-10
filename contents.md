@@ -4,6 +4,8 @@
 
 コンテンツのまとめページ
 
+- [応用情報の勉強メモ](ouyoujouhou1.md)
+
 - [Linuxやプログラミングのエラー｜普通に分からないことにメモを活用する](howtomemo.md)
 
 - [visualStudio2005を使っていくためのメモ](visualstudio2005.md)
@@ -49,8 +51,6 @@
 - [sshについてのメモ](ssh.md)
 
 - [sambaについてのメモ](samba.md)
-
-- [応用情報の勉強メモ](ouyoujouhou.md)
 
 - [centos7のインストールからサーバー構築まで](centos7.md)
 
