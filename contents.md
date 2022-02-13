@@ -4,7 +4,9 @@
 
 コンテンツのまとめページ
 
-- [応用情報の勉強メモ](ouyoujouhou1.md)
+- [応用情報の勉強メモ1page](ouyoujouhou1.md)
+
+- [応用情報の勉強メモ2page](ouyoujouhou2.md)
 
 - [Linuxやプログラミングのエラー｜普通に分からないことにメモを活用する](howtomemo.md)
 
