@@ -413,3 +413,13 @@ sort(s.begin(), s.end, c1); //value1_の値でソート
 sort(s.begin(), s.end, c2); //value2_の値でソート
 ```
 
+value1_,value2_はint型なので、比較演算子"<"により、小さい値が左、大きい値が右となり、  
+結果として小さい順に並ぶ。
+
+bool operator()...のところはbool型を返す。  
+正常に処理してtrue、正常に処理できない場合はfalseを返す。  
+もし比較演算子の左側と右側が同じ数値だと、return l.value2_ < r.value2_;と処理できないので  
+falseが返され、ソートできない。
+
+
+
