@@ -3,14 +3,21 @@
 プログラマー・アプリ個人開発者になるために勉強しています。
 
 情報学部への入学を目指して受験勉強も進めています。
+こちらはしばらく進んでないですが見直して進めます。
 
 ---
 
 ## 今日の予定やメモ
 
+進めるタスクとそれについてのメモを書いています。
+
 - 今日の[todoやメモ](todo.md)
 
+<br />
+
 ## github pagesのメモやコンテンツ
+
+作成した記事やノートはコンテンツ集としてまとめています。
 
 - [contents](contents.md)　
 
@@ -20,9 +27,9 @@
 
 note, twitter, zenn.dev
 
-- note｜150記事以上作成 SEO10位以内の上位記事もあり: [note](https://note.com/noabou)
-- twitter｜毎日更新: [twitter](https://twitter.com/noaboucoffee)
-- zenn.dev | 少しだけコンテンツあり：[zenn](https://zenn.dev/katsuo)
+- note｜150記事以上作成 SEO10位以内の記事もいくつかあります: [note](https://note.com/noabou)
+- twitter｜ほぼ毎日更新: [twitter](https://twitter.com/noaboucoffee)
+- zenn.dev | お試しでzennにも少しだけコンテンツ作成しています：[zenn](https://zenn.dev/katsuo)
 
 ---
 
