@@ -380,3 +380,36 @@ c++ではoperator() という演算子を付与する。
 
 標準ライブラリで関数オブジェクトが多く使われている。  
 
+```
+//構造体Sを定義
+struct S {
+  int value1_;
+  int value2_;
+};
+
+//構造体Sを型として配列sを定義
+vector<S> s;
+
+//Sのvalue1_を比較するクラス
+//<演算子でvalue1_の値の小さい順にソート
+struct comp1 {
+  bool operator()(const S& l, const S& r) const {
+    return l.value1_ < r.value1_;
+  }
+};
+
+//Sのvalue2_を比較するクラス
+//<演算子でvalue1_の値の小さい順にソート
+struct comp2 {
+  bool operator()(const S& l, const S& r) const {
+    return l.value2_ < r.value2_;
+  }
+};
+
+comp1 c1; //c1は関数オブジェクト
+comp2 c2; //c2も関数オブジェクト
+
+sort(s.begin(), s.end, c1); //value1_の値でソート
+sort(s.begin(), s.end, c2); //value2_の値でソート
+```
+
