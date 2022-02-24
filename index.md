@@ -1,4 +1,7 @@
-# Katsuoとは？
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7136536804767411"
+     crossorigin="anonymous"></script>
+
+# 個人開発エンジニアを目指すKatsuoの勉強ブログ
 
 プログラマー・アプリ個人開発者になるために勉強しています。
 
