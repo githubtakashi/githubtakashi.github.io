@@ -593,3 +593,10 @@ constexpr int v = 100;
 
 <br />
 
+## ラムダ式
+
+ラムダ式の記法を使うと、簡単に関数オブジェクトを定義できる。ラムダ式の計算結果を他の関数の引数に渡して使ったりする。  
+ラムダ式の説明は[リファレンス](https://cpprefjp.github.io/lang/cpp11/lambda_expressions.html)が分かりやすい。
+
+
+
