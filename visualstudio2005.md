@@ -671,14 +671,14 @@ idlファイル内のインターフェイスをデュアルインターフェ�
 デュアルインターフェースとは、c++と、c++以外のスクリプト言語のどちらからもCOMサーバーを利用できるよう対応した  
 インターフェースのことで、IDispatchから派生したもの。
 
-デュアルインターフェース自体の意味がなかなかググっても見つからなかったけど[こちらの記事](https://ichigopack.net/win32com/com_dual_1.html)で説明されていて助かった。
+デュアルインターフェース自体の意味がなかなかググっても見つからなかったけど[こちらの記事](https://ichigopack.net/win32com/com_dual_1.html)で説明されている。
 
 helpstring属性:  
-helpstringにインターフェースの名称を設定しておくと、IDEでこの名称が表示される。カーソルホバーで表示されたりする。
+helpstringにインターフェースの名称を設定しておくと、IDEのGUIで名称が表示される。ツールチップやカーソルホバーで表示されたりする。
 
 pointer_default属性:  
 インターフェイスの引数で使用するポインタのデフォルトの属性(機能、挙動)を定義する。  
-pointer_default(属性)という使い方。どの属性を定義するかによってポインターの挙動が違ってくる。  
+pointer_default(属性)という使い方。どの属性を定義するかによってポインターの機能が違ってくる。  
 引数に渡す属性は3種類ほどある。ref,ptr,unique。  
 refは参照ポインタ属性、prtはフルポインタ属性、uniqueはユニーク属性
 
@@ -686,10 +686,27 @@ refは間接参照の機能を持ったポインタ。
 uniqueは、あるメモリに対する所有権を持つポインタが、ただ一つであることを保証するようなポインタ。<-多分。  
 ptrは、C言語のポインタ機能を備えたポインタのこと。  
 
+__interface属性:  
+下記のように使う。
+
+```
+modifier __interface interface-name {interface-definition};
+```
+
+サンプルコードではIObject1という名前のインターフェースを定義している。  
+{}の中にインターフェースの定義を書く。
+
+```
+__interface IObject1 : IDispatch
+{
+  HRESULT GetANum([out, retval]int* pInt);
+};
+```
+
 module属性:  
 .idlファイルのライブラリブロックを定義するための属性。  
 
-例)
+module属性の例：
 
 ```
 [ module (type=dll, name=string, version=1.0, uuid=uuid, lcid=integer, control=boolean, helpstring=string, helpstringdll=string, helpfile=string, helpcontext=integer, helpstringcontext=integer, hidden=boolean, restricted=boolean, custom=string, resource_name=string,) ];
