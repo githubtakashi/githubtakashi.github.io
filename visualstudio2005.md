@@ -550,7 +550,7 @@ ATLプログラミングに役立つ属性を使えるようにするための�
 
 <br />
 
-### define _ATL_NO_AUTOMATIC_NAMESPACE
+### define __AUTOMATIC_NAMESPACE
 
 マクロによるコンパイラオプションの設定で、特定のコンパイラ機能を制御するための  
 マクロの宣言。ATLを既定の名前空間として使用しないためのシンボル。  
@@ -673,7 +673,7 @@ idlファイル内のインターフェイスをデュアルインターフェ�
 
 デュアルインターフェース自体の意味がなかなかググっても見つからなかったけど[こちらの記事](https://ichigopack.net/win32com/com_dual_1.html)で説明されている。
 
-helpstring属性:  
+helpstring属性:   
 helpstringにインターフェースの名称を設定しておくと、IDEのGUIで名称が表示される。ツールチップやカーソルホバーで表示されたりする。
 
 pointer_default属性:  
@@ -715,6 +715,12 @@ inは呼び出す時に（前）に引数データをマーシャリングする
 outは呼び出し先から戻る時に引数データをマーシャリングする。
 
 <br />
+
+coclass属性:  
+生成されたidlファイルにcoclassコンストラクトを配置する。  
+coclassを定義するときにuuid,version,threading,vi_progid属性をセットで指定する。
+
+
 
 module属性:  
 .idlファイルのライブラリブロックを定義するための属性。  
