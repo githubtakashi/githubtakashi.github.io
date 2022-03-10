@@ -720,7 +720,10 @@ coclass属性:
 生成されたidlファイルにcoclassコンストラクトを配置する。  
 coclassを定義するときにuuid,version,threading,vi_progid属性をセットで指定する。
 
-
+ATL_NO_VTABLE属性:  
+ATL(Active Template Library)はCOMオブジェクトを簡単に作成できる  
+Visua C++用のテンプレートライブラリ。  
+COMインターフェースなのでvtableへのアクセスが不要なので、ATL_NO_VTABLE属性をつける。  
 
 module属性:  
 .idlファイルのライブラリブロックを定義するための属性。  
@@ -867,7 +870,13 @@ visual c++のプロジェクトのcppファイルにデフォルトで書かれ�
   
 <br />
 
+## VTableとは
 
+クラスのポインターが与えられ、そのポインターから仮想関数を呼び出すとき、  
+継承関係を考慮した上で適切なクラスのメンバ関数を呼び出せる仕組み。
+  
+
+  
 
   
   
