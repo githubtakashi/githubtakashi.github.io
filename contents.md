@@ -56,6 +56,8 @@
 
 - [centos7のインストールからサーバー構築まで](centos7.md)
 
+- [manjaro linuxでサーバー構築するためのメモ](linuxserver.md)
+
 ---
 
 
