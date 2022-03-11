@@ -598,5 +598,58 @@ constexpr int v = 100;
 ラムダ式の記法を使うと、簡単に関数オブジェクトを定義できる。ラムダ式の計算結果を他の関数の引数に渡して使ったりする。  
 ラムダ式の説明は[リファレンス](https://cpprefjp.github.io/lang/cpp11/lambda_expressions.html)が分かりやすい。
 
+<br />
 
+## プリプロセッサ
+
+プリプロセッサはコンパイルの前に前処理を行う機能。  
+前処理とは、ファイルの読み込み、マクロの処理、条件付き取り込みの範囲設定など。  
+
+ファイルの読み込み：  
+#include命令や__has_include命令。  
+"__has_include"命令を使うと、ソースファイルが存在したら読み込むという動作が可能になる。
+
+例)
+
+```
+#if __has_include(<fileName>)
+    #include <fileName>
+#endif
+```
+
+マクロの定義：  
+#define/#undef。マクロはプリプロセッサによって文字列を置換する。  
+マクロにはオブジェクト形式マクロと関数形式マクロがあり、どっちもマクロが使用された箇所で文字列の置換のみをする。
+
+オブジェクト形式マクロの使用例)  
+
+```
+//オブジェクト形式マクロの定義
+#define DEFAULT_COFFEE_VOLUME 150 
+...
+const int defaultCoffeeVolume = DEFAULT_COFFEE_VOLUME;
+//プリプロセッサによって置換される↓
+//const int defaultCoffeeVolume =　150; 
+```
+ソースコードの中でDEFAULT_COFFEE_VOLUMEという文字列を使うとプリプロセッサが150で置換してくれる。  
+
+<br />
+
+関数形式マクロの使用例)
+
+```
+//関数形式マクロの定義
+#define ADD(VAL) VAL + VAL
+...
+
+//マクロの使用
+const int result = ADD(1);
+
+//プリプロセッサによって置換される↓
+//const int result = 1 + 1;
+...
+//マクロの削除
+//削除を明示しない場合はソースファイルの終端までマクロが有効
+#undef ADD
+```
 
