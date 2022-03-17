@@ -185,6 +185,8 @@ RISC(Reduced Instruction Set Computer):
 命令の並行度とデータの並行度に着目したコンピュータ・アーキテクチャの分類として4種類がある。  
 SISD,SIMD,MISD,MIMDの4つで、この分類方法はフリンの分類(フリンは名付けたひとの名前)と呼ばれている。
 
+[この記事がわかりやすかった](https://basics.k-labo.work/2017/10/11/%E4%B8%A6%E5%88%97%E5%87%A6%E7%90%86/)ので参照する。
+
 ### SISD
 
 SISDはSingle Instruction, Single Data streamの略。  
@@ -198,4 +200,15 @@ SIMDはSingle Instruction, Multiple Data streamsの略。
 命令列は一つだけど、それを複数のデータストリームに適用するコンピュータと考えるとイメージしやすい。  
 画像、音声、動画などマルチメディア処理に使われることが多い。
 
+### MISD
 
+MISDはMultiple Instruction, Single Data streamの略。  
+命令列が複数あって、それを一つのデータストリームに適用するコンピュータで、採用している実例が少ないアーキテクチャ。  
+多数の機能ユニットが同じデータに対して異なる操作を同時にする。
+
+### MIMD
+
+MIMDはMultiple Instruction, Multiple Data streamsの略。  
+複数の異なる命令と、それぞれ異なる複数のデータストリームがあって、それを複数のプロセッサがそれぞれ走らせる、同時並行処理。  
+複数のSISDが同時並行で動いているイメージ。  
+最近のマルチコアPCは、マルチコアによってアプリケーション単位に分散して処理している。
