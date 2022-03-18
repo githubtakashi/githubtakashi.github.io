@@ -58,6 +58,8 @@
 
 - [manjaro linuxでサーバー構築するためのメモ](linuxserver.md)
 
+- [perlの勉強メモ](perlstudy.md)
+
 ---
 
 
