@@ -60,6 +60,8 @@
 
 - [perlの勉強メモ](perlstudy.md)
 
+- [windowsのパッケージマネージャのwingetを使うためのメモ](winget.md)
+
 ---
 
 
