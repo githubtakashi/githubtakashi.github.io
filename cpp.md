@@ -653,3 +653,29 @@ const int result = ADD(1);
 #undef ADD
 ```
 
+<br />
+
+### オペランドの文字列化
+
+関数マクロの仮引数に#を付加すると、マクロに渡された実引数を文字列にできる。
+
+```
+#define TO_STRING(a) #a
+//上記マクロの呼び出し(実引数として文字列"hello"を渡している)
+const char* str = TO_STRING(hello);
+//下記のように展開される
+//const char* str = "string"
+```
+
+### マクロ仮引数の連結
+
+関数マクロの仮引数は##によって連結できる。
+
+```
+#define CONCATENATE(a, b) a##b
+//関数マクロに実引数を渡して呼び出し
+CONCATENATE(Hello, World)
+//下記の結果が得られる
+//HelloWorld
+```
+
