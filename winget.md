@@ -15,6 +15,12 @@ winget install <パッケージ名>
 
 など、aptみたいに使える。
 
+```
+> winget
+```
+とだけ入力し実行すると、使い方が表示される。
+
+[詳しい使用方法](https://docs.microsoft.com/ja-jp/windows/package-manager/winget/?msclkid=754254dcaa2711ec9d8de897d55e2bc9)は公式の情報を確認する。
 
 
 
