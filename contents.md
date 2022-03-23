@@ -62,6 +62,8 @@
 
 - [windowsのパッケージマネージャのwingetを使うためのメモ](winget.md)
 
+- [windowsでllvmを利用したc++開発環境を作るためのメモ](llvm.md)
+
 ---
 
 
