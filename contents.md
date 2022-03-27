@@ -64,6 +64,8 @@
 
 - [windowsでllvmを利用したc++開発環境を作るためのメモ](llvm.md)
 
+- [静的サイトジェネレータHexoを使うためのメモ](hexodeblog.md)
+
 ---
 
 
