@@ -760,6 +760,39 @@ VTableを利用することで防ぎ、適切な仮想関数を参照してく�
 
 <br />
 
+
+### DECLARE_PROTECT_FINAL_CONSTRUCT
+
+FinalConstructで内部の集計されるオブジェクトによって参照カウントが増やされ、カウントが0に減らされても、  
+オブジェクトが削除されないように保護するための集計マクロ。
+
+```
+DECLARE_PROTECT_FINAL_CONSTRUCT()
+  HRESULT FinalConstruct()
+  {
+    return S_OK;
+  }
+```
+HRESULT FinalConstruct()：  
+派生クラスでこのメソッドをオーバーライドして、オブジェクトに必要な初期化を実行できる。  
+正常に実行できたらS_OKをリターンする(return 0;よりも意味合いが分かりやすいのでS_OKを使っている)。  
+エラーだとHRESULT型のエラー値がリターンされる。
+
+<br />
+
+
+### void FinalRelease()
+
+オブジェクトのメモリ解放をする。
+
+```
+ void FinalRelease()
+  {
+  }
+```
+
+<br />
+
 ### ストレージクラス
 
 変数や定数のデータを格納したメモリ領域をオブジェクトと呼ぶ。  
