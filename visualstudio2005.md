@@ -606,8 +606,17 @@ IDLファイルは、ネットワーク上のアプリケーションのイン�
 あるプログラム言語のソースファイルの中に、IDL仕様の書き方でインターフェースの情報を記述することで定義する形式で書く。  
 "[]"の中に記述することが特徴。
 
+## サーバーオブジェクトを実装したソースファイルを作成する
+
+ファイル名をMyServer.cppとする
+
 ```
 //MyServer.cpp fileの中身
+#include "MyIncludes.h"
+
+[ module(dll, name = "MyServer", helpstring = "MyServer 1.0 Type Library") ];
+[ emitdl ];
+
 //IObject1
 [
   object,
@@ -727,6 +736,8 @@ COMインターフェースなのでvtableへのアクセスが不要なので�
 
 module属性:  
 .idlファイルのライブラリブロックを定義するための属性。  
+module属性を使うと、COMインプロセスサーバーに必要な機能を実装する手間が省ける。  
+また、idlファイルまたはdefファイル(サーバーの関数をエクスポートするファイル)を記述する必要がない。
 
 module属性の例：
 
@@ -792,6 +803,13 @@ HRESULT FinalConstruct()：
 ```
 
 <br />
+
+## COMサーバーアプリケーションをビルド
+
+ヘッダーファイルのMyIncludes.hとCOMサーバーオブジェクトのMyServer.cppを作成したら、ビルドをして
+COMサーバーオブジェクトをwindowsに登録する。
+
+
 
 ### ストレージクラス
 
