@@ -679,3 +679,14 @@ CONCATENATE(Hello, World)
 //HelloWorld
 ```
 
+<br />
+
+### cerrは標準エラー出力
+
+coutは標準出力、cerrは標準エラー出力で使う。
+
+<br />
+
+### スレッドローカル変数とは
+
+
