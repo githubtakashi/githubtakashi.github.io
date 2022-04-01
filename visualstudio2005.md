@@ -809,6 +809,54 @@ HRESULT FinalConstruct()：
 ヘッダーファイルのMyIncludes.hとCOMサーバーオブジェクトのMyServer.cppを作成したら、ビルドをして
 COMサーバーオブジェクトをwindowsに登録する。
 
+```
+> cl /LD MyServer.cpp
+> regsvr32 MyServer.dll
+```
+
+## テスト用のクライアントアプリケーションを作成
+
+作成したCOMサーバーがちゃんと使えるかを確認するため、作成したCOMサーバーを利用するクライアントアプリケーションを  
+作成する。
+
+ファイル名：  
+クライアントアプリケーションのファイル名はComtest.cppとする。
+
+```
+//Comtest.cpp
+#include <iostream>
+#include "atlbase.h"
+#import "vc80.tlb" no_namespace
+using namespace std;
+int main()
+{
+    CoInitialize(NULL);
+    {
+        CComPtr<IUnknown> spUnknown;
+            spUnknown.CoCreateInstance(__uuidof(CObject1));
+        CComPtr<IOblect1> pI;
+        spUnknown.QueryInterface(&pI);
+        int res = 0;
+        res = pI->GetANum();
+        cout << res << endl;
+    }
+    CoUninitialize();
+}
+```
+
+クライアント側でCOMサーバーの正しい動作を認識するために、#importキーワードを使って、作成したCOMサーバーのタイプライブラリを  
+インポートする。インポートすることで、作成したCOMサーバーの機能を使えるようになる。
+
+COMサーバーを作成するときにコンパイラによって生成されたタイプライブラリの名前は、"vc80.tlb"なのでこのファイルをインポートする。
+
+```
+#import "vc80.tlb" no_namespace
+```
+
+no_namespace属性を付けることで、コンパイラがインポートしたvc80.tlbタイプライブラリの名前空間を生成しないことを指定できる。
+
+インポートしたCOMサーバーのインスタンスを使うときは、CoInitialize()とCoUninitialize()をセットで宣言する必要がある。
+(コンストラクタとデストラクタ)
 
 
 ### ストレージクラス
