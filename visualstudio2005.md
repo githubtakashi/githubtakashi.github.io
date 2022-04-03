@@ -994,14 +994,77 @@ ActiveX コントロールはCOM:Component Object Modelに基づく再利用可�
 <br />
   
 ## ActiveXコントロールの作成(ウィザードを利用)
+
+ActiveXコントロールを作成する手順を書いていく。  
+プロジェクト名は"MyAxCtrl"とする。  
   
-Visual C++のIDEでATLプロジェクトウィザードを使用してプロジェクトを作成する。  
-ファイルメニューの新規作成→プロジェクトをクリック。  
-visual c++プロジェクトをクリック、テンプレートペインのATLプロジェクトをクリック。  
-プロジェクト名を入力しokをクリック。すると、ATLプロジェクトウィザードが表示される。  
-属性のチェックボックスとDLLをオンにして完了をクリックするとプロジェクトが生成され、    
+### Visual C++のIDEでATLプロジェクトウィザードを使用してプロジェクトを作成
+
+"ファイル"メニューの"新規作成"→"プロジェクト"をクリック。  
+"visual c++プロジェクト"をクリック、テンプレートペインの"ATLプロジェクト"をクリック。  
+"プロジェクト名"を入力しokをクリック。すると、ATLプロジェクトウィザードが表示される。  
+"属性"のチェックボックスと"DLL"をオンにして完了をクリックするとプロジェクトが生成され、    
 ActiveXコントロールのコンテナとなるvisual c++のDLLプロジェクトが生成される。
 
+### ATLコントロールコンポーネントをプロジェクトに追加
+
+"クラスの追加"ダイアログボックスでは、visual c++のIDEプロジェクトに追加するいろんなコンポーネントが  
+フレームワークとして提供されている。
+  
+ATLコントロールコンポーネントもそのひとつで、"クラスの追加"で利用できる。
+
+ソリューションエクスプローラでプロジェクト名の"MyAxCrtl"を右クリックし、"追加"→"クラスの追加"をクリック。  
+クラスの追加ダイアログボックスが表示される。  
+カテゴリーで"ATL"をクリックし、"ATLコントロール"をダブルクリックすると、"ATLコントロールウィザード"が表示される。  
+"短い名前"に"MyCtl"と入力し、"完了"をクリックすると、MyAxCtrlプロジェクトにATLコントロールが追加される。  
+追加によって、ヘッダーファイルとcppファイルが生成される。
+  
+//MyCtl.h  
+  
+```
+//MyCtl.h : CMyCtlの宣言
+#pragma once
+#include "resource.h" //メインシンボル
+#include <atlctl.h>
+
+#if defined(_WIN32_WCE) && !defined(_CE_DCOM) && !defined(_CE_ALLOW_SINGLE_THREADED_OBJECTS_IN_MTA)
+#error "DCOMの完全サポートを含んでいないWindows MobileプラットフォームのようなWindows CEプラットフォームでは、単一スレッドCOMオブジェクトは正しくサポートされていません。ATLが単一スレッドCOMオブジェクトの作成をサポートすること、およびその単一スレッドCOMオブジェクトの実装の仕様を許可することを強制するには、_CE_ALLOW_SINGLE_THREADED_OBJECTS_IN_MTAを定義してください。ご使用のresファイルのスレッドモデルは'free'に設定されており、DCOM Windows CE以外のプラットフォームでサポートされる唯一のスレッドモデルと設定されていました。"
+#endif
+
+//CMyCtl
+[
+  coclass,
+  control,
+  default(IMyCtl),
+  threading(apartment),
+  vi_progid("MyAxCtrl.MyCtl"),
+  progid("MyAxCtrl.MyCtl.1"),
+  version(1.0),
+  uuid("804A28DB-6768-42B0-AD2A-0C326CB489F7"),
+  helpstring("MyCtl Class"),
+  support_error_info(IMyCtl),
+  registration_script("control.rgs")
+]
+class ATL_NO_VTABLE CMyCtl :
+  public IMyCtl,
+  public IPersistStreamInitImpl<CMyCtl>,
+  public IOleControlImpl<CMyCtl>,
+  public IOleObjectImpl<CMyCtl>,
+  public IOleInPlaceActiveObjectImpl<CMyCtl>,
+  public IViewObjectExImpl<CMyCtl>,
+  public IOleInPlaceObjectWindowlessImpl<CMyCtl>,
+  public IPersistStorageImpl<CMyCtl>,
+  public ISpecifyPropertyPagesImpl<CMyCtl>,
+  public IQuickActivateImpl<CMyCtl>,
+#ifndef _WIN32_WCE
+  public IDataObjectImpl<CMyCtl>,
+#endif
+  public IProvideClassInfo2Impl<&__uuidof(CMyCtl), NULL>,
+#ifdef _WIN32_WCE // コントロールを正常に読み込むのにWindows CE上にIObjectSaftyが必要
+  public IObjectSaftyImpl<CMyCtl, INTERFACESAFE_FOR_UNTRUSTED_CALLER>,
+#endif
+  public CComControl<>CMyCtl>
+```
 
   
 
