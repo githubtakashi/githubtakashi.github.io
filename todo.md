@@ -7,10 +7,9 @@ github pagesはマークダウンで編集できるのでメモとしても見�
 
 <br />
 
-### 2022-04-01 Todos
+### 2022-04-05 Todos
 
 - [] 応用情報の参考書
-- [] 応用情報の午後問題の参考書
 - [] 数学
 - [] visual studio 2005でCOMサーバー作成の勉強
 - [] c++ポケットリファレンスの内容を勉強
@@ -146,8 +145,6 @@ gitでソースコードをgithubにアップロードする。ローカルで�
 
 - vimmerになる
 - Blenderをdell precisionとMacBookProにインストールしたのでYoutube参考に作ってみる。
-- haskellをx220で勉強(install済)
 - 買った技術書展の本を活用していく。
 - thinkpad windows98,NT,ラズパイのpc98エミュレータでエクセルVBAやコマンドプロンプトでのコマンド
 - thinkpad235の活用としてperlとrubyのプログラムを書きつつ勉強する。
-- express5800でlinuxサーバーを作成
