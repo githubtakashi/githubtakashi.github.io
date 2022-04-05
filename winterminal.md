@@ -30,3 +30,14 @@ uniformToFillにすると背景画像をターミナルの大きさに自動調�
 余白を設定できる。  
 padding: 8,8,8,8のような記述方法
 
+## opacity
+
+背景の透明度を設定できる。  
+"opacity": 80,
+"useAcrylic": false
+
+アクリル設定をfalseにすると背景が透ける。
+
+dell precision m6500ではアクリルになってなぜか透けなかった。GPUが古いか、解像度が低いため対応していないみたい。
+
+
