@@ -20,7 +20,7 @@
 
 ## github pagesのメモやコンテンツ
 
-作成した記事やノートはコンテンツ集としてまとめています。
+作成した記事やノートはcontentsとしてまとめています。
 
 - [contents](contents.md)　
 
@@ -30,7 +30,7 @@
 
 note, twitter, zenn.dev
 
-- note｜150記事以上作成 SEO10位以内の記事もいくつかあります: [note](https://note.com/noabou)
+- note｜150記事以上作成 SEO10位以内の記事もあります: [note](https://note.com/noabou)
 - twitter｜ほぼ毎日更新: [twitter](https://twitter.com/noaboucoffee)
 - zenn.dev | お試しでzennにも少しだけコンテンツ作成しています：[zenn](https://zenn.dev/katsuo)
 
