@@ -94,6 +94,8 @@ Linux OSでのいろいろな作業についてのノート。
 
 - [sshについてのメモ](ssh.md)
 
+- [kitty terminalを使うためのメモ](kitty.md)
+
 <br />
 
 ## github pagesについてのノート
