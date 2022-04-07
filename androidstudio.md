@@ -23,12 +23,16 @@ javaとkotlinのどっちがいいのか調べたらjavaのほうがまだ良さ
 
 [helloworldするチュートリアル](https://developer.android.com/training/basics/firstapp/creating-project?hl=ja)通り進める。
 
-マニフェストとは:  
+<br />
+
+### マニフェストとは  
+
 マニフェストという言葉自体の意味は、個人や団体が方針や意図を、広く多数のひとに向かって知らせるための文書や演説のこと。  
 AndroidManifest.xmlはアプリ作成で必要なファイルで、アプリケーションについての情報が記載されている。  
 マニフェストに記載された情報はAndroidシステムに提供される。なので、システムに知らせるための文書。
 
-エントリーポイントとは:  
+### エントリーポイントとは:
+
 すぐ忘れるので再度メモ。エントリーポイントとは、プログラムを実行するとき、プログラムやサブルーチンの実行を開始する場所のこと。  
 AndroidManifest.xml中のxx.category.LAUNCHER"の部分がエントリーポイント。
 
@@ -39,7 +43,27 @@ AndroidManifest.xml中のxx.category.LAUNCHER"の部分がエントリーポイ�
 グーグダウンロードしたアプリを使い始めるときにアイコンをタップする。  
 タップが引き金になり、上記タグ内のプログラムが呼ばれてアプリが動き出す。  
 
-Gradleとは:  
+app > java > com.example.myfirstapp > MainActivity.javaがエントリポイント。
+
+アプリをビルドして実行するとこのActivity(class)のインスタンスが起動してレイアウトが読み込まれる。
+
+### Gradleとは
+
 オープンソースビルド自動化システムのこと。
 
+### 主要なファイル
+
+app > res > layout > activity_main.xml　　
+アクティビティのUIのレイアウトを定義しているXMLファイル。  
+デフォルトでHello, World!というテキストを表示するTextView要素が含まれている。
+
+app > manifests > AndroidManifest.xml　　
+マニフェストファイルには、アプリの基本的な特徴やアプリの各コンポーネントが定義されている。
+
+Gradle Scripts > build.gradle  
+この名前を持つファイルは2 種類ある。1 つはプロジェクト用(Project: My_First_App)で、  
+もう1 つはアプリモジュール用（Module: My_First_App.app）。  
+モジュールごとにそれぞれ個別のbuild.gradleファイルが用意される。  
+現在のところ、このプロジェクトに含まれるモジュールは1つだけで、各モジュールのbuild.gradleファイルを使用して、  
+Gradleプラグインでアプリを作成する方法を制御する。
 
