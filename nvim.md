@@ -1,16 +1,100 @@
-## nvimのメモ
+# nvimを使うためのメモ
 
-windows環境にnvimをインストールしたのでメモ
+ubuntuでの作業
 
-vimrcに相当するファイルはinit.vim
+## linux版のbrewをインストールする
 
-### init.vimを準備するディレクトリ
+まずaptからだといろいろパッケージが古くて困ることが多いので、brewのlinux版の  
+[linuxbrewをインストール](https://docs.brew.sh/Homebrew-on-Linux)してbrewでパッケージをインストールする。
 
-C:\Users\ユーザ名\AppData\Local\nvim\init.vim
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-nvimディレクトリはデフォルトで存在しないので自分で作成する。
+```
 
-作成後nvimで:echo $MYVIMRCを実行すると上記のパスが表示される。
+続いて下記コマンドを実行
 
-これでパスがちゃんと有効なことを確認できる。
+```
+test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
+test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+test -r ~/.bash_profile && echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >>~/.bash_profile
+echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >>~/.profile
+```
+
+コマンドを実行した結果、~/.bash_profileと~/.profileが両方存在している場合、いらない方を削除しておく。
+
+.profileを使っていく場合は、下記コマンドを実行
+
+```
+source ~/.profile
+```
+
+pcを再起動したらubuntuでbrewコマンドがつかえるようになる。
+
+<br />
+
+## プラグインで使うためのpython管理
+
+pythonのバージョンを手軽に変更できる管理ツールであるpyenvをbrewでインストールする。
+
+```
+brew install pyenv
+//続いて下記を実施しパスを通したりする
+echo 'eval "$(pyenv init --path)"' >>~/.profile
+echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+source ~/.profile
+source ~/.bashrc
+```
+
+pyenvでインストールできるpythonを表示
+
+```
+pyenv install -l
+//インストール可能なバージョンが一覧表示される
+```
+
+任意のバージョンのpythonインストール
+
+```
+pyenv install 3.10.3
+```
+
+デフォルトで使うpythonのバージョンをセットする
+
+```
+pyenv global 3.10.3
+```
+
+pipenvのインストール
+
+```
+brew install pipenv
+```
+
+pipenvは[venv](https://e-words.jp/w/venv.html)とpythonのパッケージ管理のpipがセットになったツール。
+
+
+仮想環境専用のディレクトリをつくる。~/python_envs/nvimを作ってこのディレクトリ配下にpythonの仮想環境を  
+作るようにする。同時に、pythonのパスを通すようにする。  
+
+
+pipenvはデフォルトで1つのフォルダにすべての仮想環境がまとめられて、フォルダ名の中に乱数が入っていて環境によって乱数の数字が変わるため、  
+乱数が変わるたびに、neovimに対するpythonのpathが通らなくなり、neovimでpythonが使えないので、  
+その乱数に合致したパス名にpathを変更する必要があるため大変。  
+そのため、下記のコマンドを実行して仮想環境を仮想環境専用のフォルダの下に作るようにすることで、乱数の部分が固定の静的パスになるので、  
+乱数の影響を受けなくなる。あんまりこの辺はわかってないのであくまで推測。
+
+```
+echo 'export PIPENV_VENV_IN_PROJECT=true' >> ~/.bashrc
+source ~/.bashrc
+```
+
+仮想環境専用のディレクトリ~/python_envs/nvimの中で下記コマンドを実行し、  
+neovimに必要なpythonパッケージのpynvimをインストール。
+
+```
+pipenv install pynvim
+```
+
+以上によって、neovimが参照するpythonのpathは~/python_envs/nvim/.venv/bin/pythonとなる。
 
