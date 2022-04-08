@@ -57,6 +57,8 @@ vimmerになりたい。vimプラグインを開発できるようになりた�
 
 - [nvimのメモwindows](nvim.md)
 
+- [nvimの設定ファイルinit.luaの設定をするためのメモ](initlua.md)
+
 <br />
 
 ## Windows関係についてのノート
