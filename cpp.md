@@ -792,3 +792,53 @@ int main()
 error
 ```
 
+### 文字列
+
+c++における文字列型は3種類ある。  
+- c言語から継承しているcharなどの配列によって文字列とする文字列型  
+- charなどの文字列配列を抽象化したstd::basic_stringクラス  
+- 文字列を参照するstd::basic_string_viewクラス
+
+#### 文字列オブジェクト
+
+stringクラスを利用した文字列オブジェクトの例。
+
+```
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main(){
+        string a;
+        string b = "sample";
+        string c(b, 1, 3);//bの文字列の1文字目から3文字までの文字列オブジェクトを作成する
+        string d("sample", 2);//文字配列の先頭2文字を文字列オブジェクトとして作成する
+        string e(10, 't');//10文字分のtで文字列オブジェクトを作成する
+        string f = {'s', 'a', 'm', 'p', 'l', 'e'};//文字の初期化子リストから文字列オブジェクトを作成する
+        string g = b;//bの文字列オブジェクトをｇにコピーすることで文字列オブジェクトを作成する
+        string h0 = b;
+        string h = move(h0);//h0の文字列オブジェクトを左辺値のhにmove(hの*thisに移動)することで文字列オブジェクトを作成する
+        string i(b.begin(), b.end());//イテレータで指定された範囲から文字列オブジェクトを作成する
+
+        cout << "a:" << a << endl;
+        cout << "b:" << b << endl;
+        cout << "c:" << c << endl;
+        cout << "d:" << d << endl;
+        cout << "e:" << e << endl;
+        cout << "f:" << f << endl;
+        cout << "g:" << g << endl;
+        cout << "h:" << h << endl;
+        cout << "i:" << i << endl;
+}
+//出力結果
+a:
+b:sample
+c:amp
+d:sa
+e:tttttttttt
+f:sample
+g:sample
+h:sample
+i:sample
+```
