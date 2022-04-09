@@ -90,5 +90,29 @@ windows termnalで使うpowershellのプロファイルを読み込んで上記�
 
 [microsoftの記事でoh my poshという便利なプロンプト](https://docs.microsoft.com/ja-jp/windows/terminal/tutorials/custom-prompt-setup#customize-your-powershell-prompt-with-oh-my-posh)があって、記事を参照することで設定できる。
 
+## powershell coreを既定のターミナルに切り替えるときの設定
 
+既存のパワーシェルを使っていて、powershell coreの方を使った方がよいことを後から知って、インストールした。  
+インストールは、wingetコマンドで探し出せなかったので、chocoでインストールした。  
+windows terminalの設定でpowershell coreを既定にして起動すると、今まで使っていた普通のパワーシェル  
+はプロファイルが読み込まれて、oh my poshとchcp65001が有効になっているけど、powershell coreの方は  
+プロファイルが読み込まれない。powershell coreで$PROFILEを実行すると、プロファイルのパスが表示される  
+けど、ファイルは実は存在していないみたい(nvim $PROFILEとしてファイルを開くと空ファイルが表示されるため)で、  
+powershell core用に作成する必要があるみたい。ファイル名は全く同じで問題なさそう。 
+
+[microsoft](https://docs.microsoft.com/ja-JP/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-7.2)のドキュメントを見たら解決した。
+
+下記コマンドで新規にプロファイルのファイルを作成。  
+(現在のPowerShellホストアプリケーションで現在のユーザーのプロファイルを作成するコマンド)
+
+```
+//powershell coreで実行
+if (!(Test-Path -Path $PROFILE)) {
+  New-Item -ItemType File -Path $PROFILE -Force
+}
+```
+
+上記でプロファイルが作成されるので、nvim $PROFILEで開き、既に持っている普通のpowershell用のプロファイルの中身をコピペし保存する。
+
+以上でpowershell coreにもプロファイルが有効になり、既存のpowershellのプロファイル内容を引き続き使える。
 
