@@ -112,6 +112,18 @@ windows termnalで使うpowershellのプロファイルを読み込んで上記�
 
 [microsoftの記事でoh my poshという便利なプロンプト](https://docs.microsoft.com/ja-jp/windows/terminal/tutorials/custom-prompt-setup#customize-your-powershell-prompt-with-oh-my-posh)があって、記事を参照することで設定できる。
 
+プロファイルの設定内容は下記がよい(vim $PROFILEで編集)。  
+WT_PROFILE_IDという環境変数は、Windows Terminalの設定にあるプロファイルIDを表示する変数。
+
+```
+# プロファイル(Microsoft.PowerShell_profile.ps1)で設定を永続化
+if ($env:WT_PROFILE_ID) {
+    # Windows Terminalから実行されたときだけ変更する設定をここに記述する
+    Import-Module oh-my-posh
+    Set-PoshPrompt -Theme agnosterplus
+}
+```
+
 ## powershell coreを既定のターミナルに切り替えるときの設定
 
 既存のパワーシェルを使っていて、powershell coreの方を使った方がよいことを後から知って、インストールした。  
