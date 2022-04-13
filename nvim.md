@@ -46,6 +46,24 @@ source ~/.profile
 source ~/.bashrc
 ```
 
+windowsにpyenvをインストールする方法：  
+pythonの標準のパッケージ管理ツールのpipでインストールする(chocoでもできる)。  
+windowsの場合はpyenv-winというパッケージが推奨されている。
+
+```
+pip install pyenv-win --target %USERPROFILE%/.pyenv
+```
+
+%USERPROFILE%フォルダとは：  
+Windowsの一般のユーザーアカウントの場合、ユーザー環境変数USERPROFILEに  
+C:\USER\(アカウント名)のパスがセットされている。
+
+下記2つのパスを新規登録し、既存のPythonのパスがあれば、より上に設定する。
+
+%USERPROFILE%\.pyenv\pyenv-win\bin  
+%USERPROFILE%\.pyenv\pyenv-win\shims
+
+
 pyenvでインストールできるpythonを表示
 
 ```
