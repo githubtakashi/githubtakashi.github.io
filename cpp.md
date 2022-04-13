@@ -842,3 +842,42 @@ g:sample
 h:sample
 i:sample
 ```
+
+### std::boolalpha
+
+bool値を文字列として入出力することを指示するマニピュレータ。  
+streamの中でbool値の演算をすると結果をbool値として出力してくれる。
+
+マニピュレータとは、C++のストリームの形式を変えるための関数などのこと。
+マニピュレータはヘッダーファイルとして<ios>, <iomanip>とかがある。
+  
+boolalphaは上記ヘッダーファイル読まなくても使える。
+
+```
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    string a = "123";
+    string b = "123";
+
+    cout << boolalpha;
+
+    cout << "== : " << (a == b) << endl;
+    cout << "!= : " << (a != b) << endl;
+    cout << "< : " << (a < b) << endl;
+    cout << "<= : " << (a <= b) << endl;
+    cout << "> : " << (a > b) << endl;
+    cout << ">= : " << (a >= b) << endl;
+
+}
+//出力結果
+== : true
+!= : false
+< : false
+<= : true
+> : false
+>= : true
+```
