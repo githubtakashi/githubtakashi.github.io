@@ -51,18 +51,16 @@ pythonの標準のパッケージ管理ツールのpipでインストールす�
 windowsの場合はpyenv-winというパッケージが推奨されている。
 
 ```
-pip install pyenv-win --target %USERPROFILE%/.pyenv
+pip install pyenv-win --target .pyenv //userディレクトリに.pyenvディレクトリを作って中にインストールされる
 ```
 
-%USERPROFILE%フォルダとは：  
-Windowsの一般のユーザーアカウントの場合、ユーザー環境変数USERPROFILEに  
-C:\USER\(アカウント名)のパスがセットされている。
+下記2つのパスを新規登録し、既存のPythonのパスがあれば、それより上に設定する。
 
-下記2つのパスを新規登録し、既存のPythonのパスがあれば、より上に設定する。
+まずユーザの環境変数を作成： 変数名=PYENV パス=C:\Users\katsuo\.pyenv\pyenv-win
 
-%USERPROFILE%\.pyenv\pyenv-win\bin  
-%USERPROFILE%\.pyenv\pyenv-win\shims
-
+そしてユーザのpathに下記を追加。  
+%PYENV%\bin  
+%PYENV%\shims
 
 pyenvでインストールできるpythonを表示
 
