@@ -81,11 +81,20 @@ pyenv install 3.10.3
 pyenv global 3.10.3
 ```
 
-pipenvのインストール
+pipenvのインストール | ubuntuの場合
 
 ```
 brew install pipenv
 ```
+
+pipenvのインストール | windowsの場合
+
+```
+pip install --user pipenv //userオプションをつけることでuserディレクトリにインストールされる。
+```
+
+userオプションなしだと管理者権限の必要なpython本体のディレクトリにインストールされるので、  
+エラーがでる。
 
 pipenvは[venv](https://e-words.jp/w/venv.html)とpythonのパッケージ管理のpipがセットになったツール。
 
@@ -100,17 +109,47 @@ pipenvはデフォルトで1つのフォルダにすべての仮想環境がま�
 そのため、下記のコマンドを実行して仮想環境を仮想環境専用のフォルダの下に作るようにすることで、乱数の部分が固定の静的パスになるので、  
 乱数の影響を受けなくなる。あんまりこの辺はわかってないのであくまで推測。
 
+ubuntuの場合：
+
 ```
 echo 'export PIPENV_VENV_IN_PROJECT=true' >> ~/.bashrc
 source ~/.bashrc
+``` 
+
+windowsの場合：
+
+システムの詳細メニューで、環境変数を新規作成する。  
+変数名は、PIPENV_VENV_IN_PROJECT 値は、true
+
+ちゃんと設定が反映されているかを下記コマンドで確認できる。
+
+```
+Get-ChildItem env:PIPENV_VENV_IN_PROJECT
 ```
 
-仮想環境専用のディレクトリ~/python_envs/nvimの中で下記コマンドを実行し、  
+仮想環境専用のディレクトリ~/python_envs/nvimを作成し、その中で下記コマンドを実行し、  
 neovimに必要なpythonパッケージのpynvimをインストール。
 
 ```
 pipenv install pynvim
 ```
 
-以上によって、neovimが参照するpythonのpathは~/python_envs/nvim/.venv/bin/pythonとなる。
+以上によって、neovimが参照するpythonのpathは~/python_envs/nvim/.venv/bin/pythonとなる。 
+
+
+仮想環境のpathが知りたい場合は、下記コマンドで確認できる。
+
+```
+pipenv --venv
+```
+
+仮想環境の削除方法：
+
+```
+pipenv --rm
+```
+
+仮想環境でpipenv shellコマンドを実行すると、仮想環境のshellが立ち上がる。  
+nvimで使うだけなので使わないと思うけど、一応情報としてメモ。
+
 
