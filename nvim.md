@@ -35,7 +35,16 @@ pcを再起動したらubuntuでbrewコマンドがつかえるようになる�
 
 ## プラグインで使うためのpython管理
 
-pythonのバージョンを手軽に変更できる管理ツールであるpyenvをbrewでインストールする。
+pyenvとpipenvとnvm-windowsをインストールし設定していく。  
+pyenvはpythonのバージョンを簡単に切り替えるためのツール。  
+pipenvはpythonの仮想環境をつくるためのツール。
+nvm-windowsはnode.jsのバージョンを簡単に切り替えるためのツール。
+
+### pyenvのインストールと設定
+
+まずはpythonのバージョンを手軽に変更できる管理ツールであるpyenvをbrewでインストールする。
+
+#### ubuntuにpyenvをインストール
 
 ```
 brew install pyenv
@@ -46,7 +55,8 @@ source ~/.profile
 source ~/.bashrc
 ```
 
-windowsにpyenvをインストールする方法：  
+#### windowsにpyenvをインストール  
+
 pythonの標準のパッケージ管理ツールのpipでインストールする(chocoでもできる)。  
 windowsの場合はpyenv-winというパッケージが推奨されている。
 
@@ -81,31 +91,35 @@ pyenv install 3.10.3
 pyenv global 3.10.3
 ```
 
-pipenvのインストール | ubuntuの場合
+### pipenvのインストールと設定
+
+pipenvをインストールする。  
+pipenvは[venv](https://e-words.jp/w/venv.html)とpythonのパッケージ管理のpipがセットになったツール。
+
+#### ubuntuにpipenvをインストール
 
 ```
 brew install pipenv
 ```
 
-pipenvのインストール | windowsの場合
+#### windowsにpipenvをインストール
 
 ```
 pip install --user pipenv //userオプションをつけることでuserディレクトリにインストールされる。
 ```
 
-userオプションなしだと管理者権限の必要なpython本体のディレクトリにインストールされるので、  
-エラーがでる。
-
-pipenvは[venv](https://e-words.jp/w/venv.html)とpythonのパッケージ管理のpipがセットになったツール。
+userオプションなしだと管理者権限の必要なpython本体のディレクトリにpipenvパッケージが  
+インストールされるので、エラーがでる。
 
 
-仮想環境専用のディレクトリをつくる。~/python_envs/nvimを作ってこのディレクトリ配下にpythonの仮想環境を  
+### 仮想環境専用のディレクトリをつくる
+
+~/python_envs/nvimを作ってこのディレクトリ配下にpythonの仮想環境を  
 作るようにする。同時に、pythonのパスを通すようにする。  
 
-
 pipenvはデフォルトで1つのフォルダにすべての仮想環境がまとめられて、フォルダ名の中に乱数が入っていて環境によって乱数の数字が変わるため、  
-乱数が変わるたびに、neovimに対するpythonのpathが通らなくなり、neovimでpythonが使えないので、  
-その乱数に合致したパス名にpathを変更する必要があるため大変。  
+乱数が変わるたびにneovimに対するpythonのpathが通らなくなりneovimからpythonが使えるようにするために毎回neovimが参照するpythonのパスを  設定しないといけない(その乱数に合致したパス名にpathを変更する必要があるため大変)。  
+
 そのため、下記のコマンドを実行して仮想環境を仮想環境専用のフォルダの下に作るようにすることで、乱数の部分が固定の静的パスになるので、  
 乱数の影響を受けなくなる。あんまりこの辺はわかってないのであくまで推測。
 
@@ -128,14 +142,15 @@ Get-ChildItem env:PIPENV_VENV_IN_PROJECT
 ```
 
 仮想環境専用のディレクトリ~/python_envs/nvimを作成し、その中で下記コマンドを実行し、  
-neovimに必要なpythonパッケージのpynvimをインストール。
+neovimでプラグインを使用するときに必要なpythonパッケージのpynvimをインストール。
 
 ```
 pipenv install pynvim
 ```
 
-以上によって、neovimが参照するpythonのpathは~/python_envs/nvim/.venv/bin/pythonとなる。 
+以上によって、neovimが参照するpythonのpathは~/python_envs/nvim/.venv/bin/pythonとなる(あとでneovim側にパスを認識させる設定が必要)。 
 
+#### pipenvのコマンド
 
 仮想環境のpathが知りたい場合は、下記コマンドで確認できる。
 
@@ -158,3 +173,7 @@ nvimで使うだけなので使わないと思うけど、一応情報として�
 ```
 pipenv run pip list
 ```
+
+### nvm-windowsのインストールと設定
+
+
