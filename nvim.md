@@ -145,6 +145,13 @@ windowsの場合：
 Get-ChildItem env:PIPENV_VENV_IN_PROJECT
 ```
 
+システムの詳細メニューで、環境変数を新規作成する。  
+変数名は、PYENV_ROOTで、値はC:\Users\takas\.pyenv
+
+PYENV_ROOTとは、pyenvがバージョン管理するpythonが格納されるフォルダ。  
+設定しておかないと、neovimがpythonがあるパスを参照できないので、:checkhealthでエラーが  
+出力される。
+
 仮想環境専用のディレクトリ~/python_envs/nvimを作成し、その中で下記コマンドを実行し、  
 neovimでプラグインを使用するときに必要なpythonパッケージのpynvimをインストール。
 
@@ -232,6 +239,14 @@ windows terminalでは複数タブを開くことができるけど、セキュ�
 ```
 > node -v
 > npm -v
+```
+
+#### node.jsにneovim用パッケージをインストールする必要がある
+
+neovimというパッケージをnode.jsにインストールしとかないと、:checkhealthでnode.jsがwarning出力される。
+
+```
+npm install -g neovim
 ```
 
 #### インストールしたnode.jsの任意のバージョンの削除方法
