@@ -933,6 +933,28 @@ int main(){
         foo(y.begin());
         cout << "y:" << y << endl;
 }
+  
+//実行結果
+hello
+olleh
+olleh
+xlleh
 ```
 
+最後の出力結果がxllehとなる理由：  
+begin()が対象とする文字列オブジェクトがollehであり、これはconstな文字列オブジェクトじゃない。
+なのでbegin()はconst_iteratorじゃなく、普通のiteratorとなる。なので、下記の関数が呼ばれる。  
+ここで、foo(y.begin())のy.begin()はollehのoを指すイテレーター。このoが下記関数に渡されることになる。
+
+```
+void foo(string::iterator a) {
+        *a = 'x';
+}
+```
+
+この関数では、引数に渡されてきたイテレータの文字の値を'x'に書き換える。そのため、引数として渡したy.begin()イテレーター  
+の値であるoがxに書き換わる。そのため、文字列オブジェクトyの値はxllehになる。
   
+
+  
+
