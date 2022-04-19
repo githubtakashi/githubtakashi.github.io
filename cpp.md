@@ -884,3 +884,55 @@ int main() {
 
 上記のように、std::basic_strngクラスでは演算子が文字列に対して使える。
   
+#### 文字列イテレータで文字列を操作する
+  
+stringクラスを利用する。
+
+begin()/end()メンバ関数は先頭要素を指すイテレータ / 末尾要素を指すイテレータを返す。
+
+rbegin()/rend()メンバ関数は逆順のイテレータを返す。  
+例えば"xyz"という文字列オブジェクトの場合、rbegin()は'z'を指すイテレータを返し、  
+rend()は'x'の前を指すイテレータを返す。
+  
+cbegin()/cend()メンバ関数は、文字列オブジェクトがconstに指定しているかしていないかにかかわらず  
+常にconst_iteratorを返す。もし、文字列オブジェクトの内容が変わると、イテレータが無効になる。
+ 
+
+```
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+void foo(string::const_iterator a) {
+        //何もしない(でもあとでcbegin()イテレーターで使う)
+}
+
+void foo(string::iterator a) {
+        *a = 'x';
+}
+
+int main(){
+        //範囲for文で文字列を走査する
+        string x = "hello";
+        cout << "x:";
+        for (const char& c : x) {
+                cout << c;
+        }
+        cout << endl;
+
+        //逆順イテレータの範囲で初期化
+        string y(x.rbegin(), x.rend());
+        cout << "y:" << y << endl;
+
+        //cbegin()/cend()はconst_iteratorを返す
+        foo(y.cbegin());
+        cout << "y:" << y << endl;
+
+        //begin()/end()はオブジェクトの状態によってiteratorかconst_iteratorかが切り替わる
+        foo(y.begin());
+        cout << "y:" << y << endl;
+}
+```
+
+  
