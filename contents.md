@@ -39,6 +39,8 @@ c++の基本、IDEを使ったアプリの作成、vimを使ったc++プログ�
 
 - [windowsでllvmを利用したc++開発環境を作るためのメモ](llvm.md)
 
+- [Qtでアプリ作成を進めるためのメモ](qt.md)
+
 <br />
 
 ## vimについてのノート
@@ -113,14 +115,6 @@ github pagesでtex記法を使う方法などのノート
 AtCoderでプログラミングの地頭を鍛えたく進めていますが少しはまると進まない。  
 
 - [atcoderのメモ](atcoder.md)
-
-<br />
-
-## xcodeについてのノート
-
-とりあえず手を出してみた感じです。
-
-- [xcodeの勉強メモ](xcodememo.md)
 
 <br />
 
