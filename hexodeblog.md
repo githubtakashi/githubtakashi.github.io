@@ -206,3 +206,11 @@ package-lock.json：
 package.json：  
 Hexoを構成しているライブラリのリスト
 
+config.ymlの内容を修正して/source内にMarkdownで記事を作って、/publicに書き出されたファイル一式を  
+Web上にアップロードするとブログが公開できる。
+
+npmコマンドで/node_modulesにライブラリを追加することで機能の追加ができる。
+
+/themes内でテーマを編集または追加または新規作成すると、ブログの見た目や出力方法を変えられる。
+
+Hexoブログの設定はconfig.ymlに書き込んで変更する。
