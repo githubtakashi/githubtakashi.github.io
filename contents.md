@@ -130,6 +130,8 @@ AtCoderでプログラミングの地頭を鍛えたく進めていますが少�
 
 - [Blenderを使うためのメモ](blender.md)
 
+- [hexoでブログを作成する手順](hexodeblog.md)
+
 ---
 
 
