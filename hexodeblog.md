@@ -145,3 +145,64 @@ npmでhexo-cliをインストール
 ```
 > npm install -g hexo-cli
 ```
+
+ブログ用のローカルディレクトリを作成する。
+
+```
+> mkdir C:\Users\user\blog
+```
+
+ブログ用のローカルディレクトリをhexoで初期化する。
+
+```
+> hexo init C:\Users\user\blog
+```
+
+初期化によってブログにひつようなファイルが生成される。
+
+hexoのブログをローカルサーバーで確認
+
+```
+> cd blog
+> hexo server
+```
+
+表示されたアドレスをブラウザに入力するとウェブブラウザの画面が’表示される。  
+Ctrl + cで停止できる。
+
+![hexoinit](https://user-images.githubusercontent.com/43819429/164973954-3b628254-ae0f-4a1b-b39d-50f9ba22ee71.png)
+
+生成されたファイルの説明
+
+![hexofiles](https://user-images.githubusercontent.com/43819429/164974134-ff7c0a34-5d12-41c1-a8e9-7bc5d1f8c63d.png)
+
+node_modules：  
+構成しているnpmライブラリの置き場所
+
+public：  
+公開用のデータ一式がここに書き出される
+
+scaffolds：  
+記事や固定ページを作るときに必要なMarkdownテンプレート集
+
+source：  
+記事や固定ページを構成するMarkdown,画像データを置く場所
+
+themes：  
+ブログのテーマが置かれる場所（デフォルトテーマ入が最初から入っている）
+
+config.yml：  
+ブログのタイトルやURLなどの設定を書くためのファイル
+
+.gitignore：  
+gitの取り扱いの対象外にさせるファイルやディレクトリを書くファイル
+
+db.json：  
+キャッシュが書き込まれるファイル
+
+package-lock.json：  
+特定のバージョンのライブラリ構成を共有するためのファイル
+
+package.json：  
+Hexoを構成しているライブラリのリスト
+
