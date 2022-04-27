@@ -214,3 +214,47 @@ npmコマンドで/node_modulesにライブラリを追加することで機能�
 /themes内でテーマを編集または追加または新規作成すると、ブログの見た目や出力方法を変えられる。
 
 Hexoブログの設定はconfig.ymlに書き込んで変更する。
+
+
+
+config.ymlファイルを編集(編集する箇所のみ抜粋)
+
+```
+# Site
+title: katsuo blog
+subtitle: ''
+description: ''
+keywords:
+author: katsuo
+language: en
+timezone: ''
+
+# URL
+## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+url: https://kyachuo.github.io/katsuo-blog/ # 自分のgithub pagesのurl
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+pretty_urls:
+  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+  
+# Deployment
+## Docs: https://hexo.io/docs/one-command-deployment
+deploy:
+  type: 'git'
+  repo: https://github.com/kyachuo/katsuo-blog.git　# 自分のgithubのブログのリポジトリ
+  branch: master
+```
+
+gitでdeployするためにパッケージをインストール
+
+```
+> npm install hexo-deployer-git --save
+```
+
+ブログをgithub pages上にデプロイ
+
+```
+> hexo deploy
+```
+
