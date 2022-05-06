@@ -1,3 +1,5 @@
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"> </script> <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ] } }); </script> 
+
 # 数学についてのメモ
 
 青チャートで数学を勉強しているときのメモを書いていく。
@@ -53,5 +55,19 @@
 有理数なのでm/nで表せ(n≠0が前提)。m=0のとき有理数m/nは0となるので0も有理数。
 
 <br />
+
+## 平方根
+
+2乗するとaになる数をaの平方根と呼ぶ。とてもわかりにくい。  
+bを2乗するとaになる。$\sqrt{7}$を2乗すると、7になる。なので、$b=\sqrt{7}$で、a=7。  
+
+なので、2乗すると7になる数を7の平方根と呼ぶ。なので、7の平方根は$\sqrt{7}$
+
+$-\sqrt{7}$も2乗したら7になるので、7の平方根は$\sqrt{7}$と$-\sqrt{7}$
+
+$(\sqrt{7})^2 = 7$
+
+$(-\sqrt{7})^2 = 7$
+
 
 
