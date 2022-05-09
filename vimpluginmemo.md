@@ -39,6 +39,12 @@ packpath配下にプラグインを配置することでvimがpackpathの中の�
 :set packpath?
 ```
 
+linuxで上記コマンドを実行すると、下記のようにpackpathが出力される。  
+```
+packpath=~/.vim,/usr/local/share/vim/vimfiles,/usr/local/share/vim/vim82,/usr/
+local/share/vim/vimfiles/after,~/.vim/after
+```
+
 windowsの場合のpackpath
 
 ```
@@ -64,6 +70,9 @@ mkdir tools\vim\vim82\pack\plugins
 mkdir tools\vim\vim82\pack\plugins\start
 ```
 
+上記のようにstartディレクトリを作成すると、start直下に保存したディレクトリが1つのプラグインディレクトリとして  
+vimに認識される。
+
 <br />
 
 ## プラグインの構成
@@ -77,7 +86,9 @@ mkdir tools\vim\vim82\pack\plugins\start
   doc/
   
   plugin/
-  
+
+上記のように一つのプラグインのディレクトリ内に3つのディレクトリを作成する。
+
 <br />
 
 - autoload/
@@ -108,24 +119,21 @@ autoload/neko.vim
 
 plugin/neko.vim
 
-のように同じ名前を付けることになる。少し違和感を感じるけどこういう
-ルールだと覚えておく。
+のように同じ名前を付けることになる。
 
-## 
-
-autoload配下のファイルで定義している関数をplugin配下のファイルから呼び出すことを想定している場合は
+autoload配下のファイルで定義している関数をplugin配下のファイルのプログラムから呼び出すことを想定している場合は
 
 "ファイル名#関数名()"
 
 と命名する。理由は、
 
-plugin配下のファイルからautoload配下で定義されている関数を呼ぶときは、
+plugin配下のファイルからautoload配下で定義されている関数を呼ぶとき、
 
 ファイル名と関数名によってどのファイルのどの関数を呼ぶかを指定し探しているため。
 
 特に、autoload配下に複数のファイルがあるときはどのファイルから関数を探すのを
 
-特定するためにこの命名方法が必要になることが理由として納得できる。
+特定するためにこの命名方法が必要になる。
 
 
 
