@@ -5,6 +5,9 @@ nvimでinit.vimからinit.luaが推奨されているのでinit.luaで設定フ�
 
 [init.lua](https://neovim.io/doc/user/lua.html)のヘルプを参考までに参照する。
 
+init.luaファイルを保存すべき場所は:checkhealthコマンドで確認できる。  
+(init.vimと同じディレクトリでok)
+
 22-04-08現在のinit.luaの内容|dell precision m6500 windows
 
 ```
