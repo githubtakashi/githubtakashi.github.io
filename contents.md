@@ -51,6 +51,8 @@ vimmerになりたい。vimプラグインを開発できるようになりた�
 
 - [vimrcの設定メモ](vimrc.md)
 
+- [vimのpythonやperlなど言語有効化手順](viminterface.md)
+
 - [vim pluginの勉強メモ](vimpluginmemo.md)
 
 - [覚えておきたいvimのコマンド](vimcmd.md)
