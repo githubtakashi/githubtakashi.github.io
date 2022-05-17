@@ -254,3 +254,14 @@ npm install -g neovim
 ```
 nvm uninstall 16.14.2
 ```
+
+### perlをwindowsにインストール
+
+chocoでchoco install strawberryperlでインストールしcpanmで下記をインストールする。
+
+```
+> cpanm -n Neovim::Ext
+```
+
+上記を実行してもwindowsではcheckhealthをパスできない。
+
