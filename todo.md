@@ -7,15 +7,13 @@ github pagesはマークダウンで編集できるのでメモとしても見�
 
 <br />
 
-### 2022-05-20 Todos
+### 2022-05-28 Todos
 
-- [] 応用情報の参考書
+- [] 応用情報
 - [] 数学
 - [] vim
-- [] visual studio 2005でCOMサーバー作成の勉強
 - [] c++ポケットリファレンスの内容を勉強
-- [] atcoderでc++の勉強
-- [] udemy
+- [] atcoderでc++
 
 ***
 
@@ -84,21 +82,11 @@ vim
 
 ***
 
-#### メイン
+### なんでもメモ
 
-- 青チャートで数学(わんこら式を参考にして進める)
-- c++でatcoder
-- c++環境としてCMake、doxygen導入する。
-- visual studio2005でアプリつくり(thinkpad t40p)
-- golangの基礎をコツコツと勉強する。
-- 応用情報技術の基礎。2022年秋に受験する。
+hexoでブログを作成する。
+windowsで構築する。
 
-<br />
 
-#### サブ
 
-- vimmerになる
-- Blender　Youtube参考に作ってみる。
-- 買った技術書展の本を活用していく。
-- thinkpad windows98,NT,ラズパイのpc98エミュレータでエクセルVBAやコマンドプロンプトでのコマンド
-- thinkpad235の活用としてperlとrubyのプログラムを書きつつ勉強する。
+
