@@ -241,12 +241,12 @@ pretty_urls:
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: 'git'
+  type: git
   repo: https://github.com/kyachuo/katsuo-blog.git　# 自分のgithubのブログのリポジトリ
-  branch: master
+  branch: gh-pages
 ```
 
-gitでdeployするためにパッケージをインストール
+gitで簡単にdeployするためのパッケージをインストール
 
 ```
 > npm install hexo-deployer-git --save
