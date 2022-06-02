@@ -265,3 +265,12 @@ chocoでchoco install strawberryperlでインストールしcpanmで下記をイ
 
 上記を実行してもwindowsではcheckhealthをパスできない。
 
+### windows ubuntu環境でのnvim
+
+:checkhealthでクリップボードの警告が表示され、クリップボードのツールが必要となる。
+
+aptで下記のクリップボードツールをインストールすることで警告が解消される。
+
+```
+sudo apt install xsel
+```
