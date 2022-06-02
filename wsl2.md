@@ -115,3 +115,31 @@ ubuntuなど画面を閉じるだけで停止されていたかと思ってい�
 wsl -d ubuntu-20.04
 ```
 
+## ubuntuのアップグレード時に出るワーニングの対処
+
+出たubuntu=ubuntu22.04LTS
+
+sudo apt upgradeを実行すると、下記のメッセージがでる。出ても、アップグレードに失敗している訳ではないみたい。
+
+```
+Failed to retrieve available kernel versions.
+Failed to check for processor microcode upgrades.
+```
+
+上記のメッセージが出ないように設定できる。下記のファイルを編集する。
+
+```
+sudo -e /etc/needrestart/needrestart.conf
+```
+
+編集は、下記の項目のコメントを解除して、値として0を設定する。  
+$nrconf{kernelhints} = 0;  
+$nrconf{ucodehints} = 0;  
+
+他にも、下記のメッセージも出てくるが、別に無視しても大丈夫みたい。  
+消すなら、下記コマンドでパッケージ自体を消すと出なくなるようにできる。
+
+```
+sudo apt purge needrestart
+```
+
