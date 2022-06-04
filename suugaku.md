@@ -332,8 +332,23 @@ $\overline{p} \Rightarrow \overline{q}$を裏という。
 
 #### 対偶の性質
 
-命題の真偽とその対偶の真偽は一致する。という法則がある。これも忘れやすいので、慣れるようにする。
+命題の真偽とその対偶の真偽は一致する。という法則がある。これも忘れやすいので、慣れるようにする。  
 
+##### ある命題の真偽とその対偶の真偽が一致する理由
+
+条件p,qを満たすもの全体の集合をそれぞれP、Qとすると、
+
+$p \Rightarrow q$ が真 $\Leftrightarrow$ $P \subset Q$
+
+$P \subset Q$にド・モルガンの法則を適用すると、$P \subset Q$ $\Leftrightarrow$ $\overline{Q} \subset \overline{P}$となり、
+
+これは逆と裏を適用したものなので、対偶となる。$\overline{Q} \subset \overline{P}$より、$\overline{q} \Rightarrow \overline{p}$が真であることが  
+導き出される。よって、命題の真偽と対偶の真偽は一致する。
+
+勘違いに注意がひつようなのが、真偽が一致するだけで、命題の$P \subset Q$と対偶の$\overline{Q} \subset \overline{P}$の詳細な要素などが等しいのではない。  
+上記のベン図を書いてみると全然違うものであることがわかる。
+
+<br />
 
 #### 逆や裏の性質 
 
