@@ -1064,7 +1064,35 @@ class ATL_NO_VTABLE CMyCtl :
   public IObjectSaftyImpl<CMyCtl, INTERFACESAFE_FOR_UNTRUSTED_CALLER>,
 #endif
   public CComControl<>CMyCtl>
+{
+public:
   
+  CMyCtl()
+  {
+  }
+
+DECLARE_OLEMISC_STATUS(OLEMISC_RECOMPOSEONRESIZE |
+  OLEMISC_CANTLINKINSIDE |
+  OLEMISC_INSIDEOUT |
+  OLEMISC_ACTIVATEWHENVISIBLE |
+  OLEMISC_SETCLIENTSITEFIRST  
+)
+  
+BEGIN_PROP_MAP(CMyCtl)
+  PROP_DATA_ENTRY("_cx", m_sizeExtent.cx, VT_UI4)
+  PROP_DATA_ENTRY("_cy", m_sizeExtent.cy, VT_UI4)
+  //エントリの例
+  //PROP_ENTRY("プロパティの説明", dispid, clsid)
+  //PROP_PAGE(CLSID_StockColorPage)
+END_PROP_MAP()
+  
+BEGIN_MSG_MAP(CMyCtl)
+  CHAIN_MSG_MAP(CComControl<CMyCtl>)
+  DEFAULT_REFLECTION_HANDLER()
+END_MSG_MAP()
+//ハンドラプロパティ：
+// LRESULT MessageHandler(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
+// 
  コードまだ入力途中なので入力も進めていく。
 ```
 
