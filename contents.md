@@ -13,6 +13,8 @@
 
 - [応用情報の勉強メモ2page](ouyoujouhou2.md)
 
+- [応用情報の勉強メモ3page](ouyoujouhou3.md)
+
 <br />
 
 ## 数学の勉強ノート
