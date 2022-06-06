@@ -117,6 +117,10 @@ Japan Vulnerability Notesの略で、日本で使用されているソフトウ�
  企業や組織における情報セキュリティマネジメントの最高意思決定機関。CIOやCISOが主催する。  
  CIO(Chief Information Officer:最高情報責任者)は情報システムの最高責任者。  
  CISO(Chief Information Security Officer:最高情報セキュリティ責任者)は、企業内で情報セキュリティを統括する担当役員の1つ。
+ 
+ - SOC  
+  Security Operation Centerは、顧客や自組織を対象として情報セキュリティ機器やサーバー、ネットワークなどを監視し、  
+  これらの機器が生成するログ・ジャーナルを分析して、サイバー攻撃の検出や通知をする組織。
 
 #### NISC|内閣サイバーセキュリティセンター|サイバーセキュリティ戦略本部
 
