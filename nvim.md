@@ -37,12 +37,14 @@ pcを再起動したらubuntuでbrewコマンドがつかえるようになる�
 
 ## プラグインで使うためのpython管理
 
-pyenvとpipenvとnvm-windowsをインストールし設定していく。  
+pyenvとpipenvと、nvm-windows(windowsの場合)、nvm(linuxの場合はgithubから)をインストールし設定していく。  
 pyenvはpythonのバージョンを簡単に切り替えるためのツール。  
 pipenvはpythonの仮想環境をつくるためのツール。
 nvm-windowsはnode.jsのバージョンを簡単に切り替えるためのツール。
 
 node.jsはいるの？と思ったけど、プラグインが動作するためにpythonとnode.jsの連携が必要だったりするみたい。
+
+linuxでbrewでnvmをインストールしても何故かパスが通ってなかったりするので、[nvmのgithub](https://github.com/nvm-sh/nvm)見てインストールする。
 
 ### pyenvのインストールと設定
 
