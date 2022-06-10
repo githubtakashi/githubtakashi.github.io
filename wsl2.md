@@ -17,6 +17,14 @@ wsl2をインストールする前のwindowsOS側の準備として下記をす�
 
 <br />
 
+## hyper-vの有効化
+
+```
+DISM /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-V
+```
+
+<br />
+
 ## 仮想マシンの機能を有効化する
 
 管理者権限でパワーシェルを開いて実行
