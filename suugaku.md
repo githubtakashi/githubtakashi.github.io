@@ -327,7 +327,7 @@ q目線で見ると、qにはpの要素のうち、不足している部分が�
 $\overline{q} \Rightarrow \overline{p}$を対偶という。  
 →命題に対し、逆にして、更に否定したものなので、逆と否定の2つが揃ったものなので、対偶と呼ぶ。
 
-$\overline{p} \Rightarrow \overline{q}$を裏という。
+命題を否定したもの、$\overline{p} \Rightarrow \overline{q}$を裏という。
 
 
 #### 対偶の性質
@@ -362,11 +362,11 @@ $P \Rightarrow Q$であっても、$Q \Rightarrow P$とは限らない。その�
 
 ある命題の裏は逆の対偶であるから、逆と裏の真偽は一致する。→イメージすら浮かばず。難しすぎるので、イメージする。
 
-$p \Rightarrow q$の裏は、否定のことなので、$\overline{p} Rightarrow \overline{q}$
+$p \Rightarrow q$の裏は、否定のことなので、$\overline{p} \Rightarrow \overline{q}$
 
-裏である$\overline{p} Rightarrow \overline{q}$の対偶は、$q \Rightarrow p$であり、これは、もともとの命題$p \Rightarrow q$の逆である。
+裏である$\overline{p} \Rightarrow \overline{q}$の対偶は、$q \Rightarrow p$であり、これは、もともとの命題$p \Rightarrow q$の逆である。
 
-上記から、ある命題の裏と逆は対偶の関係なので、ある命題の裏の真偽と、ある命題の逆の真偽は一致する。
+上記から、ある命題の裏と逆は対偶の関係なので、ある命題の逆の真偽と、ある命題の裏の真偽は一致する。
 
 <br />
 
