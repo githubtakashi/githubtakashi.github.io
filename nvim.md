@@ -23,7 +23,7 @@ test -r ~/.bash_profile && echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"
 echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >>~/.profile
 ```
 
-コマンドを実行した結果、~/.bash_profileと~/.profileが両方存在している場合、いらない方を削除しておく。
+コマンドを実行した結果、 ~/.bash_profile と~/.profileが両方存在している場合、いらない方を削除しておく。
 
 .profileを使っていく場合は、下記コマンドを実行
 
@@ -195,6 +195,24 @@ pipenv run pip list
 
 ```
 > nvm version
+```
+
+※wsl2でのubuntuの場合、brewからインストールでよさそう。  
+node.jsのバージョン管理するパッケージはnodebrewというパッケージもあるけど、nvmの方が使っている人が多いらしいのでnvmを使うのが無難そう。
+
+```
+brew install nvm
+//nvmがインストールされる。されたら下記コマンドを実行(brewから実行せよとメッセージが表示されるので)
+mkdir ~/.nvm
+nvim .profile //.profileに下記を追加
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+//追加したら下記コマンドを実行
+source .profile
+command -v nvm //commandコマンドでコマンドがインストールされているかを確かめることができる
+//"nvm"と表示されたらOK
 ```
 
 #### インストールできるnode.jsバージョンの一覧を確認
