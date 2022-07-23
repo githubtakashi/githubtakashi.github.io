@@ -257,6 +257,7 @@ permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+  スラッシュなどあらかじめ設定されているアクセス方法でアクセスされたら自動でindex.htmlを探して表示する機能。おそらく。
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
   
 # Deployment
@@ -266,6 +267,14 @@ deploy:
   repo: https://github.com/kyachuo/katsuo-blog.git　# 自分のgithubのブログのリポジトリ
   branch: gh-pages
 ```
+
+詳しくは[hexoのドキュメント](https://hexo.io/docs/configuration)に書いてあるけど、  
+サブディレクトリの設定もできる。自分のconfig.ym fileでは項目を削除してしまっている。必要に応じて追加する。
+
+サブディレクトリとは、ブログの中に少しメインとは異なるジャンルの子ブログを作るみたいなイメージ。  
+もともとのブログのドメインパワーを引き継ぐことができる。
+
+<br />
 
 gitで簡単にdeployするためのパッケージをインストール
 
