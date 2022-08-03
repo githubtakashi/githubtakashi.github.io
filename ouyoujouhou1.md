@@ -279,20 +279,21 @@ xとyの否定論理積：$\overline{(x AND y)} = \overline{(x \cdot y)}$を"x N
 
 NANDはnot andで、論理積の否定のこと。
 
-このとき、論理式 "(x NAND x) NAND (y NAND y)"を展開しわかりやすく簡略化する。
+複雑な論理演算式を簡略化する例として、論理式 "(x NAND x) NAND (y NAND y)"を展開しわかりやすく簡略化する。
 
 1) $x NAND x = \overline{(x \cdot x)} = \overline{x} + \overline{x} = \overline{x}$ (ド・モルガンの法則),(同一の法則)  
 2) $y NAND y = \overline{(y \cdot y)} = \overline{y} + \overline{y} = \overline{y}$ (ド・モルガンの法則),(同一の法則)  
 
 1),2)により、与式(x NAND x) NAND (y NAND y) = $\overline{x} NAND \overline{y}$  
 $=\overline{(\overline{x} \cdot \overline{y})} = \overline{\overline{x}} + \overline{\overline{y}}$ (ド・モルガンの法則)  
+※上記は、一番上のオーバーラインと演算子についてド・モルガンの法則を1回適用する。  
 $= x + y$ (論理否定の論理否定なので元にもどる)  
 
 <br />
 
 ### カルノー図法
 
-複雑な論理和の論理式を簡略化するために利用される表のこと。
+カルノー図法とは、複雑な論理和の論理式を簡略化するために利用される表のこと。
 
 式の各変数の値と出力が分かるようになっている。ABCDのとる値は下表のように0に1ビットを加えて表す。
 
@@ -304,12 +305,15 @@ $= x + y$ (論理否定の論理否定なので元にもどる)
 | 10 | 0 | 0 | 0 | 0 |
 
 縦はAB, 横はCDのとる値を表している。  
+ABはAとBの論理積、CDはCとDの論理積を表している。  
 AB=00は、A=0,B=0の値をとるという意味で、0は偽、1は真を表している。  
 
 例) AB=00, CD=00の交わるセルの出力は1となっている。  
-ここから式を読み取ることが必要となる。  
-A,B,C,D=0のときABCDの論理積が出力1になるので、A,B,C,Dは全て1であることが分かる。
-なので、$\overline{A} \cdot \overline{B} \cdot \overline{C} \cdot \overline{D}$  
+この表のAB=00、CD=00と出力値1から、どのような式なのか、式を抽出していく。  
+
+A,B,C,D=0のときABCDの論理積が出力1になるので、A,B,C,Dは全て1であることが分かる。  
+しかし、カルノー図の表ではA,B,C,D=0なので、実際には、A,B,C,D=0の論理否定であるA,B,C,D=1ですべて1となるので、  
+$\overline{A} \cdot \overline{B} \cdot \overline{C} \cdot \overline{D}$  
 がAB=00,CD=00,出力1という表の情報から読み取れる式となる。
 
 この表から論理式を次のように導く。  
