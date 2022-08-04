@@ -598,7 +598,7 @@ nビットの値L1, L2があり、次の操作によって得られる値L3はL1
 $Y = \overline{(L1 \cdot L2)} = \overline{L1} + \overline{L2}$
 
 $L3 = (L1 + L2) \cdot (\overline{L1} + \overline{L2})$  
-右辺を展開する。　
+分配法則を適用して右辺を展開する。　
 
 $= ((L1 + L2) \cdot \overline{L1}) + ((L1 + L2) \cdot \overline{L2})$  
 $= (L1 \cdot \overline{L1} + L2 \cdot \overline{L1}) + (L1 \cdot \overline{L2} + L2 \cdot \overline{L2})$  
