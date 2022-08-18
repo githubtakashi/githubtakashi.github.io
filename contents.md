@@ -15,6 +15,8 @@
 
 - [応用情報の勉強メモ3page](ouyoujouhou3.md)
 
+- [応用情報の勉強メモ4page](ouyoujouhou4.md) 苦手な過去問についてのノート
+
 <br />
 
 ## 数学の勉強ノート
