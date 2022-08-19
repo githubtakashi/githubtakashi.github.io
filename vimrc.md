@@ -6,6 +6,27 @@
 
 <br />
 
+## vim9script
+
+vim9仕様にする。vim8->vim9へのバージョンアップでいろいろ仕様変更されている。  
+下位互換を保ちつつvim9仕様の機能が使える。
+
+## set encoding=utf-8
+
+vim内部のエンコーディングをutf-8に設定。
+
+## scriptencodings utf-8
+
+vim scriptのエンコーディングをutf-8に設定。
+ 
+## set fileencodings=ucs-bom,utf-8,iso-2022-jp,cp932,euc-jp
+
+既存のファイルを開いた時に、ファイルのエンコーディングの設定項目であるfileencoding  
+を、決めるための設定。fileencodingsに設定した順にエンコーディングし、エンコーディングのエラーが発生しなかったものが  
+そのファイルのfileencodingのエンコードの種類として設定される。
+
+ファイルを作成で新規に開いた場合は、fileencodingのグローバル設定値が適用される。
+
 ## set number
 
 vimの左側に行番号を表示する。
