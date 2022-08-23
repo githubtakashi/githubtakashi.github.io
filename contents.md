@@ -106,6 +106,8 @@ Linux OSでのいろいろな作業についてのノート。
 
 - [kitty terminalを使うためのメモ](kitty.md)
 
+- [gentolinuxをインストールするためのノート](gentoolinux.md)
+
 <br />
 
 ## github pagesについてのノート
