@@ -11,13 +11,19 @@
 vim9仕様にする。vim8->vim9へのバージョンアップでいろいろ仕様変更されている。  
 下位互換を保ちつつvim9仕様の機能が使える。
 
+<br />
+
 ## set encoding=utf-8
 
 vim内部のエンコーディングをutf-8に設定。
 
+<br />
+
 ## scriptencodings utf-8
 
 vim scriptのエンコーディングをutf-8に設定。
+
+<br />
  
 ## set fileencodings=ucs-bom,utf-8,iso-2022-jp,cp932,euc-jp
 
@@ -26,6 +32,8 @@ vim scriptのエンコーディングをutf-8に設定。
 そのファイルのfileencodingのエンコードの種類として設定される。
 
 ファイルを作成で新規に開いた場合は、fileencodingのグローバル設定値が適用される。
+
+<br />
 
 ## set number
 
@@ -58,7 +66,13 @@ vimの左側に行番号を表示する。
 
 ## set autoindent
 
-改行やoなどでプログラミング言語の種類に合わせてインデントの位置を自動的に合わせてくれる。
+ひとつ前の行のインデントに合わせてインデントを入れてくれる。
+
+<br />
+
+## set smartindent
+
+autoindentと同じだがいくつかのC構文を認識し適切な箇所のインデントを増減させてくれる。
 
 <br />
 
