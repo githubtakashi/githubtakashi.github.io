@@ -152,6 +152,8 @@ AtCoderでプログラミングの地頭を鍛えたく進めていますが少�
 
 - [qmk firmwareでキーマップを作成するための手順のメモ](qmkfirmware.md)(22/08/13追加)
 
+- [windowsのパッケージマネージャーchocoの使い方のメモ](choco.md)
+
 ---
 
 
