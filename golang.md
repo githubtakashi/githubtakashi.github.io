@@ -26,7 +26,7 @@ go mod init <モジュール名>
 
 <br />
 
-### hello.go作成
+#### hello.go作成
 
 hello.goを作成しhello worldを表示するソースコード書く。
 
@@ -48,7 +48,7 @@ go run .
 //Hello, World!がターミナルに出力される
 ```
 
-### 外部のモジュールを使う
+#### 外部のモジュールを使う
 
 goの公式サイト上のpkg.go.devという場所に、いろいろgoのモジュールが登録されていて使うことができる。
 
@@ -99,6 +99,115 @@ go.sumはgo mod tidyコマンドを実行すると生成されるファイル。
 go.sumは依存先のモジュールのハッシュを記録していて、もしウィルス仕込みなどで依存先のファイルが改ざんされていたら、  
 go.sumのハッシュ値と依存先のハッシュ値が異なるので、改ざんを検知できる。
 
+<br />
 
+------
 
+### 外部から使えるモジュール作成
+
+外部から使えるモジュールを作成
+
+モジュールとなるディレクトリを作成
+
+```
+mkdir greetings
+cd greetings
+```
+
+go mod initコマンドでモジュールを初期化
+
+```
+go mod init example.com/greetings
+go: creating new go.mod: module example.com/greetings
+```
+
+greetings.goファイルを作成し処理を記述する。
+
+```
+package greetings
+
+import "fmt"
+
+// Hello returns a greeting for the named person.
+func Hello(name string) string {
+    // Return a greeting that embeds the name in a message.
+    message := fmt.Sprintf("Hi, %v. Welcome!", name)
+    return message
+}
+```
+
+func Hello(name string) string {} Helloのように大文字で始めると外部のモジュールから関数を呼び出せる。  
+また、変数名nameの右側のstringは変数の型名を表している。{}の前のstringは戻り値の型を表している。
+
+:=オペレーターは変数の宣言と初期化をするためのショートカット。
+
+以上でgreetingsモジュールができたので、次は外部からこのモジュールを呼び出す。
+
+greetingsモジュールと同じ階層にhelloモジュールを作りそこからgreetingsモジュールを呼び出す。
+
+最初に作ったhelloモジュールのhello.goを以下に内容を変更する。
+
+```
+package main
+
+import (
+    "fmt"
+
+    "example.com/greetings"
+)
+
+func main() {
+    // Get a greeting message and print it.
+    message := greetings.Hello("Gladys")
+    fmt.Println(message)
+}
+```
+
+- package main  
+goのソースコードをアプリケーションとして実行するには、main packageを宣言する必要がある。
+
+- import  
+input/outputpの基本的な関数を利用するためにfmtモジュールをインポート、さっき作ったgreetingsモジュールをインポート。
+
+外部からモジュールを呼び出して使うには、本当はモジュールを所定のパスに登録しそこからGo toolsがダウンロードして使うという処理になるけど、  
+今回はモジュールを登録はしないので、ローカルのディレクトリ内のモジュールを結びつけるという感じの操作をする。
+
+そのために下記のコマンドをhelloディレクトリ内で実行する。
+
+```
+ go mod edit -replace example.com/greetings=../greetings
+```
+
+するとhelloディレクトリのgo.modファイルの内容が下記のようにreplaceディレクティブによって変更される。
+
+```
+module example.com/hello
+
+go 1.19
+
+replace example.com/greetings => ../greetings
+```
+
+"example.com/hello" とgreetingsモジュールを結びつけるためにhelloディレクトリでgo mod tidyコマンドを実行する。
+
+```
+go mod tidy
+go: found example.com/greetings in example.com/greetings v0.0.0-00010101000000-000000000000
+```
+
+helloディレクトリのgo.modファイルが下記のように変更される。
+
+```
+module example.com/hello
+
+go 1.19
+
+replace example.com/greetings => ../greetings
+
+require example.com/greetings v0.0.0-00010101000000-000000000000
+```
+
+requireディレクティブによって、"example.com/hello" モジュールが"example.com/greetings" モジュールを使っていることが分かる。
+
+v0.0.0-00010101000000-000000000000は疑似的なもので、疑似的なバージョンナンバーが生成されるようになっている。
 
