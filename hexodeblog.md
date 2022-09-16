@@ -331,7 +331,13 @@ hexo config theme hexo-icarus
 
 上記を実行したら、hexo sコマンドでサイトを起動しちゃんと表示されるか確認。
 
+### comfig.icarus.ymlファイルでicarusの初期設定
 
+icarusで使う画像類はicarusのフォルダ内に保存しないと、初期化時に画像が削除されるので注意。
+
+config.icarus.ymlファイルに初期設定を記述していく。
+
+[icarusのドキュメント](https://ppoffice.github.io/hexo-theme-icarus/Configuration/icarus-user-guide-configuring-the-theme/)を参照したら分かりやすいので参照しながら進める。
 
 
 
