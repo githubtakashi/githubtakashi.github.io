@@ -151,3 +151,23 @@ $nrconf{ucodehints} = 0;
 sudo apt purge needrestart
 ```
 
+<br />
+
+## wsl2でsystemdを使うための手順
+
+wsl2のubuntuではsystemctlが動いてなく、PID1のinitプロセスが動いている。systemctlで動くサービスが動かない状態となっている。  
+そのため、systemctlを動かす対策が必要。
+
+実際、mysqlをインストールしてもエラーで動作しなかった。
+
+PID1はinitプロセスと呼ばれている。initプロセスとはunix系OSでbootの最初に起動される一番最初のプロセス。
+
+Linuxのプログラムはすべて、まずinitプロセスが動き、必要な他のプロセスを呼び出し実行されるので、initプロセスは親プロセスとも呼ばれる。
+
+芋づる式にプロセスがプロセスを起動することで必要な処理ができるようになっているので、もとをたどるとinitプロセスになる。
+
+- [initプロセスについて分かりやすかった記事](https://atmarkit.itmedia.co.jp/ait/articles/0204/02/news002.html)
+
+
+
+
