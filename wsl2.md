@@ -53,7 +53,7 @@ microsoft storeからubuntuをインストールする。または、シェル�
 その場合は下記のコマンドで、シェルからインストールできるosが一覧で表示される。
 
 ```
-wsl --install --online
+wsl --list --online
 wsl --install -d Ubuntu-20.04 // ubuntu20.04をインストールする場合のコマンド
 ```
 
