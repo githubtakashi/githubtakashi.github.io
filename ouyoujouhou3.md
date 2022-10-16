@@ -414,6 +414,8 @@ FP法ではファンクションをデータ処理に関する"トランザク�
 Constructive Cost Modelは、過去の統計値・経験値をもとにして、ソフトウェアの開発ステップ数からソフトウェアの開発工数を算出する。  
 算出した開発工数によって、開発期間を見積もる。
 
+詳細は[cocomoについてのわかりやすい記事](https://ssaits.jp/promapedia/method/cocomo-model.html)を参照する。
+
 <br />
 
 ##### Putnam
