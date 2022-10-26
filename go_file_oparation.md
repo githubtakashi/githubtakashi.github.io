@@ -36,7 +36,8 @@ func main() {
 
 // 挙動の確認
 
-  fmt.Printf("read %d bytes:\n", count)
+  fsize := fmt.Srintf("read %d bytes:\n", count)
+  fmt.Println(fsize)
   fmt.Println(string(data[:count]))
 ```
 
