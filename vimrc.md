@@ -21,7 +21,7 @@ vim内部のエンコーディングをutf-8に設定。
 
 <br />
 
-## scriptencodings utf-8
+## scriptencoding utf-8
 
 vim scriptのエンコーディングをutf-8に設定。
 
