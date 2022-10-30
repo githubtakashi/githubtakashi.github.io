@@ -1,7 +1,8 @@
 # WSL2を導入するためのメモ
 
 WSL2に何気なく興味を持ったのでwsl2を導入する。  
-マシン：dell precisionのデスクトップpc、windows11pro
+
+wslの基本的なコマンドなどは[公式サイトの説明](https://learn.microsoft.com/ja-jp/windows/wsl/basic-commands)を参照する。
 
 <br />
 
@@ -57,7 +58,15 @@ wsl --list --online
 wsl --install -d Ubuntu-20.04 // ubuntu20.04をインストールする場合のコマンド
 ```
 
-上記のリストでは最新のubuntu22.04が出てきてなく、microsoft storeからしかインストールできない。
+## インストール直後のエラーの解決方法
+
+ubuntuをインストールして最初はエラーが出る。その場合はカーネルが古いので、下記のコマンドでカーネルを最新にする。
+
+```
+wsl --update
+```
+
+wsl --list --onlineによるリストでは最新のubuntu22.04が出てきてなく、microsoft storeからしかインストールできない。
 22.04のインストールが正常にできなかったので、20.04から22.04にアップグレードする手順を書いておく。
 
 ## ubuntu20.04から22.04にアップグレードする方法
