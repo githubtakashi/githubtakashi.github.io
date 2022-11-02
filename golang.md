@@ -256,3 +256,57 @@ func Hello(name string) (string, error) {
 - 名前が空のときはif文でエラー処理に分岐し、errors.Newメソッドによってエラーメッセージとerrorオブジェクトを返す。  
 - エラーに分岐せず正常に処理ができたら、正常に処理できたオブジェクトとともに、エラーがないことを意味するnilオブジェクトも追加で返す。
 
+次に、hello/hello.goを下記のように変更する。
+
+```
+package main
+
+import (
+    "fmt"
+    "log"
+
+    "example.com/greetings"
+)
+
+func main() {
+    // Set properties of the predefined Logger, including
+    // the log entry prefix and a flag to disable printing
+    // the time, source file, and line number.
+    log.SetPrefix("greetings: ")
+    log.SetFlags(0)
+
+    // Request a greeting message.
+    message, err := greetings.Hello("")
+    // If an error was returned, print it to the console and
+    // exit the program.
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    // If no error was returned, print the returned message
+    // to the console.
+    fmt.Println(message)
+}
+
+コードの変更点：  
+- logパッケージを設定：log.SetPrefix("greetings: ")とすることでエラーのときにgreetingパッケージのログとわかるようにする。  
+- log.SetFlags(0)とすることで、デフォルトで設定されている時刻、ファイル名、行番号の情報出力を無効にする。  
+- Helloメソッドの実行結果として返ってくる正常処理、エラーの返り値を格納できるようmessage変数とerr変数を定義する。  
+- エラーハンドリングを試すために、Helloメソッドの引数を空にする。  
+- errにnilじゃなく値が入っていないかを確認する。greetings.Helloの第二引数に設定したerrorに値が入っている場合は、  
+errにerrorの値が返ってくるので、その値をlog.Fatal(err)とすることで出力する。そして、log.Fatalメソッドはos.Exitメソッドを  
+内部で実行し、プロセスを終了してくれる。以上のように、log.Fatalメソッドはエラーメッセージの出力とプロセス終了をする。  
+
+<br />
+
+helloディレクトリでソースコードを実行すると、エラーハンドリングされ、プロセスが終了することでプログラムを停止してくれる。
+
+```
+go run .
+greetings: empty name
+exit status 1
+```
+
+
+
+```
