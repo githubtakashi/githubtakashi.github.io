@@ -216,3 +216,43 @@ v0.0.0-00010101000000-000000000000は疑似的なもので、疑似的なバー�
 
 番号の意味については、[モジュールのバージョン番号の定義についてのドキュメント](https://go.dev/doc/modules/version-numbers)を参照。
 
+<br />
+
+### errorハンドリングの追加
+
+挨拶をするgreetingsモジュールを作り、helloモジュールからgreetingsモジュールを呼び出して  
+使うということをできるようにしたが、そこにエラーハンドリングのコードを追加する。
+
+名前を埋め込む部分がもし空白だったらエラーを返す。名前が有る場合は成功として通常のメソッドの実行結果と一緒に  
+成功したことを示すnilも返す。
+
+greetings/greetings.goのソースコードを下記のように変更する。
+
+```
+package greetings
+
+import (
+    "errors"
+    "fmt"
+)
+
+// Hello returns a greeting for the named person.
+func Hello(name string) (string, error) {
+    // If no name was given, return an error with a message.
+    if name == "" {
+        return "", errors.New("empty name")
+    }
+
+    // If a name was received, return a value that embeds the name
+    // in a greeting message.
+    message := fmt.Sprintf("Hi, %v. Welcome!", name)
+    return message, nil
+}
+```
+
+コードの変更点：  
+- Helloの返り値を2個に変更。文字列とerrorの2個を返す。自動的に、Helloを呼ぶ側モジュールがerrorがないかをチェックしてくれる。  
+- errors.Newメソッドを使うために標準パッケージのerrorsをインポートする。  
+- 名前が空のときはif文でエラー処理に分岐し、errors.Newメソッドによってエラーメッセージとerrorオブジェクトを返す。  
+- エラーに分岐せず正常に処理ができたら、正常に処理できたオブジェクトとともに、エラーがないことを意味するnilオブジェクトも追加で返す。
+
