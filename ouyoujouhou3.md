@@ -889,6 +889,10 @@ EVMではPV、BAC、EV、AC、EACという指標を使って進捗状況を判�
  
 <br />
 
+### QC7つ道具
+
+[QC7つ道具についての記事](https://www.nikken-totalsourcing.jp/business/tsunagu/column/948/)を参照する。かなり詳しく分かりやすい記事。
+
 ### サービスマネジメント
 
 サービスマネジメントはITのライフサイクルすべてを対象とするマネジメント。
