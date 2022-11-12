@@ -404,4 +404,20 @@ set ttimeoutlen=50
 	
 <br />
 
+## autocmd
 
+autocmdでイベントに対し自動的に実行する処理を作ることができる。  
+イベントについては、:help {event} で確認できる。
+	
+自動的に処理をさせたい時に便利そうなので、継続的に調べて活用。
+	
+autocmdの使用例:  
+
+```
+autocmd BufNewFile * put ='#start editing new file'
+//vim sample.txtのように新規ファイルを編集しだすと上記の文字列が自動的に挿入される
+```
+	
+augroupとは:  
+autocmdをグループ化できる。
+	
