@@ -421,3 +421,9 @@ autocmd BufNewFile * put ='#start editing new file'
 augroupとは:  
 autocmdをグループ化できる。
 	
+```
+augroup NewFileEdit
+        au!
+        au BufNewFile * put ='#start editing new file'
+augroup END
+```
