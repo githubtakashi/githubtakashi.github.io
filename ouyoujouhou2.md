@@ -548,6 +548,8 @@ OSI(Open System Interconnection)はISOが定めたネットワークアーキテ
 
 第2層～7層の頭文字を語呂合わせにする。→デネトセプア。
 
+[OSI参照モデルについてのとてもわかりやすい記事](https://www.itmanage.co.jp/column/osi-reference-model/)を参照する。各層の役割が理解しやすい。
+
 ### 物理層
 
 DTEとDCEとは：  
