@@ -874,3 +874,15 @@ PCMとは、アナログ信号をデジタル信号に変換すること。標�
 
 - [より厳密に仕組みを理解しやすい記事](https://www.c-a-c.jp/about/knowledge.html)
 
+<br />
+
+## 3DCGのレンダリング技術
+
+テクノロジ系のマルチメディア技術として3DCGのレンダリングについての問題が出題されている。午前対策等の本では取り上げられていないので、  
+自分で勉強する必要がある。
+
+[3DCGのレンダリング技術について記事](https://blender3d.biz/knowledge_rendering_renderingmethods.html#Zソート法)を参照し勉強をしておく。
+
+
+
+
