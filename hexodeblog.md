@@ -215,6 +215,7 @@ hexoのブログをローカルサーバーで確認
 
 ```
 > cd blog
+> npm install //必要なパッケージがインストールされる
 > hexo server
 ```
 
