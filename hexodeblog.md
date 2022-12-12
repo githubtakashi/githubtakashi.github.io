@@ -63,6 +63,13 @@ node.jsはiphoneに入れたアプリのiphoneに相当する、javascriptのア
 nvmはnode.jsのバージョンを好きなものに切り替えることができるツールで、node.jsを包む箱のようなもの。  
 npmはnode.jsで使用するパッケージをインストールしたり削除したりするパッケージ管理ツール(aptやbrewのような)で、node.jsに同梱されている。  
 
+※nvmでnode.jsをインストールしなくても、brewで最新版のnode.jsをインストールし、brew upgradeでnode.jsを最新版にするというシンプルな. 
+方法の方が簡単かも。brewでnode.jsをインストールするには、下記のコマンドを実行する。
+
+```
+brew install node
+```
+
 最初にnvmをインストールし、nvmのコマンドでnode.jsをインストールする。
 [nvmはgithubにあるパッケージ](https://github.com/nvm-sh/nvm)で、インストール方法もgithubを参照する。
 
