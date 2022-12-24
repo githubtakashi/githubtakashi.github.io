@@ -422,7 +422,15 @@ autocmd BufNewFile * put ='#start editing new file'
 ```
 	
 augroupとは:  
-autocmdをグループ化できる。
+autocmdをグループ化できる。  
+
+任意のグループとして下記のように自動コマンドを定義する。  
+1. ":augroup {name}" によってグループを選択する。  
+2. ":au!" で古い自動コマンドを全て消去。  
+3. グループの名前で使いたい自動コマンドを定義する。  
+4. ":augroup END" で既定のグループに戻る。  
+	
+上記によって、自動コマンドが2回定義されてしまうことを防止できる。
 	
 ```
 augroup NewFileEdit
