@@ -477,7 +477,7 @@ $= x + y$ (論理否定の論理否定なので元にもどる)
 縦はAB, 横はCDのとる値を表している。    
 
 例) AB=00, CD=00の交わるセルは1となっている。  
-例えばA=0はAの否定である $\overline{A} を表している。
+例えばA=0はAの否定である $\overline{A}$ を表している。
 この表のAB=00、CD=00と出力値1なので、  
 $\overline{A} \cdot \overline{B} \cdot \overline{C} \cdot \overline{D}$  
 がAB=00,CD=00,出力1という表の情報から読み取れる式となる。
@@ -509,12 +509,12 @@ $\overline{A} \cdot \overline{B} \cdot \overline{C} \cdot \overline{D}$
 
 すると、2つの論理式に共通する変数があることがわかる。  
 この共通変数を抽出すると、$\overline{A}$, $\overline{B}$, $\overline{D}$なので  
-抽出する論理式は$\overline{A} \cdot \overline{B} \cdot C \cdot \overline{D}$となる。
+抽出する論理式は$\overline{A} \cdot \overline{B} \cdot \overline{D}$となる。
 
 カルノー図が示す論理式は、2箇所の四角で抽出した論理式の論理和となる。
 
 よって、カルノー図から導き出す論理式は  
-$\overline{A} \cdot \overline{B} \cdot C \cdot \overline{D} + B \cdot D$  
+$\overline{A} \cdot \overline{B} \cdot \overline{D} + B \cdot D$  
 となる。
 
 <br />
