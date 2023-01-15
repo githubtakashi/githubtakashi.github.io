@@ -766,6 +766,9 @@ $Y = \overline{(L1 \cdot L2)} = \overline{L1} + \overline{L2}$
 $L3 = (L1 + L2) \cdot (\overline{L1} + \overline{L2})$  
 分配法則を適用して右辺を展開する。　
 
+この時、L1 + L2を一文字に置くと、分配法則が使えることがわかるので、L1 + L2 = Xと置く。  
+これはなかなか慣れないと気づきにくいけど、慣れていくことで使えるようにする。下記のように分配法則が使える。
+
 $= ((L1 + L2) \cdot \overline{L1}) + ((L1 + L2) \cdot \overline{L2})$  
 $= (L1 \cdot \overline{L1} + L2 \cdot \overline{L1}) + (L1 \cdot \overline{L2} + L2 \cdot \overline{L2})$  
 ここで、$L1 \cdot \overline{L1} = 0$, $L2 \cdot \overline{L2} = 0$なので  
