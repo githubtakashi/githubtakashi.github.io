@@ -373,11 +373,37 @@ hexo config theme hexo-icarus
 
 ### comfig.icarus.ymlファイルでicarusの初期設定
 
+icarusの設定項目について見ていく。
+
 icarusで使う画像類はicarusのフォルダ内に保存しないと、初期化時に画像が削除されるので注意。
 
 config.icarus.ymlファイルに初期設定を記述していく。
 
 [icarusのドキュメント](https://ppoffice.github.io/hexo-theme-icarus/Configuration/icarus-user-guide-configuring-the-theme/)を参照したら分かりやすいので参照しながら進める。
+
+<br />
+
+#### PWAの設定
+
+icarusではPWA(Progressive web apps)が利用できる。  
+PWAを設定すると、icarusで作ったブログをiOSアプリのような見た目のアプリのアイコンができ、ウェブアプリのようにすることができる。  
+そこまで必要なさそうなので、別に設定しなくてよしとする。
+
+<br />
+
+#### Open Graphの設定
+
+Open Graph(OGP)とは、Twitterなどにブログのリンクを投稿したときにきちんと体裁を整えて表示させてくれる機能。  
+OGPを設定しないと、Twitterなどにきちんとした表示にできない。設定しておいた方が良いが、ブログを運用し出してから. 
+じゃないと必要ないので、後々設定する。
+
+<br />
+
+#### Google Structured Data
+
+google検索に構造を最適に知らせるためのデータ構造を設定できる。  
+設定しておいた方が良さそう。  
+[google structured dataについて説明している記事](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data?hl=ja)を参照する。
 
 
 
