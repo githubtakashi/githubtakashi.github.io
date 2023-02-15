@@ -415,3 +415,11 @@ RSSは現在廃れているので設定は無しで良い
 
 <br />
 
+#### page metadata
+
+headタグ内に入れるmetaタグのこと。  
+googleがheadタグ内のデータを読み込むことでタグ内の情報をGoogleに伝えることができる。  
+詳細は[googleのメタデータについての記事](https://developers.google.com/search/docs/crawling-indexing/valid-page-metadata?hl=ja)を読む。
+
+
+
