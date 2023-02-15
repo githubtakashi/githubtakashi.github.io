@@ -405,5 +405,13 @@ google検索に構造を最適に知らせるためのデータ構造を設定�
 設定しておいた方が良さそう。  
 [google structured dataについて説明している記事](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data?hl=ja)を参照する。
 
+構造化データを設定すると、検索結果にリッチリザルト表示をさせることができる。リッチリザルト表示はいろんな表示形式に対応している。
 
+<br />
+
+#### RSS
+
+RSSは現在廃れているので設定は無しで良い
+
+<br />
 
