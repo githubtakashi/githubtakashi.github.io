@@ -119,10 +119,11 @@ helloworldは7種類の文字があるので、1文字あたり3ビットで表�
 
 ハフマン木を使ってhelloworldを表すと、27ビットになり、27/30 = 0.9 となり、10%圧縮される。
 
-
 ![image](https://user-images.githubusercontent.com/43819429/228383428-eac0793c-8378-40ba-adfb-6327ab97f7cc.jpeg)
 
+<br />
 
+[ハフマン符号化のとても参考になった記事](https://note.com/toppakou/n/nbf4128366f1e)を参照する。
 
 
 
