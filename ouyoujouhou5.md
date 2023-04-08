@@ -167,6 +167,8 @@ TKIP: Temporal Key Integrity Protocol(暗号化方式)
 RC4という暗号化アルゴリズムが利用されている。暗号化に使う鍵を短期間に変更する。共通鍵が使われる。  
 RC4はストリーム暗号方式。１ビット単位、1バイト単位という細かなデータを順次暗号化するようなイメージ。
 
+<br />
+
 CCMP: Counter mode with CBC-MAC Protocol(暗号化方式)  
 AES: Advanced Encryption Standard という暗号化アルゴリズムが利用されている。
 データを一定の長さのブロック単位にして、置換や並び替えを繰り返し暗号化するブロック暗号方式。共通鍵が使われる。RC4よりも暗号化が強固。
@@ -174,5 +176,15 @@ AES: Advanced Encryption Standard という暗号化アルゴリズムが利用�
 AESではブロックの鍵長が選択できる。128, 192, 256bitの3つから選ぶことができる。  
 置換や並び替えを繰り返す方法として、SubBytes、ShiftRows、MixColumns、AddRoundKeyという4つの処理が行なわれる。
 
+<br />
+
 ストリーム暗号方式よりもブロック暗号方式の方が一般的に使われている。
 
+ブロック暗号方式として、AESのほかに古いものとしてDES: Data Encryption Standard がある。  
+使える鍵長が56bitで短いので簡単に解読されセキュリティが弱い。
+
+<br />
+
+#### WPA-PSKのPSKとは
+
+Pre Shared Keyの略で、事前共有鍵方式のこと。アクセスポイントと端末の間で事前に設定したパスコードで認証し接続や暗号化をすること。
