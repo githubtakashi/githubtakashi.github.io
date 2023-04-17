@@ -372,5 +372,10 @@ y軸は合格率をとる。
 
 <br />
 
+### 線形探索の午前問題 | 平成30年春午前問6
+
+手こずったのでメモを貼っておく。
+
 ![image](https://user-images.githubusercontent.com/43819429/232505520-7a6d6639-acbc-48aa-9ef9-e04bb4dd7dfb.jpeg)
 
+<br />
