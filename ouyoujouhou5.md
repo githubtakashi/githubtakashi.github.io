@@ -372,4 +372,5 @@ y軸は合格率をとる。
 
 <br />
 
+![image](https://user-images.githubusercontent.com/43819429/232505520-7a6d6639-acbc-48aa-9ef9-e04bb4dd7dfb.jpeg)
 
