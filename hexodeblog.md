@@ -340,86 +340,37 @@ hexoのサイトでいろんなテーマを載せている[ページ](https://he
 
 テーマのリポジトリを自分のローカルパソコン上にインストールする方法は何種類かある。
 
-一つ目の方法:  
-リポジトリでforkボタンを押して、自分のgithubにリポジトリのコピーを作成する。それから、forkしたリポジトリを自分のパソコンのローカル  
-ディレクトリにgit submoduleコマンドで追加する。
+テーマのマニュアルを読むとテーマを適用する方法が載っているのでそれを参照してする。
 
-こっちの方法は慣れていないので、今回はやらなかった。
+最初はicarusというテーマを使ってみたが設定が難しく感じたので、particlexというテーマを適用してみた。
 
-二つ目の方法：  
-git cloneコマンドでリポジトリのクローンをtheme/ディレクトリに作成する。  
-こちらのほうが慣れているのでこちらのほうでテーマのリポジトリを自分のローカルパソコン上にクローンした。
+[particlexのgithub](https://github.com/theme-particlex/hexo-theme-particlex)に設定方法が記載されている。
 
-```
-//themesディレクトリ内にhexo-icarusというディレクトリを作成しリポジトリのテーマをクローン
-git clone https://github.com/githubtakashi/hexo-theme-icarus.git themes/hexo-icarus
-```
-
-今回はicarusというテーマに決めてみた。とても見やすいと思ったため。  
+どのテーマを使うかの判断として、githubを見て数年更新されていない場合は何かと面倒なことになったので、  
+なるべく新しいテーマを使った方がスムーズに設定など進むので良いと感じた。
 
 <br />
 
-icarusのリポジトリをクローンしたら、下記のコマンドを実行する(リポジトリの説明文として記載されている)。
+### particlexの設定メモ
 
-※もしかしたらリポジトリクローンしなくても下記のコマンドだけでできるのかもしれない。今回はリポジトリのクローンをthemes/hexo-icarus　　
-に作成し、config.ymlのthemeという項目に、hexo-icarusと設定したたあとに、下記コマンドを実行した。
+particlex専用の設定のconfig.ymlファイルは、themes/particlexディレクトリ内にある。
 
-```
-npm install hexo-theme-icarus
-hexo config theme hexo-icarus
-```
+#### 設定項目
 
-上記を実行したら、hexo sコマンドでサイトを起動しちゃんと表示されるか確認。
+- pollyfill. 
+古いブラウザでもJavaScriptがきちんと動作させるためのプラグイン。これを設定することで、  
+未対応のブラウザでもおかしくなることなくちゃんと動作してくれる。デフォルトで有効になっている。
 
-### comfig.icarus.ymlファイルでicarusの初期設定
+- highlight.js. 
+記事にソースコードを記載するときに見やすく色分けハイライト表示してくれる。デフォルトで有効になっている。
 
-icarusの設定項目について見ていく。
+- Katex math rendering. 
+数式を表示するための設定。HTMLとCSSだけで描画するので描画速度がsvgよりも速い。  
+デフォルトで無効になっている。
 
-icarusで使う画像類はicarusのフォルダ内に保存しないと、初期化時に画像が削除されるので注意。
+- Image Preview. 
+画像をクリックしたときに拡大、縮小する設定。デフォルトで有効になっている。
 
-config.icarus.ymlファイルに初期設定を記述していく。
-
-[icarusのドキュメント](https://ppoffice.github.io/hexo-theme-icarus/Configuration/icarus-user-guide-configuring-the-theme/)を参照したら分かりやすいので参照しながら進める。
-
-<br />
-
-#### PWAの設定
-
-icarusではPWA(Progressive web apps)が利用できる。  
-PWAを設定すると、icarusで作ったブログをiOSアプリのような見た目のアプリのアイコンができ、ウェブアプリのようにすることができる。  
-そこまで必要なさそうなので、別に設定しなくてよしとする。
-
-<br />
-
-#### Open Graphの設定
-
-Open Graph(OGP)とは、Twitterなどにブログのリンクを投稿したときにきちんと体裁を整えて表示させてくれる機能。  
-OGPを設定しないと、Twitterなどにきちんとした表示にできない。設定しておいた方が良いが、ブログを運用し出してから. 
-じゃないと必要ないので、後々設定する。
-
-<br />
-
-#### Google Structured Data
-
-google検索に構造を最適に知らせるためのデータ構造を設定できる。  
-設定しておいた方が良さそう。  
-[google structured dataについて説明している記事](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data?hl=ja)を参照する。
-
-構造化データを設定すると、検索結果にリッチリザルト表示をさせることができる。リッチリザルト表示はいろんな表示形式に対応している。
-
-<br />
-
-#### RSS
-
-RSSは現在廃れているので設定は無しで良い
-
-<br />
-
-#### page metadata
-
-headタグ内に入れるmetaタグのこと。  
-googleがheadタグ内のデータを読み込むことでタグ内の情報をGoogleに伝えることができる。  
-詳細は[googleのメタデータについての記事](https://developers.google.com/search/docs/crawling-indexing/valid-page-metadata?hl=ja)を読む。
-
-
-
+- Giscus. 
+記事にコメント機能をつけるための設定. 
+デフォルトでは無効
