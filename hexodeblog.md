@@ -304,8 +304,8 @@ pretty_urls:
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/kyachuo/katsuo-blog.git　# 自分のgithubのブログのリポジトリ
-  branch: gh-pages
+  repo: git@github.com/hogehoge/hoge-blog.git　# 自分のgithubのブログのリポジトリ,sshの方
+  branch: 
 ```
 
 詳しくは[hexoのドキュメント](https://hexo.io/docs/configuration)に書いてあるけど、  
@@ -321,6 +321,10 @@ gitで簡単にdeployするためのパッケージをインストール
 ```
 > npm install hexo-deployer-git --save
 ```
+
+デプロイ前にgithubに公開鍵を登録する。詳しくは[参考記事参照](https://realslowlife.com/3725-2/). 
+公開鍵登録することでsshでgithubにデプロイしてくれる。config.ymlのdeployのrepoはhttpsにするとgithubではサポートされていない方式. 
+でのアクセスになりデプロイできない。
 
 ブログをgithub pages上にデプロイ
 
