@@ -36,6 +36,15 @@ DISM /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-V
 
 <br />
 
+## コマンド1個でインストールが済むようになった| 追記
+
+コマンド１個でインストールができるようになった。楽すぎる。これ以降の内容は以前の手順。
+
+```
+wsl --install
+```
+
+
 ## wsl2を規定のバージョンにする
 
 wsl1じゃなくて新しいバージョンの2を使いたいので規定にする。
